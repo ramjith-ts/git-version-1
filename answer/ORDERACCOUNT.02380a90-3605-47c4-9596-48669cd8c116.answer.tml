@@ -1,0 +1,28 @@
+guid: 02380a90-3605-47c4-9596-48669cd8c116
+answer:
+  name: ORDERACCOUNT
+  tables:
+  - id: PURCHASETRANSACTIONS149M
+    name: PURCHASETRANSACTIONS149M
+    fqn: e7bc8aab-9ebc-4bb6-938c-96ad0163010b
+  search_query: "[ORDERACCOUNT]"
+  answer_columns:
+  - name: ORDERACCOUNT
+  table:
+    table_columns:
+    - column_id: ORDERACCOUNT
+      show_headline: false
+    ordered_column_ids:
+    - ORDERACCOUNT
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: ORDERACCOUNT
+    axis_configs:
+    - "y":
+      - ORDERACCOUNT
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ORDERACCOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"00915b9e-cf1e-4aa1-8118-7dc544546d3d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"ORDERACCOUNT\"],\"isOpposite\": false}},{\"id\": \"78b10b4c-18a5-4e65-bc88-66a0ec941281\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: TABLE_MODE
