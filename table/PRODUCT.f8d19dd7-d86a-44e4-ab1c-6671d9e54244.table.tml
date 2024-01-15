@@ -1,0 +1,41 @@
+guid: f8d19dd7-d86a-44e4-ab1c-6671d9e54244
+table:
+  name: PRODUCT
+  db: SUPPLYCHAIN_MAIN
+  schema: PUBLIC
+  db_table: PRODUCT
+  connection:
+    name: Test_1
+    fqn: 2a7abe1f-cad6-4353-b89e-192f1cbd101c
+  columns:
+  - name: Product Group_KEY
+    db_column_name: Product Group_KEY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Product Group_NAME
+    db_column_name: Product Group_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_KEY
+    db_column_name: PRODUCT_KEY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_NAME
+    db_column_name: PRODUCT_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_PRODUCT_GROUP
+    destination:
+      name: PRODUCTCATEGORY
+      fqn: 2998695b-8c04-4043-9177-3101bb34c4a1
+    "on": "[PRODUCT::Product Group_NAME] = [PRODUCTCATEGORY::Product Group]"
+    type: INNER

@@ -1,0 +1,31 @@
+guid: e4142b3d-0a20-41dc-82e9-61c664224217
+liveboard:
+  name: usergrees's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: PRODUCT_KEY
+      tables:
+      - id: PRODUCT
+        name: PRODUCT
+        fqn: f8d19dd7-d86a-44e4-ab1c-6671d9e54244
+      search_query: "[PRODUCT_KEY]"
+      answer_columns:
+      - name: PRODUCT_KEY
+      table:
+        table_columns:
+        - column_id: PRODUCT_KEY
+          show_headline: false
+        ordered_column_ids:
+        - PRODUCT_KEY
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: PRODUCT_KEY
+        axis_configs:
+        - "y":
+          - PRODUCT_KEY
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 770cb8c6-d4a0-4103-abb0-6d624be8fdd0
