@@ -56,3 +56,30 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: c7c99209-fc70-4ee5-800a-fc16a28dae70
+  - id: Viz_3
+    answer:
+      name: PRODUCT_KEY
+      tables:
+      - id: PRODUCT
+        name: PRODUCT
+        fqn: f8d19dd7-d86a-44e4-ab1c-6671d9e54244
+      search_query: "[PRODUCT_KEY]"
+      answer_columns:
+      - name: PRODUCT_KEY
+      table:
+        table_columns:
+        - column_id: PRODUCT_KEY
+          show_headline: false
+        ordered_column_ids:
+        - PRODUCT_KEY
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: PRODUCT_KEY
+        axis_configs:
+        - "y":
+          - PRODUCT_KEY
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 3f48ee98-a6e4-450a-8b9c-dda080b25528
