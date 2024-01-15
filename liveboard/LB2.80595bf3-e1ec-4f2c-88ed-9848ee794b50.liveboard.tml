@@ -1,0 +1,38 @@
+guid: 80595bf3-e1ec-4f2c-88ed-9848ee794b50
+liveboard:
+  name: LB2
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Answer description, Answer name"
+      tables:
+      - id: Product Usage
+        name: Product Usage
+        fqn: 9a527010-0a08-4b54-9700-e6da0a82a084
+      search_query: "[Answer description] [Answer name]"
+      answer_columns:
+      - name: Answer description
+      - name: Answer name
+      table:
+        table_columns:
+        - column_id: Answer description
+          show_headline: false
+        - column_id: Answer name
+          show_headline: false
+        ordered_column_ids:
+        - Answer description
+        - Answer name
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Answer description
+        - column_id: Answer name
+        axis_configs:
+        - x:
+          - Answer description
+          "y":
+          - Answer name
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: c9bd0edc-9613-452a-b7f4-0b9f832d63c5
