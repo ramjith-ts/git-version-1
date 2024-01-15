@@ -1,0 +1,33 @@
+guid: 96df4064-a5ce-42a3-86d8-46189aace8ab
+answer:
+  name: Total Discount
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Discount] [Supply Cost]"
+  answer_columns:
+  - name: Total Discount
+  - name: Total Supply Cost
+  table:
+    table_columns:
+    - column_id: Total Discount
+      headline_aggregation: SUM
+    - column_id: Total Supply Cost
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Total Discount
+    - Total Supply Cost
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Discount
+    - column_id: Total Supply Cost
+    axis_configs:
+    - "y":
+      - Total Discount
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"190ef374-93e6-48ac-9c37-237c778084f9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"22a405f9-8761-45b1-8a9f-28f08b279e14\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
