@@ -1,0 +1,31 @@
+guid: 3099a1ef-149c-49c4-83ac-b990d3034582
+liveboard:
+  name: testuser2's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Pinboard description
+      tables:
+      - id: Product Usage
+        name: Product Usage
+        fqn: 9a527010-0a08-4b54-9700-e6da0a82a084
+      search_query: "[Pinboard description]"
+      answer_columns:
+      - name: Pinboard description
+      table:
+        table_columns:
+        - column_id: Pinboard description
+          show_headline: false
+        ordered_column_ids:
+        - Pinboard description
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Pinboard description
+        axis_configs:
+        - "y":
+          - Pinboard description
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 914a1b4b-52c3-4b5c-9982-9f22839f8df3
