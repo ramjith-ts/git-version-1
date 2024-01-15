@@ -1,0 +1,43 @@
+guid: 17f887e6-d0b1-4b44-a9ed-54742853b5f6
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Quantity
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity] [Discount] [Revenue]"
+      answer_columns:
+      - name: Total Quantity
+      - name: Total Discount
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Quantity
+        - Total Discount
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Quantity
+        - column_id: Total Discount
+        - column_id: Total Revenue
+        axis_configs:
+        - "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Quantity\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c1292bec-eb65-4538-838b-d30c32df3670\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"31d66a80-8a83-436d-9e83-8d706cc8c055\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 94974740-3490-494d-bafa-307c7490694b
