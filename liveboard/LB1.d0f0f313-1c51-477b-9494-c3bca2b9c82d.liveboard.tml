@@ -1,3 +1,38 @@
 guid: d0f0f313-1c51-477b-9494-c3bca2b9c82d
 liveboard:
   name: LB1
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Org Name, Hidden"
+      tables:
+      - id: Product Usage
+        name: Product Usage
+        fqn: 9a527010-0a08-4b54-9700-e6da0a82a084
+      search_query: "[Org Name] [Hidden]"
+      answer_columns:
+      - name: Org Name
+      - name: Hidden
+      table:
+        table_columns:
+        - column_id: Org Name
+          show_headline: false
+        - column_id: Hidden
+          show_headline: false
+        ordered_column_ids:
+        - Org Name
+        - Hidden
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Org Name
+        - column_id: Hidden
+        axis_configs:
+        - x:
+          - Org Name
+          "y":
+          - Hidden
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 5295ede8-48a0-4723-b283-a63e712ad3fe
