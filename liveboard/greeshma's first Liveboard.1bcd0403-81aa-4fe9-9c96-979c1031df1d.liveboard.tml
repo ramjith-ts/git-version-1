@@ -1,0 +1,40 @@
+guid: 1bcd0403-81aa-4fe9-9c96-979c1031df1d
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount by Size
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Size]"
+      answer_columns:
+      - name: Total Discount
+      - name: Size
+      table:
+        table_columns:
+        - column_id: Size
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Size
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Size
+        - column_id: Total Discount
+        axis_configs:
+        - x:
+          - Size
+          "y":
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Size\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"68ee30ba-b047-463d-90c3-6ca05ed55575\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"69d2c4c8-4255-4e23-a3cb-35fbfabb0ee0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Size\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 20928e29-6dfd-44dd-838d-203ad81b5270
