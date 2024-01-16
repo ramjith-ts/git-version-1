@@ -1,0 +1,41 @@
+guid: 0f2fb8d0-c8a0-41e7-9c62-40a8c91ac378
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Revenue] [Extended Price]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Revenue
+      - name: Total Extended Price
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Revenue
+        - Total Extended Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Revenue
+        - column_id: Total Extended Price
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: da0a554b-546c-4a6a-ad88-abf1f136c573
