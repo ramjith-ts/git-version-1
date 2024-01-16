@@ -1,0 +1,31 @@
+guid: 92ec2220-a544-4e35-9903-2a3efc76bf99
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Quantity
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity]"
+      answer_columns:
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Quantity
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 1d656156-716d-4844-80d6-bded8c461ff2
