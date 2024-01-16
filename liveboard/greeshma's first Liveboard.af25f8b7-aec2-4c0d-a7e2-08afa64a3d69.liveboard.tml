@@ -1,0 +1,40 @@
+guid: af25f8b7-aec2-4c0d-a7e2-08afa64a3d69
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Revenue by Brand1
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Revenue] [Brand1]"
+      answer_columns:
+      - name: Total Revenue
+      - name: Brand1
+      table:
+        table_columns:
+        - column_id: Brand1
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Brand1
+        - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Brand1
+        - column_id: Total Revenue
+        axis_configs:
+        - x:
+          - Brand1
+          "y":
+          - Total Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1383dd8d-38a3-4492-981b-d7163862a70c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"e7635b10-9ada-46f4-81b7-54ac512bdbb9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: c11342f4-dc97-4713-a3e0-5e7eb7304e71
