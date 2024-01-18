@@ -1,6 +1,6 @@
 guid: 2240ed31-7ef3-4bf4-8892-8010ca352c85
 liveboard:
-  name: greeshma's first Liveboard
+  name: First Liveboard
   description: Test Description
   visualizations:
   - id: Viz_1
