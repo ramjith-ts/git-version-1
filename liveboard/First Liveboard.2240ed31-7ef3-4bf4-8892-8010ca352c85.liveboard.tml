@@ -36,6 +36,12 @@ liveboard:
       display_mode: CHART_MODE
     viz_guid: 5ac81996-943c-433b-8552-309c34f708ca
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      size: EXTRA_SMALL
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 2
+        width: 3
