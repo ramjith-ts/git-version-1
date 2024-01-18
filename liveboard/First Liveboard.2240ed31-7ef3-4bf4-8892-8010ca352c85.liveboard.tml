@@ -35,6 +35,10 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 5ac81996-943c-433b-8552-309c34f708ca
+  - id: Viz_2
+    viz_guid: 65211bba-b102-4194-bbeb-345da03f36ef
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test note 1</span></h1>"
   layout:
     tabs:
     - name: Tab 1
@@ -42,6 +46,11 @@ liveboard:
       tiles:
       - visualization_id: Viz_1
         x: 0
-        "y": 0
+        "y": 4
         height: 2
+        width: 3
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 4
         width: 3
