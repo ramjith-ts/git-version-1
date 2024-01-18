@@ -1,6 +1,7 @@
 guid: 2240ed31-7ef3-4bf4-8892-8010ca352c85
 liveboard:
   name: greeshma's first Liveboard
+  description: Test Description
   visualizations:
   - id: Viz_1
     answer:
@@ -34,3 +35,7 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 5ac81996-943c-433b-8552-309c34f708ca
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
