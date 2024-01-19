@@ -72,3 +72,5 @@ liveboard:
         "y": 0
         height: 4
         width: 3
+    - name: Tab 2
+      description: ""
