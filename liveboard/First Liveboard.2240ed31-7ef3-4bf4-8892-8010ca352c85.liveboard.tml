@@ -47,6 +47,10 @@ liveboard:
     viz_guid: 61e98613-31aa-4214-80a9-00e8736c4eb1
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test note 3</span></h1>"
+  - id: Viz_5
+    viz_guid: cc62a97f-85ce-4820-ad1f-d74295867eb8
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test note 1</span></h1>"
   layout:
     tabs:
     - name: Tab 1
@@ -74,3 +78,9 @@ liveboard:
         width: 3
     - name: Tab 2
       description: ""
+      tiles:
+      - visualization_id: Viz_5
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
