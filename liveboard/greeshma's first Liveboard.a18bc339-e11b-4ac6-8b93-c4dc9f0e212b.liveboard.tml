@@ -1,0 +1,36 @@
+guid: a18bc339-e11b-4ac6-8b93-c4dc9f0e212b
+liveboard:
+  name: greeshma's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Revenue]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Total Discount
+          show_headline: false
+        - column_id: Total Revenue
+          show_headline: false
+        ordered_column_ids:
+        - Total Discount
+        - Total Revenue
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Revenue
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: efc318ca-e2ba-4dd5-a7dc-991ec4aa13de
