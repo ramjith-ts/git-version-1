@@ -1,0 +1,47 @@
+guid: 521fcc74-fcb9-48b9-a776-9114ae561065
+liveboard:
+  name: tsadmin's first Liveboard
+  description: Test 47
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Extended Price
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Extended Price] [Org Masked Revenue]"
+      answer_columns:
+      - name: Total Extended Price
+      - name: Total Org Masked Revenue
+      table:
+        table_columns:
+        - column_id: Total Extended Price
+          headline_aggregation: SUM
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Total Extended Price
+        - Total Org Masked Revenue
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Extended Price
+        - column_id: Total Org Masked Revenue
+        axis_configs:
+        - "y":
+          - Total Extended Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 4bf1066f-42f1-4266-8529-25fc6f145257
+  layout:
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 2
+        width: 3
