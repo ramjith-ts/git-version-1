@@ -1,6 +1,7 @@
 guid: 087b9f0e-487c-402a-83e0-ac79d0ecd380
 liveboard:
   name: Test1
+  description: test
   visualizations:
   - id: Viz_1
     answer:
@@ -34,3 +35,7 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: fc9e1245-bfc8-4c14-b14d-9c75224be847
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
