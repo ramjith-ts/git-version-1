@@ -1,7 +1,7 @@
 guid: 2e91a051-e4c7-437f-919a-9cbdff95f1aa
 liveboard:
   name: greeshma's first Liveboard
-  description: Test 1
+  description: Test 2
   visualizations:
   - id: Viz_1
     answer:
