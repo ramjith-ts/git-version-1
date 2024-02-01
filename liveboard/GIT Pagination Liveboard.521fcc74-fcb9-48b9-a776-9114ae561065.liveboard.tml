@@ -1,6 +1,6 @@
 guid: 521fcc74-fcb9-48b9-a776-9114ae561065
 liveboard:
-  name: tsadmin's first Liveboard
+  name: GIT Pagination Liveboard
   description: Test 42
   visualizations:
   - id: Viz_1
