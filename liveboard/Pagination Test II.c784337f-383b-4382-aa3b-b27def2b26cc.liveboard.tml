@@ -1,0 +1,41 @@
+guid: c784337f-383b-4382-aa3b-b27def2b26cc
+liveboard:
+  name: Pagination Test II
+  description: Test 23
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Database Latency (us)
+      tables:
+      - id: "TS: BI Server"
+        name: "TS: BI Server"
+        fqn: eaab6de7-c556-468c-8b4b-ff6d78dd3ecf
+      search_query: "[Database Latency (us)] [Response Size]"
+      answer_columns:
+      - name: Total Database Latency (us)
+      - name: Total Response Size
+      table:
+        table_columns:
+        - column_id: Total Database Latency (us)
+          show_headline: false
+        - column_id: Total Response Size
+          show_headline: false
+        ordered_column_ids:
+        - Total Database Latency (us)
+        - Total Response Size
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Database Latency (us)
+        - column_id: Total Response Size
+        axis_configs:
+        - "y":
+          - Total Database Latency (us)
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 73c8a577-18cc-4147-ac70-9417b28e448f
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
