@@ -1,7 +1,7 @@
 guid: c784337f-383b-4382-aa3b-b27def2b26cc
 liveboard:
   name: Pagination Test II
-  description: Test 2
+  description: Test 3
   visualizations:
   - id: Viz_1
     answer:
