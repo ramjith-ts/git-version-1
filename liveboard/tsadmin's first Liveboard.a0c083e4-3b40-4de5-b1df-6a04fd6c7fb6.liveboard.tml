@@ -1,0 +1,38 @@
+guid: a0c083e4-3b40-4de5-b1df-6a04fd6c7fb6
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "COMMENT, DATA_TYPE"
+      tables:
+      - id: PROCEDURES
+        name: PROCEDURES
+        fqn: 3117fc96-145d-4945-aff4-ef99f7379cff
+      search_query: "[COMMENT] [DATA_TYPE]"
+      answer_columns:
+      - name: COMMENT
+      - name: DATA_TYPE
+      table:
+        table_columns:
+        - column_id: COMMENT
+          show_headline: false
+        - column_id: DATA_TYPE
+          show_headline: false
+        ordered_column_ids:
+        - COMMENT
+        - DATA_TYPE
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: COMMENT
+        - column_id: DATA_TYPE
+        axis_configs:
+        - x:
+          - COMMENT
+          "y":
+          - DATA_TYPE
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 7cc8c965-7a62-4e4c-81d1-554c2b6162a7

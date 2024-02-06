@@ -1,0 +1,135 @@
+guid: 3117fc96-145d-4945-aff4-ef99f7379cff
+table:
+  name: PROCEDURES
+  description: The stored procedures defined in this database that are accessible to the current user's role.
+  db: SUPPLYCHAIN_MAIN
+  schema: INFORMATION_SCHEMA
+  db_table: PROCEDURES
+  connection:
+    name: Test-Con
+    fqn: f904d439-2d5a-4827-a931-1cf69837249d
+  columns:
+  - name: PROCEDURE_CATALOG
+    description: Database which the procedure belongs to
+    db_column_name: PROCEDURE_CATALOG
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PROCEDURE_SCHEMA
+    description: Schema which the procedure belongs to
+    db_column_name: PROCEDURE_SCHEMA
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PROCEDURE_NAME
+    description: Name of the procedure
+    db_column_name: PROCEDURE_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PROCEDURE_OWNER
+    description: Name of the role that owns the procedure
+    db_column_name: PROCEDURE_OWNER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ARGUMENT_SIGNATURE
+    description: Type signature of the procedure's arguments
+    db_column_name: ARGUMENT_SIGNATURE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: DATA_TYPE
+    description: Return value data type
+    db_column_name: DATA_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CHARACTER_MAXIMUM_LENGTH
+    description: Maximum length in characters of string return value
+    db_column_name: CHARACTER_MAXIMUM_LENGTH
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: CHARACTER_OCTET_LENGTH
+    description: Maximum length in bytes of string return value
+    db_column_name: CHARACTER_OCTET_LENGTH
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NUMERIC_PRECISION
+    description: Numeric precision of numeric return value
+    db_column_name: NUMERIC_PRECISION
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NUMERIC_PRECISION_RADIX
+    description: Radix of precision of numeric return value
+    db_column_name: NUMERIC_PRECISION_RADIX
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NUMERIC_SCALE
+    description: Scale of numeric return value
+    db_column_name: NUMERIC_SCALE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: PROCEDURE_LANGUAGE
+    description: Language of the procedure
+    db_column_name: PROCEDURE_LANGUAGE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PROCEDURE_DEFINITION
+    description: Procedure definition
+    db_column_name: PROCEDURE_DEFINITION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATED
+    description: Creation time of the procedure
+    db_column_name: CREATED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: LAST_ALTERED
+    description: Last altered time of the procedure
+    db_column_name: LAST_ALTERED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: COMMENT
+    description: Comment for this procedure
+    db_column_name: COMMENT
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
