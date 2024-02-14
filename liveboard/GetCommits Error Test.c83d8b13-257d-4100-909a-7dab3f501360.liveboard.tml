@@ -1,0 +1,42 @@
+guid: c83d8b13-257d-4100-909a-7dab3f501360
+liveboard:
+  name: GetCommits Error Test
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Answer One
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Tax] [Supply Cost]"
+      answer_columns:
+      - name: Total Tax
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Tax
+        - Total Supply Cost
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Tax
+        - column_id: Total Supply Cost
+        axis_configs:
+        - "y":
+          - Total Tax
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"abc88fb6-e3de-4f6c-b775-609002ae8b9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"051480aa-d99c-4469-995a-3ab42ef26bc8\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 22ae31a0-010b-481b-b59d-e5530a4d8f94
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
