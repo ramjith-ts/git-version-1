@@ -37,6 +37,38 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Tax\",\"columnProperty\": {}},{\"columnId\": \"Total Supply Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"abc88fb6-e3de-4f6c-b775-609002ae8b9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Tax\"],\"isOpposite\": false}},{\"id\": \"051480aa-d99c-4469-995a-3ab42ef26bc8\",\"properties\": {\"axisType\": \"X\"}}]}"
       display_mode: CHART_MODE
     viz_guid: 22ae31a0-010b-481b-b59d-e5530a4d8f94
+  - id: Viz_2
+    answer:
+      name: Total Org Masked Revenue
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Org Masked Revenue] [Revenue]"
+      answer_columns:
+      - name: Total Org Masked Revenue
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Total Org Masked Revenue
+          headline_aggregation: TABLE_AGGR
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Org Masked Revenue
+        - Total Revenue
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Org Masked Revenue
+        - column_id: Total Revenue
+        axis_configs:
+        - "y":
+          - Total Org Masked Revenue
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: fcc8dccf-3f75-4292-9b12-51c68f93f88b
   layout:
     tiles:
     - visualization_id: Viz_1
