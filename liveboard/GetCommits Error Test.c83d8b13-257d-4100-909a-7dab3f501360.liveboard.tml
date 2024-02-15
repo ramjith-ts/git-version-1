@@ -1,7 +1,7 @@
 guid: c83d8b13-257d-4100-909a-7dab3f501360
 liveboard:
   name: GetCommits Error Test
-  description: Test des
+  description: Test de
   visualizations:
   - id: Viz_1
     answer:
