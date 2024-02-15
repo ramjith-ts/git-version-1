@@ -1,7 +1,7 @@
 guid: c83d8b13-257d-4100-909a-7dab3f501360
 liveboard:
   name: GetCommits Error Test
-  description: Test description 5
+  description: Test description 7
   visualizations:
   - id: Viz_1
     answer:
@@ -44,25 +44,25 @@ liveboard:
       - id: Parameters WS
         name: Parameters WS
         fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-      search_query: "[Org Masked Revenue] [Revenue]"
+      search_query: "[Org Masked Revenue] [Revenue New]"
       answer_columns:
       - name: Total Org Masked Revenue
-      - name: Total Revenue
+      - name: Total Revenue New
       table:
         table_columns:
         - column_id: Total Org Masked Revenue
           headline_aggregation: TABLE_AGGR
-        - column_id: Total Revenue
+        - column_id: Total Revenue New
           headline_aggregation: SUM
         ordered_column_ids:
         - Total Org Masked Revenue
-        - Total Revenue
+        - Total Revenue New
         client_state: ""
       chart:
         type: KPI
         chart_columns:
         - column_id: Total Org Masked Revenue
-        - column_id: Total Revenue
+        - column_id: Total Revenue New
         axis_configs:
         - "y":
           - Total Org Masked Revenue
@@ -72,4 +72,6 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
       size: EXTRA_SMALL
