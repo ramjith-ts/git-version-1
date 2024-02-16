@@ -1,0 +1,36 @@
+guid: 26cf8378-e611-45c9-b98f-76d202665a3b
+liveboard:
+  name: chin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Supply Cost
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Supply Cost] [Quantity]"
+      answer_columns:
+      - name: Total Supply Cost
+      - name: Total Quantity
+      table:
+        table_columns:
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Supply Cost
+        - Total Quantity
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Supply Cost
+        - column_id: Total Quantity
+        axis_configs:
+        - "y":
+          - Total Supply Cost
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 01250ae4-c614-45b1-a726-444afe7c3178
