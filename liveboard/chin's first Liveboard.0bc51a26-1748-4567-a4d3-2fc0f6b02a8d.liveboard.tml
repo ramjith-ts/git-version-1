@@ -1,0 +1,38 @@
+guid: 0bc51a26-1748-4567-a4d3-2fc0f6b02a8d
+liveboard:
+  name: chin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Test ANS 1
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Revenue New]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Revenue New
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Revenue New
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Revenue New
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Revenue New
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue New\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fde26c10-6391-44db-ae06-2abc50795e24\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"77c75903-90c6-40c9-aff2-87f6e12d7f82\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 22c95a02-ce14-42fb-ac65-7666d0eac88e
