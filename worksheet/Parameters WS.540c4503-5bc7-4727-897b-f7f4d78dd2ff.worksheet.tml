@@ -94,7 +94,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Revenue New
+  - name: Revenue
     column_id: LINEORDER_1::Revenue
     properties:
       column_type: MEASURE
