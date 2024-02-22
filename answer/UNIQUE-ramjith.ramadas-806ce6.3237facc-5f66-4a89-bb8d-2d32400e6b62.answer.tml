@@ -1,0 +1,35 @@
+guid: 3237facc-5f66-4a89-bb8d-2d32400e6b62
+answer:
+  name: UNIQUE-ramjith.ramadas-806ce6
+  tables:
+  - id: UNIQUE-ramjith.ramadas-UI-WS
+    name: UNIQUE-ramjith.ramadas-UI-WS
+    fqn: 64ed8ca0-377c-4bce-af2c-06b957b2ca13
+  search_query: "[Lo Quantity] [Lo Orderdate] [Lo Orderdate].monthly"
+  answer_columns:
+  - name: Total Lo Quantity
+  - name: Month(Lo Orderdate)
+  table:
+    table_columns:
+    - column_id: Month(Lo Orderdate)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Lo Quantity
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Month(Lo Orderdate)
+    - Total Lo Quantity
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Month(Lo Orderdate)
+    - column_id: Total Lo Quantity
+    axis_configs:
+    - x:
+      - Month(Lo Orderdate)
+      "y":
+      - Total Lo Quantity
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}},{\"columnId\": \"Month(Lo Orderdate)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f6446b5d-4184-4c93-9701-77473308bbf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Quantity\"],\"isOpposite\": false}},{\"id\": \"a879ae45-ebcb-4471-b3b4-c8ab5d7ccba8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Quantity\",\"color\": \"#2770ef\"}]}"
+  display_mode: CHART_MODE
