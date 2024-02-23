@@ -1,0 +1,28 @@
+guid: 6f6d5c89-2ad8-4360-b9c9-b4926601d283
+answer:
+  name: Total Org Masked Revenue
+  tables:
+  - id: Parameters WS
+    name: Parameters WS
+    fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+  search_query: "[Org Masked Revenue]"
+  answer_columns:
+  - name: Total Org Masked Revenue
+  table:
+    table_columns:
+    - column_id: Total Org Masked Revenue
+      headline_aggregation: TABLE_AGGR
+    ordered_column_ids:
+    - Total Org Masked Revenue
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Org Masked Revenue
+    axis_configs:
+    - "y":
+      - Total Org Masked Revenue
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Org Masked Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7db71dd9-06d9-46c9-9d45-e09c356c5396\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Org Masked Revenue\"],\"isOpposite\": false}},{\"id\": \"c11294ab-d790-4a7d-8f2c-e9aa03260c46\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
