@@ -1,6 +1,7 @@
 guid: 6f6d5c89-2ad8-4360-b9c9-b4926601d283
 answer:
   name: Total Org Masked Revenue
+  description: Test description
   tables:
   - id: Parameters WS
     name: Parameters WS
