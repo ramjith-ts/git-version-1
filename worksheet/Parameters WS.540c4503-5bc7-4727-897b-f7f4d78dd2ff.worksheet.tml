@@ -89,7 +89,7 @@ worksheet:
     properties:
       column_type: MEASURE
       aggregation: SUM
-  - name: Discount2
+  - name: Discount
     column_id: LINEORDER_1::Discount
     properties:
       column_type: MEASURE
