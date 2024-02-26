@@ -6,27 +6,35 @@ answer:
   - id: UNIQUE-ramjith.ramadas-UI-WS
     name: UNIQUE-ramjith.ramadas-UI-WS
     fqn: 64ed8ca0-377c-4bce-af2c-06b957b2ca13
-  search_query: "[iy 9mvfuPqEB6orLyUui] [Lo Commitdate] [Lo Commitdate].quarterly [Lo Orderdate] [Lo Orderdate].quarterly [Lo Discount]"
+  search_query: "[iy 9mvfuPqEB6orLyUui] [Lo Commitdate] [Lo Commitdate].quarterly [Lo Orderdate] [Lo Orderdate].quarterly [Lo Discount] [Lo Tax] [Lo Shipmode]"
   answer_columns:
   - name: Total iy 9mvfuPqEB6orLyUui
   - name: Quarter(Lo Commitdate)
   - name: Quarter(Lo Orderdate)
   - name: Total Lo Discount
+  - name: Total Lo Tax
+  - name: Lo Shipmode
   table:
     table_columns:
     - column_id: Quarter(Lo Commitdate)
       headline_aggregation: MIN-MAX
     - column_id: Quarter(Lo Orderdate)
       headline_aggregation: MIN-MAX
+    - column_id: Lo Shipmode
+      headline_aggregation: COUNT_DISTINCT
     - column_id: Total iy 9mvfuPqEB6orLyUui
       headline_aggregation: SUM
     - column_id: Total Lo Discount
       headline_aggregation: SUM
+    - column_id: Total Lo Tax
+      headline_aggregation: SUM
     ordered_column_ids:
     - Quarter(Lo Commitdate)
     - Quarter(Lo Orderdate)
+    - Lo Shipmode
     - Total iy 9mvfuPqEB6orLyUui
     - Total Lo Discount
+    - Total Lo Tax
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
@@ -34,8 +42,10 @@ answer:
     chart_columns:
     - column_id: Quarter(Lo Commitdate)
     - column_id: Quarter(Lo Orderdate)
+    - column_id: Lo Shipmode
     - column_id: Total iy 9mvfuPqEB6orLyUui
     - column_id: Total Lo Discount
+    - column_id: Total Lo Tax
     axis_configs:
     - x:
       - Quarter(Lo Commitdate)
@@ -43,5 +53,5 @@ answer:
       "y":
       - Total iy 9mvfuPqEB6orLyUui
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Lo Commitdate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Lo Commitdate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1490f396-4a74-42ef-8ae2-fce3cc6d2c87\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total iy 9mvfuPqEB6orLyUui\"],\"isOpposite\": false}},{\"id\": \"08c4326c-aea4-478d-98ad-470bd8935ff4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\",\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Quarter(Lo Orderdate)\",\"color\": \"#48d1e0\"},{\"serieName\": \"q1 1992\",\"color\": \"#A2ACBA\"},{\"serieName\": \"q2 1992\",\"color\": \"#47515F\"},{\"serieName\": \"q3 1992\",\"color\": \"#BEC6D0\"},{\"serieName\": \"q4 1992\",\"color\": \"#747E8C\"},{\"serieName\": \"q1 1993\",\"color\": \"#FFA97E\"},{\"serieName\": \"q2 1993\",\"color\": \"#C26232\"},{\"serieName\": \"q3 1993\",\"color\": \"#FFCCB3\"},{\"serieName\": \"q4 1993\",\"color\": \"#FF8142\"},{\"serieName\": \"q1 1994\",\"color\": \"#B094F8\"},{\"serieName\": \"q2 1994\",\"color\": \"#6A4ABA\"},{\"serieName\": \"q3 1994\",\"color\": \"#D1C0FB\"},{\"serieName\": \"q4 1994\",\"color\": \"#8C62F5\"},{\"serieName\": \"q1 1995\",\"color\": \"#56D3A8\"},{\"serieName\": \"q2 1995\",\"color\": \"#049160\"},{\"serieName\": \"q3 1995\",\"color\": \"#9BE5CB\"},{\"serieName\": \"q4 1995\",\"color\": \"#06BF7F\"},{\"serieName\": \"q1 1996\",\"color\": \"#FCD977\"},{\"serieName\": \"q2 1996\",\"color\": \"#BF982A\"},{\"serieName\": \"q3 1996\",\"color\": \"#FDE9AF\"},{\"serieName\": \"q4 1996\",\"color\": \"#FCC838\"},{\"serieName\": \"q1 1997\",\"color\": \"#82DFE9\"},{\"serieName\": \"q2 1997\",\"color\": \"#369FAA\"},{\"serieName\": \"q3 1997\",\"color\": \"#B5ECF2\"},{\"serieName\": \"q4 1997\",\"color\": \"#48D1E0\"},{\"serieName\": \"q1 1998\",\"color\": \"#71A1F4\"},{\"serieName\": \"q2 1998\",\"color\": \"#2359B6\"},{\"serieName\": \"q3 1998\",\"color\": \"#ABC7F9\"},{\"serieName\": \"q4 1998\",\"color\": \"#2E75F0\"},{\"serieName\": \"pareto\",\"color\": \"#06BF7F\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Lo Commitdate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Lo Commitdate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Lo Shipmode\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Lo Tax\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1490f396-4a74-42ef-8ae2-fce3cc6d2c87\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total iy 9mvfuPqEB6orLyUui\"],\"isOpposite\": false}},{\"id\": \"08c4326c-aea4-478d-98ad-470bd8935ff4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\",\"Quarter(Lo Orderdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Quarter(Lo Orderdate)\",\"color\": \"#48d1e0\"},{\"serieName\": \"q1 1992\",\"color\": \"#A2ACBA\"},{\"serieName\": \"q2 1992\",\"color\": \"#47515F\"},{\"serieName\": \"q3 1992\",\"color\": \"#BEC6D0\"},{\"serieName\": \"q4 1992\",\"color\": \"#747E8C\"},{\"serieName\": \"q1 1993\",\"color\": \"#FFA97E\"},{\"serieName\": \"q2 1993\",\"color\": \"#C26232\"},{\"serieName\": \"q3 1993\",\"color\": \"#FFCCB3\"},{\"serieName\": \"q4 1993\",\"color\": \"#FF8142\"},{\"serieName\": \"q1 1994\",\"color\": \"#B094F8\"},{\"serieName\": \"q2 1994\",\"color\": \"#6A4ABA\"},{\"serieName\": \"q3 1994\",\"color\": \"#D1C0FB\"},{\"serieName\": \"q4 1994\",\"color\": \"#8C62F5\"},{\"serieName\": \"q1 1995\",\"color\": \"#56D3A8\"},{\"serieName\": \"q2 1995\",\"color\": \"#049160\"},{\"serieName\": \"q3 1995\",\"color\": \"#9BE5CB\"},{\"serieName\": \"q4 1995\",\"color\": \"#06BF7F\"},{\"serieName\": \"q1 1996\",\"color\": \"#FCD977\"},{\"serieName\": \"q2 1996\",\"color\": \"#BF982A\"},{\"serieName\": \"q3 1996\",\"color\": \"#FDE9AF\"},{\"serieName\": \"q4 1996\",\"color\": \"#FCC838\"},{\"serieName\": \"q1 1997\",\"color\": \"#82DFE9\"},{\"serieName\": \"q2 1997\",\"color\": \"#369FAA\"},{\"serieName\": \"q3 1997\",\"color\": \"#B5ECF2\"},{\"serieName\": \"q4 1997\",\"color\": \"#48D1E0\"},{\"serieName\": \"q1 1998\",\"color\": \"#71A1F4\"},{\"serieName\": \"q2 1998\",\"color\": \"#2359B6\"},{\"serieName\": \"q3 1998\",\"color\": \"#ABC7F9\"},{\"serieName\": \"q4 1998\",\"color\": \"#2E75F0\"},{\"serieName\": \"pareto\",\"color\": \"#06BF7F\"}]}"
   display_mode: CHART_MODE
