@@ -25,7 +25,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: GEO_HEATMAP
+    type: GEO_BUBBLE
     chart_columns:
     - column_id: C_NATION
     - column_id: C_NAME
@@ -36,5 +36,5 @@ answer:
       "y":
       - Total C_CUSTKEY
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NATION\",\"columnProperty\": {}},{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total C_CUSTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ca7150f-d8a0-4638-b332-6f5d13dbbd63\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total C_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"eaacbe9b-01bc-41bb-9c6e-2a0792932a80\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [529973.5127499104,2078181.125991194],\"zoomLevel\": 2.3101284262508845,\"extent\": [-1.5879762340026349E7,-7486260.291089382,1.693970936552617E7,1.164262254307177E7]},\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NATION\",\"columnProperty\": {}},{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total C_CUSTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ca7150f-d8a0-4638-b332-6f5d13dbbd63\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total C_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"eaacbe9b-01bc-41bb-9c6e-2a0792932a80\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
   display_mode: CHART_MODE
