@@ -26,7 +26,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: KPI
+    type: PIVOT_TABLE
     chart_columns:
     - column_id: Quarter(Lo Commitdate)
     - column_id: Quarter(Lo Orderdate)
@@ -36,6 +36,12 @@ answer:
       - Quarter(Lo Commitdate)
       "y":
       - Total iy 9mvfuPqEB6orLyUui
+    - "y":
+      - Total iy 9mvfuPqEB6orLyUui
+    - x:
+      - Quarter(Lo Commitdate)
+      "y":
+      - Total iy 9mvfuPqEB6orLyUui
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ff744e1-f1f8-4af6-8675-5c3c077c8248\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total iy 9mvfuPqEB6orLyUui\"],\"isOpposite\": false}},{\"id\": \"8057512f-4197-4245-9aa8-df0e21b4624c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2770ef\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Lo Commitdate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Lo Commitdate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ff744e1-f1f8-4af6-8675-5c3c077c8248\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total iy 9mvfuPqEB6orLyUui\"],\"isOpposite\": false}},{\"id\": \"8057512f-4197-4245-9aa8-df0e21b4624c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2770ef\"}]}"
   display_mode: CHART_MODE
