@@ -30,7 +30,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: WATERFALL
+    type: HEATMAP
     chart_columns:
     - column_id: Quarter(Lo Commitdate)
     - column_id: Quarter(Lo Orderdate)
@@ -40,8 +40,8 @@ answer:
     - x:
       - Quarter(Lo Commitdate)
       "y":
-      - Total iy 9mvfuPqEB6orLyUui
-      - Total Lo Discount
+      - Quarter(Lo Orderdate)
+      size: Total iy 9mvfuPqEB6orLyUui
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Lo Commitdate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Lo Commitdate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0a324294-17fb-4ce7-982e-f88966a6daf7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total iy 9mvfuPqEB6orLyUui\"],\"isOpposite\": false}},{\"id\": \"4140c59a-cda5-4e02-81da-fa2d3498f524\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Discount\"],\"isOpposite\": true}},{\"id\": \"a7a6d06c-7174-4178-8550-e707683020f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Quarter(Lo Commitdate)\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Quarter(Lo Commitdate)\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"row\"}]},\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Quarter(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Lo Orderdate)\",\"columnProperty\": {}},{\"columnId\": \"Total iy 9mvfuPqEB6orLyUui\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total Lo Discount\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"2735ced0-6567-4e1e-a821-369b67f59ccc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Quarter(Lo Orderdate)\"],\"isOpposite\": false}},{\"id\": \"5e5b5516-6bd5-47c1-8cfe-4a736bc5a609\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total iy 9mvfuPqEB6orLyUui\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total Lo Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Quarter(Lo Orderdate)\",\"color\": \"#48d1e0\"}]}"
   display_mode: CHART_MODE
