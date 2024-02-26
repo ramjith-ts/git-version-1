@@ -26,7 +26,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: PIE
+    type: BAR
     chart_columns:
     - column_id: Quarter(Lo Commitdate)
     - column_id: Quarter(Lo Orderdate)
