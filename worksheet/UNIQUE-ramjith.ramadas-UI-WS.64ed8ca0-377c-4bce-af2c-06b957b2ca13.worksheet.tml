@@ -54,7 +54,7 @@ worksheet:
     column_id: UNIQUE-ramjith.ramadas_LINEORDER_1::LO_SHIPPRIORITY
     properties:
       column_type: ATTRIBUTE
-  - name: Lo Quantity
+  - name: UEUruEE5P3KlbJZZMGLd
     column_id: UNIQUE-ramjith.ramadas_LINEORDER_1::LO_QUANTITY
     properties:
       column_type: MEASURE
@@ -78,7 +78,7 @@ worksheet:
       column_type: MEASURE
       aggregation: SUM
       index_type: DONT_INDEX
-  - name: Lo Revenue
+  - name: iy 9mvfuPqEB6orLyUui
     column_id: UNIQUE-ramjith.ramadas_LINEORDER_1::LO_REVENUE
     properties:
       column_type: MEASURE
