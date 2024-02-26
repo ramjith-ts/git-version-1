@@ -5,22 +5,26 @@ answer:
   - id: UNIQUE-ramjith.ramadas_CUSTOMER
     name: UNIQUE-ramjith.ramadas_CUSTOMER
     fqn: 1c049a41-0419-4d43-b69b-b6759714017d
-  search_query: "[C_CUSTKEY] [C_NATION] [C_NAME]"
+  search_query: "[C_CUSTKEY] [C_NATION] [C_NAME] [C_CITY]"
   answer_columns:
   - name: Total C_CUSTKEY
   - name: C_NATION
   - name: C_NAME
+  - name: C_CITY
   table:
     table_columns:
     - column_id: C_NATION
       headline_aggregation: COUNT_DISTINCT
     - column_id: C_NAME
       headline_aggregation: COUNT_DISTINCT
+    - column_id: C_CITY
+      headline_aggregation: COUNT_DISTINCT
     - column_id: Total C_CUSTKEY
       headline_aggregation: SUM
     ordered_column_ids:
     - C_NATION
     - C_NAME
+    - C_CITY
     - Total C_CUSTKEY
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -29,6 +33,7 @@ answer:
     chart_columns:
     - column_id: C_NATION
     - column_id: C_NAME
+    - column_id: C_CITY
     - column_id: Total C_CUSTKEY
     axis_configs:
     - x:
@@ -36,5 +41,5 @@ answer:
       "y":
       - Total C_CUSTKEY
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [529973.5127499104,2078181.125991194],\"zoomLevel\": 2.3101284262508845,\"extent\": [-1.5879762340026349E7,-7486260.291089382,1.693970936552617E7,1.164262254307177E7]},\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NATION\",\"columnProperty\": {}},{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total C_CUSTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ca7150f-d8a0-4638-b332-6f5d13dbbd63\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total C_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"eaacbe9b-01bc-41bb-9c6e-2a0792932a80\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NATION\",\"columnProperty\": {}},{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total C_CUSTKEY\",\"columnProperty\": {}},{\"columnId\": \"C_CITY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1ca7150f-d8a0-4638-b332-6f5d13dbbd63\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total C_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"eaacbe9b-01bc-41bb-9c6e-2a0792932a80\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total C_CUSTKEY\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
   display_mode: CHART_MODE
