@@ -69,6 +69,42 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 99b57c3b-a40b-4783-bb3c-4822ff005ff7
+  - id: Viz_3
+    answer:
+      name: "Quarterly Order Date, Org Name Table"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Order Date] [Order Date].quarterly [Org Name]"
+      answer_columns:
+      - name: Quarter(Order Date)
+      - name: Org Name
+      table:
+        table_columns:
+        - column_id: Quarter(Order Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Org Name
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Quarter(Order Date)
+        - Org Name
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Quarter(Order Date)
+        - column_id: Org Name
+        axis_configs:
+        - x:
+          - Quarter(Order Date)
+          "y":
+          - Org Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"caf533d4-2dee-454c-9783-daa370e86e69\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Org Name\"],\"isOpposite\": false}},{\"id\": \"e3819455-eecb-4b7b-8953-2c5646799e2a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Org Name\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 566e19c1-3c15-4890-bf32-6d338ec84593
   layout:
     tiles:
     - visualization_id: Viz_1
