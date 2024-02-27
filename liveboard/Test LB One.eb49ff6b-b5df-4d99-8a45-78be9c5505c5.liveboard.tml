@@ -145,6 +145,12 @@ liveboard:
     viz_guid: 9094bd6c-afff-4be0-96a4-178a7183d069
     note_tile:
       html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><i><b><strong class=\"theme-module__editor-text-bold theme-module__editor-text-italic\" style=\"white-space: pre-wrap;\">This is a test note!</strong></b></i></p><p class=\"theme-module__editor-paragraph\"><img id=\"8d7a29d6-f283-42b0-9323-da65ab3b360d\" alt=\"UPLOAD\" style=\"height: inherit; width: 426px; max-width: 100%;\"></p>"
+  filters:
+  - column:
+    - Line Number
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
   layout:
     tabs:
     - name: Tab 1
