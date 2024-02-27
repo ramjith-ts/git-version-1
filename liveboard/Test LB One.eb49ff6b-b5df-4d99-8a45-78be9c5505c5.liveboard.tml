@@ -105,6 +105,42 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Org Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"caf533d4-2dee-454c-9783-daa370e86e69\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Org Name\"],\"isOpposite\": false}},{\"id\": \"e3819455-eecb-4b7b-8953-2c5646799e2a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Order Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Org Name\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 566e19c1-3c15-4890-bf32-6d338ec84593
+  - id: Viz_4
+    answer:
+      name: Total Quantity by Container
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Quantity] [Container]"
+      answer_columns:
+      - name: Total Quantity
+      - name: Container
+      table:
+        table_columns:
+        - column_id: Container
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Quantity
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Container
+        - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Container
+        - column_id: Total Quantity
+        axis_configs:
+        - x:
+          - Container
+          "y":
+          - Total Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2bd7d9de-dcce-4b1c-9c13-5c084a39f1a6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"f387bcb9-c66f-46ac-93cc-6c9f0afa32ca\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Container\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 34441680-40cb-4fd7-bbbf-f3c2f24f4db3
   layout:
     tabs:
     - name: Tab 1
@@ -125,5 +161,6 @@ liveboard:
         "y": 10
         height: 8
         width: 6
+      - visualization_id: Viz_4
     - name: Tab 2
       description: ""
