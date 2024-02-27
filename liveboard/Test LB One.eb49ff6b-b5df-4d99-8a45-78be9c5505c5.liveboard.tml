@@ -1,0 +1,41 @@
+guid: eb49ff6b-b5df-4d99-8a45-78be9c5505c5
+liveboard:
+  name: Test LB One
+  description: One description
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Supply Cost]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Supply Cost
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Supply Cost
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Supply Cost
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Supply Cost
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 33be3d6e-2ac4-446a-9b0d-1b04c8875060
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
