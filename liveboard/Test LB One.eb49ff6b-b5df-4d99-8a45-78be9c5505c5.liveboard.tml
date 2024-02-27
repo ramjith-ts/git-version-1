@@ -141,6 +141,10 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Container\",\"columnProperty\": {}},{\"columnId\": \"Total Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2bd7d9de-dcce-4b1c-9c13-5c084a39f1a6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Quantity\"],\"isOpposite\": false}},{\"id\": \"f387bcb9-c66f-46ac-93cc-6c9f0afa32ca\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Container\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Quantity\",\"color\": \"#747E8C\"}]}"
       display_mode: CHART_MODE
     viz_guid: 34441680-40cb-4fd7-bbbf-f3c2f24f4db3
+  - id: Viz_5
+    viz_guid: 9094bd6c-afff-4be0-96a4-178a7183d069
+    note_tile:
+      html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><i><b><strong class=\"theme-module__editor-text-bold theme-module__editor-text-italic\" style=\"white-space: pre-wrap;\">This is a test note!</strong></b></i></p><p class=\"theme-module__editor-paragraph\"><img id=\"8d7a29d6-f283-42b0-9323-da65ab3b360d\" alt=\"UPLOAD\" style=\"height: inherit; width: 426px; max-width: 100%;\"></p>"
   layout:
     tabs:
     - name: Tab 1
@@ -148,19 +152,24 @@ liveboard:
       tiles:
       - visualization_id: Viz_1
         x: 0
-        "y": 0
+        "y": 4
         height: 2
         width: 3
       - visualization_id: Viz_2
         x: 0
-        "y": 2
+        "y": 6
         height: 8
         width: 12
       - visualization_id: Viz_3
         x: 0
-        "y": 10
+        "y": 14
         height: 8
         width: 6
+      - visualization_id: Viz_5
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
     - name: Tab 2
       description: ""
       tiles:
