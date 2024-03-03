@@ -1,0 +1,38 @@
+guid: 9952808d-067b-4c4b-bc32-dc2c13b0649d
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: One
+      description: One description
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount]"
+      answer_columns:
+      - name: Total Discount
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1652c411-3239-42ca-9580-e60127f9823b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"8f6d9751-0992-4030-a3af-08414aeb09b2\",\"properties\": {\"axisType\": \"X\"}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 64213c73-de95-4ba1-ae6a-a9037e5006c2
+  - id: Viz_2
+    viz_guid: 2df681c4-bd20-4d5a-823d-dcb088379ab0
+    note_tile:
+      html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
