@@ -36,3 +36,7 @@ liveboard:
     viz_guid: 2df681c4-bd20-4d5a-823d-dcb088379ab0
     note_tile:
       html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  - id: Viz_3
+    viz_guid: 49fa9783-7427-4408-af84-3a9f7c68033c
+    note_tile:
+      html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
