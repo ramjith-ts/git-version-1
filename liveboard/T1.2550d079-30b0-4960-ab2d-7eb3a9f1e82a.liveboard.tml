@@ -44,3 +44,19 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ebb09dfb-c875-430a-9e04-02e1f517289f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\",\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"52ba9a18-a64b-4795-84ae-d9889f6bb81b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1f2504ba-4ce9-4106-b6f1-a8bc781fc74b
+  - id: Viz_2
+    viz_guid: 291e72a2-e74c-48d4-9f10-ab7a69533ca0
+    note_tile:
+      html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 4
+      height: 8
+      width: 6
+    - visualization_id: Viz_2
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
