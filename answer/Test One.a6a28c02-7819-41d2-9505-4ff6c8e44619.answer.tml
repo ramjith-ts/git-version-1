@@ -25,7 +25,7 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: PIVOT_TABLE
+    type: STACKED_BAR
     chart_columns:
     - column_id: Brand1
     - column_id: Total Discount
@@ -36,14 +36,6 @@ answer:
       "y":
       - Total Discount
       - Total Revenue
-    - "y":
-      - Total Discount
-      - Total Revenue
-    - x:
-      - Brand1
-      "y":
-      - Total Discount
-      - Total Revenue
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2f0e5e40-0c81-4f72-8c96-76e9a06bb844\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"2ee4cd04-cf89-4427-87cd-046982d20c5d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": true}},{\"id\": \"324183e2-4aa1-4b8e-afdb-2c8b76876ce7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#FF8142\"},{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Brand1\",\"columnProperty\": {}},{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ebb09dfb-c875-430a-9e04-02e1f517289f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\",\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"52ba9a18-a64b-4795-84ae-d9889f6bb81b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Brand1\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Discount\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Revenue\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
