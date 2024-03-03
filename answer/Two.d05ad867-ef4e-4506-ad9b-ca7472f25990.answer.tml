@@ -6,29 +6,38 @@ answer:
   - id: Parameters WS
     name: Parameters WS
     fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
-  search_query: "[Discount] [Order Total Price]"
+  search_query: "[Revenue] [Commit Date] [Commit Date].quarterly [Order Date] [Order Date].quarterly"
   answer_columns:
-  - name: Total Discount
-  - name: Total Order Total Price
+  - name: Total Revenue
+  - name: Quarter(Commit Date)
+  - name: Quarter(Order Date)
   table:
     table_columns:
-    - column_id: Total Discount
-      headline_aggregation: SUM
-    - column_id: Total Order Total Price
+    - column_id: Quarter(Commit Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Quarter(Order Date)
+      headline_aggregation: MIN-MAX
+    - column_id: Total Revenue
       headline_aggregation: SUM
     ordered_column_ids:
-    - Total Discount
-    - Total Order Total Price
+    - Quarter(Commit Date)
+    - Quarter(Order Date)
+    - Total Revenue
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: KPI
+    type: LINE
     chart_columns:
-    - column_id: Total Discount
-    - column_id: Total Order Total Price
+    - column_id: Quarter(Commit Date)
+    - column_id: Quarter(Order Date)
+    - column_id: Total Revenue
     axis_configs:
-    - "y":
-      - Total Discount
+    - x:
+      - Quarter(Commit Date)
+      "y":
+      - Total Revenue
+      color:
+      - Quarter(Order Date)
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Discount\",\"columnProperty\": {}},{\"columnId\": \"Total Order Total Price\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"0cc46638-c85d-4169-ba3f-197e602d55fd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Discount\"],\"isOpposite\": false}},{\"id\": \"51fa9fdf-d560-4845-a623-46ae9b6aeb27\",\"properties\": {\"axisType\": \"X\"}}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(Commit Date)\",\"columnProperty\": {}},{\"columnId\": \"Quarter(Order Date)\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"cd328e90-0dff-4e00-9783-3c2fd03a5744\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"9f02df16-d1d0-4acc-b12a-8d42b6dc0f41\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(Commit Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"q1 1992\",\"color\": \"#2E75F0\"},{\"serieName\": \"q2 1992\",\"color\": \"#48D1E0\"},{\"serieName\": \"q3 1992\",\"color\": \"#FCC838\"},{\"serieName\": \"q4 1992\",\"color\": \"#06BF7F\"},{\"serieName\": \"q1 1993\",\"color\": \"#8C62F5\"},{\"serieName\": \"q2 1993\",\"color\": \"#FF8142\"},{\"serieName\": \"q3 1993\",\"color\": \"#ABC7F9\"},{\"serieName\": \"q4 1993\",\"color\": \"#B5ECF2\"},{\"serieName\": \"q1 1994\",\"color\": \"#FDE9AF\"},{\"serieName\": \"q2 1994\",\"color\": \"#9BE5CB\"},{\"serieName\": \"q3 1994\",\"color\": \"#D1C0FB\"},{\"serieName\": \"q4 1994\",\"color\": \"#FFCCB3\"},{\"serieName\": \"q1 1995\",\"color\": \"#2359B6\"},{\"serieName\": \"q2 1995\",\"color\": \"#369FAA\"},{\"serieName\": \"q3 1995\",\"color\": \"#BF982A\"},{\"serieName\": \"q4 1995\",\"color\": \"#049160\"},{\"serieName\": \"q1 1996\",\"color\": \"#6A4ABA\"},{\"serieName\": \"q2 1996\",\"color\": \"#C26232\"},{\"serieName\": \"q3 1996\",\"color\": \"#71A1F4\"},{\"serieName\": \"q4 1996\",\"color\": \"#82DFE9\"},{\"serieName\": \"q1 1997\",\"color\": \"#FCD977\"},{\"serieName\": \"q2 1997\",\"color\": \"#56D3A8\"},{\"serieName\": \"q3 1997\",\"color\": \"#B094F8\"},{\"serieName\": \"q4 1997\",\"color\": \"#FFA97E\"},{\"serieName\": \"q1 1998\",\"color\": \"#163772\"},{\"serieName\": \"q2 1998\",\"color\": \"#22636B\"},{\"serieName\": \"q3 1998\",\"color\": \"#785F1A\"}]}"
   display_mode: CHART_MODE
