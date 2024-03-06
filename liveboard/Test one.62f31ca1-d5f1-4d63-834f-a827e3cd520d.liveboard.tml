@@ -1,0 +1,38 @@
+guid: 62f31ca1-d5f1-4d63-834f-a827e3cd520d
+liveboard:
+  name: Test one
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Line Number, Container"
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Line Number] [Container]"
+      answer_columns:
+      - name: Line Number
+      - name: Container
+      table:
+        table_columns:
+        - column_id: Line Number
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Container
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Line Number
+        - Container
+        client_state: ""
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Line Number
+        - column_id: Container
+        axis_configs:
+        - x:
+          - Line Number
+          "y":
+          - Container
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: a4fc838a-b18d-4677-a32d-da55700b276f
