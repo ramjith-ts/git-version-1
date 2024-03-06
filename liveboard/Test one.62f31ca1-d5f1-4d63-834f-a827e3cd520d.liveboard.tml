@@ -39,7 +39,7 @@ liveboard:
   - id: Viz_2
     viz_guid: 0faedfd4-7776-4178-9133-15ea78abe39f
     note_tile:
-      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test One</span></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test One</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
     tiles:
     - visualization_id: Viz_1
