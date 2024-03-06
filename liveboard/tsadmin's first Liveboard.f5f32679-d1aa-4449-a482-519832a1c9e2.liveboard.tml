@@ -41,7 +41,7 @@ liveboard:
   - id: Viz_2
     viz_guid: 264447b9-19af-4827-ab5d-24779271ff5c
     note_tile:
-      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"color: rgb(255, 255, 255); white-space: pre-wrap;\">Test One</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><i><em class=\"theme-module__editor-text-italic\" style=\"color: rgb(201, 240, 245); white-space: pre-wrap;\">Test Description</em></i></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(86, 211, 168);\"></div>"
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"color: rgb(255, 255, 255); white-space: pre-wrap;\">Test Title</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><i><em class=\"theme-module__editor-text-italic\" style=\"color: rgb(201, 240, 245); white-space: pre-wrap;\">Test Description</em></i></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(86, 211, 168);\"></div>"
   layout:
     tiles:
     - visualization_id: Viz_1
