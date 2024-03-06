@@ -1,6 +1,7 @@
 guid: 9952808d-067b-4c4b-bc32-dc2c13b0649d
 liveboard:
   name: tsadmin's first Liveboard
+  description: hgsdhjf
   visualizations:
   - id: Viz_1
     answer:
@@ -112,6 +113,14 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Name\",\"columnProperty\": {}},{\"columnId\": \"Total Product Cost\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a5a8cd75-9a36-4854-b1ee-03a7b1f8f5b7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Product Cost\"],\"isOpposite\": false}},{\"id\": \"1e0712f8-b742-4814-953e-00163bc610c9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Product Cost\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 06b8bed6-a5dd-4ec0-83e5-ea4f4f9d2a2d
+  - id: Viz_6
+    viz_guid: 995b5977-e8e0-4aba-924a-096dbc465d0e
+    note_tile:
+      html_parsed_string: ""
+  - id: Viz_7
+    viz_guid: 5483327a-289b-4195-a751-04c001c0f9de
+    note_tile:
+      html_parsed_string: ""
   layout:
     tabs:
     - name: test tab 1
@@ -140,9 +149,19 @@ liveboard:
       tiles:
       - visualization_id: Viz_2
         x: 0
-        "y": 0
+        "y": 8
         height: 8
         width: 6
+      - visualization_id: Viz_6
+        x: 0
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_7
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
     - name: Tab sd4
       description: ""
       tiles:
