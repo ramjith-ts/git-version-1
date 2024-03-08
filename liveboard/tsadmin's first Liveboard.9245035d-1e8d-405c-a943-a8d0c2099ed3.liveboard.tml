@@ -1,0 +1,36 @@
+guid: 9245035d-1e8d-405c-a943-a8d0c2099ed3
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Tax]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Tax
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Tax
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Tax
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Tax
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 5cd11b6b-cf4e-43cf-8bdc-93b57d874c2b
