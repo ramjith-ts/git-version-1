@@ -42,6 +42,33 @@ liveboard:
     viz_guid: 8ed79534-67f8-48e0-a266-50d03fc7acff
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Test One</span></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  - id: Viz_3
+    answer:
+      name: Total Order Total Price
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Order Total Price]"
+      answer_columns:
+      - name: Total Order Total Price
+      table:
+        table_columns:
+        - column_id: Total Order Total Price
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Order Total Price
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Order Total Price
+        axis_configs:
+        - "y":
+          - Total Order Total Price
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: f1ccdec3-3895-4392-9aa6-e2e66367c9df
   layout:
     tiles:
     - visualization_id: Viz_1
