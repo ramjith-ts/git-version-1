@@ -1,0 +1,41 @@
+guid: c634c9e9-e4d4-48bc-9b6a-aa5b78b51894
+liveboard:
+  name: LB Test Carousel 2
+  description: "3"
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Discount
+      tables:
+      - id: Parameters WS
+        name: Parameters WS
+        fqn: 540c4503-5bc7-4727-897b-f7f4d78dd2ff
+      search_query: "[Discount] [Revenue]"
+      answer_columns:
+      - name: Total Discount
+      - name: Total Revenue
+      table:
+        table_columns:
+        - column_id: Total Discount
+          headline_aggregation: SUM
+        - column_id: Total Revenue
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Total Discount
+        - Total Revenue
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Discount
+        - column_id: Total Revenue
+        axis_configs:
+        - "y":
+          - Total Discount
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: b7eb2264-3ebd-494e-b10d-d17b7daaac39
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
