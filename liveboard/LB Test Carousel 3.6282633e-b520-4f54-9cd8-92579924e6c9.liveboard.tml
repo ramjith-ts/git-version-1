@@ -1,7 +1,7 @@
 guid: 6282633e-b520-4f54-9cd8-92579924e6c9
 liveboard:
   name: LB Test Carousel 3
-  description: "1"
+  description: "2"
   visualizations:
   - id: Viz_1
     answer:
