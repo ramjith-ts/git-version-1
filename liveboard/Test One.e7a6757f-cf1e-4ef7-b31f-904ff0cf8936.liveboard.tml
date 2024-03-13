@@ -35,7 +35,19 @@ liveboard:
         client_state: ""
       display_mode: CHART_MODE
     viz_guid: 59694f9f-29a8-4174-97b7-d1c4b1b04df8
+  - id: Viz_2
+    viz_guid: f2af5e2f-db36-4217-9e79-82a4ca0c7b55
+    note_tile:
+      html_parsed_string: "<h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   layout:
     tiles:
     - visualization_id: Viz_1
-      size: EXTRA_SMALL
+      x: 0
+      "y": 4
+      height: 2
+      width: 3
+    - visualization_id: Viz_2
+      x: 0
+      "y": 0
+      height: 4
+      width: 3
