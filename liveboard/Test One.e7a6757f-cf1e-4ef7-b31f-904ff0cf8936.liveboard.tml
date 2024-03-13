@@ -42,7 +42,7 @@ liveboard:
   layout:
     tiles:
     - visualization_id: Viz_1
-      x: 0
+      x: 2
       "y": 0
       height: 2
       width: 3
