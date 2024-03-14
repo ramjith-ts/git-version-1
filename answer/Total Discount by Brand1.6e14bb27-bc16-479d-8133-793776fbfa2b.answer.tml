@@ -1,6 +1,7 @@
 guid: 6e14bb27-bc16-479d-8133-793776fbfa2b
 answer:
   name: Total Discount by Brand1
+  description: ok
   tables:
   - id: Parameters WS
     name: Parameters WS
