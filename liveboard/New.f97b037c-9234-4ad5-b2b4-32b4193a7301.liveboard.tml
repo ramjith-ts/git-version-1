@@ -1,0 +1,55 @@
+guid: f97b037c-9234-4ad5-b2b4-32b4193a7301
+liveboard:
+  name: New
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Lo Suppkey by Lo Orderpriority
+      tables:
+      - id: UNIQUE-ramjith.ramadas-64c6fc
+        name: UNIQUE-ramjith.ramadas-64c6fc
+        fqn: dd12b34c-6f5d-410f-80b6-9d5e4961f746
+      search_query: "[Lo Orderpriority] [Lo Suppkey]"
+      answer_columns:
+      - name: Lo Orderpriority
+      - name: Total Lo Suppkey
+      table:
+        table_columns:
+        - column_id: Lo Orderpriority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Lo Suppkey
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Lo Orderpriority
+        - Total Lo Suppkey
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Lo Orderpriority
+        - column_id: Total Lo Suppkey
+        axis_configs:
+        - x:
+          - Lo Orderpriority
+          "y":
+          - Total Lo Suppkey
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Lo Orderpriority\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Suppkey\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5da63203-d9cf-417f-afd0-e835f046895e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Suppkey\"],\"isOpposite\": false}},{\"id\": \"8c4787d4-e95a-43dd-b048-158ce7546f9a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Lo Orderpriority\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Suppkey\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d8ae8c93-31f9-4b2a-a60f-aebc12716ca7
+  filters:
+  - column:
+    - Lo Commitdate
+    is_mandatory: false
+    date_filter:
+      type: YESTERDAY
+      oper: =
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 6
