@@ -1,6 +1,7 @@
 guid: f97b037c-9234-4ad5-b2b4-32b4193a7301
 liveboard:
   name: New
+  description: Test
   visualizations:
   - id: Viz_1
     answer:
