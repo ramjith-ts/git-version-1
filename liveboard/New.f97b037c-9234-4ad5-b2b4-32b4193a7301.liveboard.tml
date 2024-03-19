@@ -1,7 +1,7 @@
 guid: f97b037c-9234-4ad5-b2b4-32b4193a7301
 liveboard:
   name: New
-  description: Test2
+  description: Test
   visualizations:
   - id: Viz_1
     answer:
@@ -12,8 +12,8 @@ liveboard:
         fqn: dd12b34c-6f5d-410f-80b6-9d5e4961f746
       search_query: "[Lo Orderpriority] [Lo Suppkey]"
       answer_columns:
-      - name: Lo Orderpriority
       - name: Total Lo Suppkey
+      - name: Lo Orderpriority
       table:
         table_columns:
         - column_id: Lo Orderpriority
