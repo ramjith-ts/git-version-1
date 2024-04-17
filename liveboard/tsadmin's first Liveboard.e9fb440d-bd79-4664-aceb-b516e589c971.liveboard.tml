@@ -1,0 +1,107 @@
+guid: e9fb440d-bd79-4664-aceb-b516e589c971
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Lo Quantity
+      tables:
+      - id: UNIQUE-ramjith.ramadas-UI-WS
+        name: UNIQUE-ramjith.ramadas-UI-WS
+        fqn: 249fb14f-a4a8-4d75-850a-068b351d5044
+      search_query: "[Lo Quantity] [Lo Shipmode] [Lo Orderdate] [Lo Orderdate].quarterly"
+      answer_columns:
+      - name: Lo Shipmode
+      - name: Quarter(Lo Orderdate)
+      - name: Total Lo Quantity
+      table:
+        table_columns:
+        - column_id: Lo Shipmode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Quarter(Lo Orderdate)
+          headline_aggregation: MIN-MAX
+        - column_id: Total Lo Quantity
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Lo Shipmode
+        - column_id: Quarter(Lo Orderdate)
+        - column_id: Total Lo Quantity
+        axis_configs:
+        - "y":
+          - Total Lo Quantity
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Quantity\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d6111f8b-435d-470e-99b7-999f56b1a65f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Quantity\"],\"isOpposite\": false}},{\"id\": \"50e3fcfb-935e-4351-baa3-31a391d95372\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Quantity\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 6f6409f1-e0e2-4de4-baa9-22de976901b1
+  - id: Viz_2
+    answer:
+      name: Total Lo Linenumber
+      tables:
+      - id: UNIQUE-ramjith.ramadas-UI-WS
+        name: UNIQUE-ramjith.ramadas-UI-WS
+        fqn: 249fb14f-a4a8-4d75-850a-068b351d5044
+      search_query: "[Lo Linenumber] [Lo Revenue] [Lo Orderpriority]"
+      answer_columns:
+      - name: Lo Orderpriority
+      - name: Total Lo Linenumber
+      - name: Total Lo Revenue
+      table:
+        table_columns:
+        - column_id: Lo Orderpriority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Lo Linenumber
+          headline_aggregation: SUM
+        - column_id: Total Lo Revenue
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Lo Orderpriority
+        - column_id: Total Lo Linenumber
+        - column_id: Total Lo Revenue
+        axis_configs:
+        - "y":
+          - Total Lo Linenumber
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Lo Linenumber\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d16593d7-0233-4f46-8854-69ab9590604f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Linenumber\"],\"isOpposite\": false}},{\"id\": \"06eac9f1-e009-4451-b085-452573dcf91d\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Linenumber\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total Lo Revenue\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8bb05813-1abd-4a73-8165-bc28f4d2a831
+  - id: Viz_3
+    answer:
+      name: Total Lo Ordtotalprice by Quarterly Lo Orderdate
+      tables:
+      - id: UNIQUE-ramjith.ramadas-UI-WS
+        name: UNIQUE-ramjith.ramadas-UI-WS
+        fqn: 249fb14f-a4a8-4d75-850a-068b351d5044
+      search_query: "[Lo Revenue] [Lo Commitdate] [Lo Commitdate].weekly"
+      answer_columns:
+      - name: Total Lo Revenue
+      - name: Week(Lo Commitdate)
+      table:
+        table_columns:
+        - column_id: Total Lo Revenue
+          headline_aggregation: SUM
+        - column_id: Week(Lo Commitdate)
+          headline_aggregation: MIN-MAX
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total Lo Revenue
+        - column_id: Week(Lo Commitdate)
+        axis_configs:
+        - x:
+          - Week(Lo Commitdate)
+          "y":
+          - Total Lo Revenue
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Week(Lo Commitdate)\",\"columnProperty\": {}},{\"columnId\": \"Total Lo Revenue\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f2c7dcc5-f8b4-4c6c-8108-0864e34f4302\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Lo Revenue\"],\"isOpposite\": false}},{\"id\": \"eb1d4f94-8c95-4ce4-abfd-c18597252896\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Lo Commitdate)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Lo Revenue\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1574305a-e41f-4ef5-847b-96283b62c3a6
