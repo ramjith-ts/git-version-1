@@ -1,0 +1,32 @@
+guid: 21d0c725-60ad-4020-8be1-bf4065d914aa
+answer:
+  name: "API, Org Id"
+  tables:
+  - id: Credit Usage Worksheet
+    name: Credit Usage Worksheet
+    fqn: 965b5f46-7162-4c16-8aac-7ab26f313b25
+  search_query: "[API] [Org Id]"
+  answer_columns:
+  - name: API
+  - name: Org Id
+  table:
+    table_columns:
+    - column_id: API
+      show_headline: false
+    - column_id: Org Id
+      show_headline: false
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: SCATTER
+    chart_columns:
+    - column_id: API
+    - column_id: Org Id
+    axis_configs:
+    - x:
+      - API
+      "y":
+      - Org Id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"API\",\"columnProperty\": {}},{\"columnId\": \"Org Id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ca4d9bb1-a70e-4599-bfcb-ddf9c2ac86c4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Org Id\"],\"isOpposite\": false}},{\"id\": \"55e86205-a16a-4d80-ac25-52b8558f1e95\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"API\"]}}]}"
+  display_mode: TABLE_MODE
