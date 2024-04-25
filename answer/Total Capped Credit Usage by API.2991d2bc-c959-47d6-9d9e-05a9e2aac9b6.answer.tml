@@ -1,6 +1,6 @@
 guid: 2991d2bc-c959-47d6-9d9e-05a9e2aac9b6
 answer:
-  name: Total Capped Credit Usage by API version 2
+  name: Total Capped Credit Usage by API
   tables:
   - id: Credit Usage Worksheet
     name: Credit Usage Worksheet
