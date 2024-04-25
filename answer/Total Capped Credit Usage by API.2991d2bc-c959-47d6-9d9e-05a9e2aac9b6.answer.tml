@@ -1,0 +1,32 @@
+guid: 2991d2bc-c959-47d6-9d9e-05a9e2aac9b6
+answer:
+  name: Total Capped Credit Usage by API
+  tables:
+  - id: Credit Usage Worksheet
+    name: Credit Usage Worksheet
+    fqn: 965b5f46-7162-4c16-8aac-7ab26f313b25
+  search_query: "[Capped Credit Usage] [API]"
+  answer_columns:
+  - name: API
+  - name: Total Capped Credit Usage
+  table:
+    table_columns:
+    - column_id: API
+      show_headline: false
+    - column_id: Total Capped Credit Usage
+      show_headline: false
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: API
+    - column_id: Total Capped Credit Usage
+    axis_configs:
+    - x:
+      - API
+      "y":
+      - Total Capped Credit Usage
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"API\",\"columnProperty\": {}},{\"columnId\": \"Total Capped Credit Usage\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7e2fd807-9413-4c05-810a-b3a7c6a709de\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Capped Credit Usage\"],\"isOpposite\": false}},{\"id\": \"5718040b-4dc1-4ef7-b9ab-7ddfbec5f387\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"API\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Capped Credit Usage\",\"color\": \"#06BF7F\"}]}"
+  display_mode: CHART_MODE
