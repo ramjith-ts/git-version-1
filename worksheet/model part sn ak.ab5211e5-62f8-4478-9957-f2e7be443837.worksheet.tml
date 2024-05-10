@@ -31,7 +31,7 @@ model:
     column_id: PART::P_MFGR
     properties:
       column_type: ATTRIBUTE
-  - name: p_section
+  - name: P_CATEGORY
     column_id: PART::P_CATEGORY
     properties:
       column_type: ATTRIBUTE
