@@ -42,18 +42,18 @@ liveboard:
       - id: model part sn ak
         name: model part sn ak
         fqn: ab5211e5-62f8-4478-9957-f2e7be443837
-      search_query: "[P_TYPE] [P_PARTKEY] [P_NAME]"
+      search_query: "[P_TYPE] [P_NAME] [P_SIZE]"
       answer_columns:
       - name: P_NAME
       - name: P_TYPE
-      - name: Total P_PARTKEY
+      - name: Total P_SIZE
       table:
         table_columns:
         - column_id: P_NAME
           headline_aggregation: COUNT_DISTINCT
         - column_id: P_TYPE
           headline_aggregation: COUNT_DISTINCT
-        - column_id: Total P_PARTKEY
+        - column_id: Total P_SIZE
           headline_aggregation: SUM
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -62,13 +62,13 @@ liveboard:
         chart_columns:
         - column_id: P_NAME
         - column_id: P_TYPE
-        - column_id: Total P_PARTKEY
+        - column_id: Total P_SIZE
         axis_configs:
         - x:
           - P_NAME
           "y":
-          - Total P_PARTKEY
+          - Total P_SIZE
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total P_PARTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8a5a3a89-5cc9-4f23-8fae-fa315dbfbbdd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_PARTKEY\"],\"isOpposite\": false}},{\"id\": \"09b58f63-2b0b-4bd5-a5c0-92d8d10ead8f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total P_PARTKEY\",\"color\": \"#FF8142\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total P_SIZE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"aeb3d556-0f93-442f-83f8-13a8703b517c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_SIZE\"],\"isOpposite\": false}},{\"id\": \"5cb5c754-27fa-4679-8ac7-46e001558a3e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"42a2dfe7-8785-4ce7-a493-f1c562dde804\",\"color\": \"#FF8142\"},{\"serieName\": \"Total P_SIZE\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: a50f62d0-f8a3-4c51-b97b-9678222a189f
