@@ -5,7 +5,7 @@ answer:
   - id: ws chasmtrap sn ak
     name: ws chasmtrap sn ak
     fqn: 8669387f-e8d1-468e-926f-d6bde27c6015
-  search_query: "[LO_REVENUE] [P_NAME] [S_NATION] [LO_ORDERDATE] [LO_ORDERDATE].monthly [LO_ORDERPRIORITY] [LO_TAX] [LO_DISCOUNT]"
+  search_query: "[LO_REVENUE] [P_NAME] [S_NATION] [LO_ORDERDATE] [LO_ORDERDATE].monthly [LO_ORDERDATE].1993 [LO_ORDERPRIORITY] [LO_TAX] [LO_DISCOUNT]"
   answer_columns:
   - name: LO_ORDERPRIORITY
   - name: Month(LO_ORDERDATE)
