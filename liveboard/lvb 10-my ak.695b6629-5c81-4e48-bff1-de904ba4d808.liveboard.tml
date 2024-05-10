@@ -93,6 +93,7 @@ liveboard:
         - column_id: P_TYPE
           headline_aggregation: COUNT_DISTINCT
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"P_COLOR\",\"columnProperty\": {}},{\"columnId\": \"P_CONTAINER\",\"columnProperty\": {}},{\"columnId\": \"P_TYPE\",\"columnProperty\": {}}]}"
       chart:
         type: SCATTER
         chart_columns:
@@ -107,38 +108,14 @@ liveboard:
           color:
           - P_CONTAINER
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"P_CONTAINER\",\"columnProperty\": {}},{\"columnId\": \"P_TYPE\",\"columnProperty\": {}},{\"columnId\": \"P_COLOR\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"17ac4142-9ee7-4ead-ba98-e0badae959ab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"P_TYPE\"],\"isOpposite\": false}},{\"id\": \"1c4e0f8e-aa96-4edf-9e8c-a76bf4af32f5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_COLOR\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: 27018844-2f54-49fb-aa24-ab8594da5b42
-  - id: Viz_4
-    answer:
-      name: Total LO_REVENUE by Weekly LO_COMMITDATE - Cc-exte
-      tables:
-      - id: ws chasmtrap sn ak
-        name: ws chasmtrap sn ak
-        fqn: 8669387f-e8d1-468e-926f-d6bde27c6015
-      search_query: "[LO_REVENUE] [LO_COMMITDATE] [LO_COMMITDATE].weekly"
-      answer_columns:
-      - name: Total LO_REVENUE
-      - name: Week(LO_COMMITDATE)
-      table:
-        table_columns:
-        - column_id: Total LO_REVENUE
-          headline_aggregation: SUM
-        - column_id: Week(LO_COMMITDATE)
-          headline_aggregation: MIN-MAX
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Total LO_REVENUE
-        - column_id: Week(LO_COMMITDATE)
-        axis_configs:
-        - x:
-          - Week(LO_COMMITDATE)
-          "y":
-          - Total LO_REVENUE
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Week(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6bfa2a35-d177-4623-bb39-33654e27d6eb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"0aacb9ae-f338-4042-84a8-e0c114e64a9b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#8C62F5\"}]}"
-      display_mode: CHART_MODE
-    viz_guid: 5ca53f25-dcdb-48d1-8352-33f4af4b481a
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: LARGE
