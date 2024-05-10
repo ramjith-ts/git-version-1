@@ -9,13 +9,49 @@ liveboard:
       - id: model part sn ak
         name: model part sn ak
         fqn: ab5211e5-62f8-4478-9957-f2e7be443837
-      search_query: "[P_PARTKEY] [P_CATEGORY]"
+      search_query: "[P_PARTKEY] [p_section]"
       answer_columns:
-      - name: P_CATEGORY
+      - name: Total P_PARTKEY
+      - name: p_section
+      table:
+        table_columns:
+        - column_id: Total P_PARTKEY
+          headline_aggregation: SUM
+        - column_id: p_section
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total P_PARTKEY
+        - column_id: p_section
+        axis_configs:
+        - x:
+          - p_section
+          "y":
+          - Total P_PARTKEY
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"p_section\",\"columnProperty\": {}},{\"columnId\": \"Total P_PARTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8484e074-49c3-4cfc-a8f2-b1f4674346ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_PARTKEY\"],\"isOpposite\": false}},{\"id\": \"295f7d4a-29c4-486d-822f-338051f71dde\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"p_section\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total P_PARTKEY\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 728dc955-c353-44ab-8d7b-fc060cb361dd
+  - id: Viz_2
+    answer:
+      name: Total P_PARTKEY by P_NAME
+      tables:
+      - id: model part sn ak
+        name: model part sn ak
+        fqn: ab5211e5-62f8-4478-9957-f2e7be443837
+      search_query: "[P_TYPE] [P_PARTKEY] [P_NAME]"
+      answer_columns:
+      - name: P_NAME
+      - name: P_TYPE
       - name: Total P_PARTKEY
       table:
         table_columns:
-        - column_id: P_CATEGORY
+        - column_id: P_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: P_TYPE
           headline_aggregation: COUNT_DISTINCT
         - column_id: Total P_PARTKEY
           headline_aggregation: SUM
@@ -24,14 +60,15 @@ liveboard:
       chart:
         type: COLUMN
         chart_columns:
-        - column_id: P_CATEGORY
+        - column_id: P_NAME
+        - column_id: P_TYPE
         - column_id: Total P_PARTKEY
         axis_configs:
         - x:
-          - P_CATEGORY
+          - P_NAME
           "y":
           - Total P_PARTKEY
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_CATEGORY\",\"columnProperty\": {}},{\"columnId\": \"Total P_PARTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8484e074-49c3-4cfc-a8f2-b1f4674346ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_PARTKEY\"],\"isOpposite\": false}},{\"id\": \"295f7d4a-29c4-486d-822f-338051f71dde\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_CATEGORY\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total P_PARTKEY\",\"color\": \"#48D1E0\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total P_PARTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8a5a3a89-5cc9-4f23-8fae-fa315dbfbbdd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_PARTKEY\"],\"isOpposite\": false}},{\"id\": \"09b58f63-2b0b-4bd5-a5c0-92d8d10ead8f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total P_PARTKEY\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
-    viz_guid: 728dc955-c353-44ab-8d7b-fc060cb361dd
+    viz_guid: a50f62d0-f8a3-4c51-b97b-9678222a189f
