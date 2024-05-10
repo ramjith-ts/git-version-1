@@ -1,0 +1,32 @@
+guid: 38378e7f-2cb3-4b27-8301-462dae1a4bb7
+answer:
+  name: Total P_PARTKEY by P_CATEGORY
+  tables:
+  - id: model part sn ak
+    name: model part sn ak
+    fqn: ab5211e5-62f8-4478-9957-f2e7be443837
+  search_query: "[P_PARTKEY] [P_CATEGORY]"
+  answer_columns:
+  - name: P_CATEGORY
+  - name: Total P_PARTKEY
+  table:
+    table_columns:
+    - column_id: P_CATEGORY
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total P_PARTKEY
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: P_CATEGORY
+    - column_id: Total P_PARTKEY
+    axis_configs:
+    - x:
+      - P_CATEGORY
+      "y":
+      - Total P_PARTKEY
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_CATEGORY\",\"columnProperty\": {}},{\"columnId\": \"Total P_PARTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8484e074-49c3-4cfc-a8f2-b1f4674346ba\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total P_PARTKEY\"],\"isOpposite\": false}},{\"id\": \"295f7d4a-29c4-486d-822f-338051f71dde\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_CATEGORY\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total P_PARTKEY\",\"color\": \"#48D1E0\"}]}"
+  display_mode: CHART_MODE
