@@ -1,0 +1,262 @@
+guid: 8669387f-e8d1-468e-926f-d6bde27c6015
+worksheet:
+  name: ws chasmtrap sn ak
+  tables:
+  - name: LINEORDER
+    fqn: f4a76694-c536-4719-ad4b-2d0bfa603e91
+  - name: PART
+    fqn: 0e73d9fc-d5c2-4ec0-bfe5-93299dc41d4b
+  - name: SUPPLIER
+    fqn: b3e847c9-b6d2-485a-82f6-33b44e82a93c
+  joins:
+  - name: PART_to_LINEORDER
+    source: PART
+    destination: LINEORDER
+    type: INNER
+    is_one_to_one: false
+  - name: SUPPLIER_to_LINEORDER
+    source: SUPPLIER
+    destination: LINEORDER
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+    join_path:
+    - join:
+      - SUPPLIER_to_LINEORDER
+    - join:
+      - PART_to_LINEORDER
+  - id: PART_1
+    table: PART
+    join_path:
+    - {}
+  - id: SUPPLIER_1
+    table: SUPPLIER
+    join_path:
+    - {}
+  worksheet_columns:
+  - name: LO_ORDERKEY
+    column_id: LINEORDER_1::LO_ORDERKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - order identifier
+      - order number
+      synonym_type: AUTO_GENERATED
+  - name: LO_LINENUMBER
+    column_id: LINEORDER_1::LO_LINENUMBER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - line identifier
+      - line number
+      synonym_type: AUTO_GENERATED
+  - name: LO_CUSTKEY
+    column_id: LINEORDER_1::LO_CUSTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - customer identifier
+      - customer number
+      synonym_type: AUTO_GENERATED
+  - name: LO_ORDERDATE
+    column_id: LINEORDER_1::LO_ORDERDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - order date
+      - order day
+      synonym_type: AUTO_GENERATED
+  - name: LO_ORDERPRIORITY
+    column_id: LINEORDER_1::LO_ORDERPRIORITY
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - order priority
+      - order importance
+      synonym_type: AUTO_GENERATED
+  - name: LO_QUANTITY
+    column_id: LINEORDER_1::LO_QUANTITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - amount
+      - quantity
+      synonym_type: AUTO_GENERATED
+  - name: LO_EXTENDEDPRICE
+    column_id: LINEORDER_1::LO_EXTENDEDPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - extended cost
+      - extended price
+      synonym_type: AUTO_GENERATED
+  - name: LO_ORDTOTALPRICE
+    column_id: LINEORDER_1::LO_ORDTOTALPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - order total price
+      - order total cost
+      synonym_type: AUTO_GENERATED
+  - name: LO_DISCOUNT
+    column_id: LINEORDER_1::LO_DISCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - discount
+      - reduction
+      synonym_type: AUTO_GENERATED
+  - name: LO_REVENUE
+    column_id: LINEORDER_1::LO_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - revenue
+      - income
+      synonym_type: AUTO_GENERATED
+  - name: LO_SUPPLYCOST
+    column_id: LINEORDER_1::LO_SUPPLYCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - supply cost
+      - supply price
+      synonym_type: AUTO_GENERATED
+  - name: LO_TAX
+    column_id: LINEORDER_1::LO_TAX
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - tax
+      - levy
+      synonym_type: AUTO_GENERATED
+  - name: LO_COMMITDATE
+    column_id: LINEORDER_1::LO_COMMITDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - commit date
+      - commit day
+      calendar: cc-exte
+      synonym_type: AUTO_GENERATED
+  - name: LO_SHIPMODE
+    column_id: LINEORDER_1::LO_SHIPMODE
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - shipment mode
+      - transport mode
+      synonym_type: AUTO_GENERATED
+  - name: P_PARTKEY
+    column_id: PART_1::P_PARTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - part identifier
+      - part number
+      synonym_type: AUTO_GENERATED
+  - name: P_NAME
+    column_id: PART_1::P_NAME
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - name
+      - title
+      synonym_type: AUTO_GENERATED
+  - name: P_COLOR
+    column_id: PART_1::P_COLOR
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - color
+      - hue
+      synonym_type: AUTO_GENERATED
+  - name: P_TYPE
+    column_id: PART_1::P_TYPE
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - type
+      - style
+      synonym_type: AUTO_GENERATED
+  - name: P_SIZE
+    column_id: PART_1::P_SIZE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - size
+      - dimension
+      synonym_type: AUTO_GENERATED
+  - name: P_CONTAINER
+    column_id: PART_1::P_CONTAINER
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - container
+      - packaging
+      synonym_type: AUTO_GENERATED
+  - name: S_SUPPKEY
+    column_id: SUPPLIER_1::S_SUPPKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - supplier identifier
+      - supplier number
+      synonym_type: AUTO_GENERATED
+  - name: S_NATION
+    column_id: SUPPLIER_1::S_NATION
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - nation
+      - country
+      synonym_type: AUTO_GENERATED
+  - name: S_REGION
+    column_id: SUPPLIER_1::S_REGION
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - region
+      - area
+      synonym_type: AUTO_GENERATED
+  - name: S_PHONE
+    column_id: SUPPLIER_1::S_PHONE
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - telephone
+      - phone number
+      synonym_type: AUTO_GENERATED
+  properties:
+    is_bypass_rls: false
+    join_progressive: true

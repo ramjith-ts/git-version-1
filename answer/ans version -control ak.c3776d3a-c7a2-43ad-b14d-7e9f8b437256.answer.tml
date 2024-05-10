@@ -1,0 +1,38 @@
+guid: c3776d3a-c7a2-43ad-b14d-7e9f8b437256
+answer:
+  name: ans version -control ak
+  tables:
+  - id: ws chasmtrap sn ak
+    name: ws chasmtrap sn ak
+    fqn: 8669387f-e8d1-468e-926f-d6bde27c6015
+  search_query: "[LO_REVENUE] [P_NAME] [S_NATION]"
+  answer_columns:
+  - name: P_NAME
+  - name: S_NATION
+  - name: Total LO_REVENUE
+  table:
+    table_columns:
+    - column_id: P_NAME
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: S_NATION
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total LO_REVENUE
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: STACKED_COLUMN
+    chart_columns:
+    - column_id: P_NAME
+    - column_id: S_NATION
+    - column_id: Total LO_REVENUE
+    axis_configs:
+    - x:
+      - P_NAME
+      "y":
+      - Total LO_REVENUE
+      color:
+      - S_NATION
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_NAME\",\"columnProperty\": {}},{\"columnId\": \"S_NATION\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"58e153c4-92ab-471d-bdd9-54c3aff11903\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"2fc4f92e-7b78-45e7-8e8d-c744b4c43bf7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"algeria\",\"color\": \"#47515F\"},{\"serieName\": \"argentina\",\"color\": \"#BEC6D0\"},{\"serieName\": \"brazil\",\"color\": \"#747E8C\"},{\"serieName\": \"canada\",\"color\": \"#C26232\"},{\"serieName\": \"china\",\"color\": \"#FFCCB3\"},{\"serieName\": \"egypt\",\"color\": \"#FF8142\"},{\"serieName\": \"ethiopia\",\"color\": \"#6A4ABA\"},{\"serieName\": \"france\",\"color\": \"#D1C0FB\"},{\"serieName\": \"germany\",\"color\": \"#8C62F5\"},{\"serieName\": \"india\",\"color\": \"#56D3A8\"},{\"serieName\": \"indonesia\",\"color\": \"#049160\"},{\"serieName\": \"iran\",\"color\": \"#9BE5CB\"},{\"serieName\": \"iraq\",\"color\": \"#06BF7F\"},{\"serieName\": \"japan\",\"color\": \"#FCD977\"},{\"serieName\": \"jordan\",\"color\": \"#BF982A\"},{\"serieName\": \"kenya\",\"color\": \"#FDE9AF\"},{\"serieName\": \"morocco\",\"color\": \"#FCC838\"},{\"serieName\": \"mozambique\",\"color\": \"#82DFE9\"},{\"serieName\": \"peru\",\"color\": \"#369FAA\"},{\"serieName\": \"romania\",\"color\": \"#B5ECF2\"},{\"serieName\": \"russia\",\"color\": \"#48D1E0\"},{\"serieName\": \"saudi arabia\",\"color\": \"#71A1F4\"},{\"serieName\": \"united kingdom\",\"color\": \"#2359B6\"},{\"serieName\": \"united states\",\"color\": \"#ABC7F9\"},{\"serieName\": \"vietnam\",\"color\": \"#2E75F0\"}]}"
+  display_mode: CHART_MODE
