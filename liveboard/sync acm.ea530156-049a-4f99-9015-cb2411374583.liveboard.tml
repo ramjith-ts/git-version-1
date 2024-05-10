@@ -1,0 +1,93 @@
+guid: ea530156-049a-4f99-9015-cb2411374583
+liveboard:
+  name: sync acm
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total LO_CUSTKEY by C_NAME
+      tables:
+      - id: acmws1
+        name: acmws1
+        fqn: f734b1f6-d88b-4ef8-8ecf-ae6ba956f503
+      search_query: "[C_NAME] [LO_CUSTKEY]"
+      answer_columns:
+      - name: C_NAME
+      - name: Total LO_CUSTKEY
+      table:
+        table_columns:
+        - column_id: C_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total LO_CUSTKEY
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: C_NAME
+        - column_id: Total LO_CUSTKEY
+        axis_configs:
+        - x:
+          - C_NAME
+          "y":
+          - Total LO_CUSTKEY
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total LO_CUSTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"63ca6cb4-ee62-49be-ad20-d4de746a4dd4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"fb1e1178-c5dc-430b-a40d-b9741bda2646\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_CUSTKEY\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 8951ed9c-57a6-4900-b427-e38330921644
+  - id: Viz_2
+    answer:
+      name: Total LO_CUSTKEY by C_NAME
+      tables:
+      - id: acmws1
+        name: acmws1
+        fqn: f734b1f6-d88b-4ef8-8ecf-ae6ba956f503
+      search_query: "[C_NAME] [LO_CUSTKEY]"
+      answer_columns:
+      - name: C_NAME
+      - name: Total LO_CUSTKEY
+      table:
+        table_columns:
+        - column_id: C_NAME
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total LO_CUSTKEY
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: C_NAME
+        - column_id: Total LO_CUSTKEY
+        axis_configs:
+        - x:
+          - C_NAME
+          "y":
+          - Total LO_CUSTKEY
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"C_NAME\",\"columnProperty\": {}},{\"columnId\": \"Total LO_CUSTKEY\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"63ca6cb4-ee62-49be-ad20-d4de746a4dd4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_CUSTKEY\"],\"isOpposite\": false}},{\"id\": \"fb1e1178-c5dc-430b-a40d-b9741bda2646\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_CUSTKEY\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 06f33f40-1c2a-4392-8df2-7be90f9b8150
+  filters:
+  - column:
+    - C_NAME
+    oper: in
+    values:
+    - customer#000000016
+    - customer#000000028
+    - customer#000000046
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - C_CUSTKEY
+    oper: <
+    values:
+    - "150"
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
