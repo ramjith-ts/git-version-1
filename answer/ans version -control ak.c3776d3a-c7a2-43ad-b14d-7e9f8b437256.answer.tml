@@ -5,34 +5,50 @@ answer:
   - id: ws chasmtrap sn ak
     name: ws chasmtrap sn ak
     fqn: 8669387f-e8d1-468e-926f-d6bde27c6015
-  search_query: "[LO_REVENUE] [P_NAME] [S_NATION]"
+  search_query: "[LO_REVENUE] [P_NAME] [S_NATION] [LO_ORDERDATE] [LO_ORDERDATE].monthly [LO_ORDERPRIORITY] [LO_TAX] [LO_DISCOUNT]"
   answer_columns:
+  - name: LO_ORDERPRIORITY
+  - name: Month(LO_ORDERDATE)
   - name: P_NAME
   - name: S_NATION
+  - name: Total LO_DISCOUNT
   - name: Total LO_REVENUE
+  - name: Total LO_TAX
   table:
     table_columns:
+    - column_id: LO_ORDERPRIORITY
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Month(LO_ORDERDATE)
+      headline_aggregation: MIN-MAX
     - column_id: P_NAME
       headline_aggregation: COUNT_DISTINCT
     - column_id: S_NATION
       headline_aggregation: COUNT_DISTINCT
+    - column_id: Total LO_DISCOUNT
+      headline_aggregation: SUM
     - column_id: Total LO_REVENUE
+      headline_aggregation: SUM
+    - column_id: Total LO_TAX
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: STACKED_COLUMN
+    type: COLUMN
     chart_columns:
+    - column_id: LO_ORDERPRIORITY
+    - column_id: Month(LO_ORDERDATE)
     - column_id: P_NAME
     - column_id: S_NATION
+    - column_id: Total LO_DISCOUNT
     - column_id: Total LO_REVENUE
+    - column_id: Total LO_TAX
     axis_configs:
     - x:
-      - P_NAME
+      - Month(LO_ORDERDATE)
       "y":
       - Total LO_REVENUE
-      color:
-      - S_NATION
+      - Total LO_TAX
+      - Total LO_DISCOUNT
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"P_NAME\",\"columnProperty\": {}},{\"columnId\": \"S_NATION\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"58e153c4-92ab-471d-bdd9-54c3aff11903\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"2fc4f92e-7b78-45e7-8e8d-c744b4c43bf7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"P_NAME\"]}}],\"systemSeriesColors\": [{\"serieName\": \"algeria\",\"color\": \"#47515F\"},{\"serieName\": \"argentina\",\"color\": \"#BEC6D0\"},{\"serieName\": \"brazil\",\"color\": \"#747E8C\"},{\"serieName\": \"canada\",\"color\": \"#C26232\"},{\"serieName\": \"china\",\"color\": \"#FFCCB3\"},{\"serieName\": \"egypt\",\"color\": \"#FF8142\"},{\"serieName\": \"ethiopia\",\"color\": \"#6A4ABA\"},{\"serieName\": \"france\",\"color\": \"#D1C0FB\"},{\"serieName\": \"germany\",\"color\": \"#8C62F5\"},{\"serieName\": \"india\",\"color\": \"#56D3A8\"},{\"serieName\": \"indonesia\",\"color\": \"#049160\"},{\"serieName\": \"iran\",\"color\": \"#9BE5CB\"},{\"serieName\": \"iraq\",\"color\": \"#06BF7F\"},{\"serieName\": \"japan\",\"color\": \"#FCD977\"},{\"serieName\": \"jordan\",\"color\": \"#BF982A\"},{\"serieName\": \"kenya\",\"color\": \"#FDE9AF\"},{\"serieName\": \"morocco\",\"color\": \"#FCC838\"},{\"serieName\": \"mozambique\",\"color\": \"#82DFE9\"},{\"serieName\": \"peru\",\"color\": \"#369FAA\"},{\"serieName\": \"romania\",\"color\": \"#B5ECF2\"},{\"serieName\": \"russia\",\"color\": \"#48D1E0\"},{\"serieName\": \"saudi arabia\",\"color\": \"#71A1F4\"},{\"serieName\": \"united kingdom\",\"color\": \"#2359B6\"},{\"serieName\": \"united states\",\"color\": \"#ABC7F9\"},{\"serieName\": \"vietnam\",\"color\": \"#2E75F0\"}]}"
-  display_mode: CHART_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}},{\"columnId\": \"Month(LO_ORDERDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_TAX\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8a45c3a1-cc00-483b-b4ed-b4f4398e1db2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"61bb4f13-46f5-4e93-aa86-859f7c28dcad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_TAX\"],\"isOpposite\": true}},{\"id\": \"55b436be-ab13-4e0d-b393-37c27ca393dc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": true}},{\"id\": \"429a7fd2-573c-4ada-a435-a2270b63ce92\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(LO_ORDERDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"algeria\",\"color\": \"#47515F\"},{\"serieName\": \"argentina\",\"color\": \"#BEC6D0\"},{\"serieName\": \"brazil\",\"color\": \"#747E8C\"},{\"serieName\": \"canada\",\"color\": \"#C26232\"},{\"serieName\": \"china\",\"color\": \"#FFCCB3\"},{\"serieName\": \"egypt\",\"color\": \"#FF8142\"},{\"serieName\": \"ethiopia\",\"color\": \"#6A4ABA\"},{\"serieName\": \"france\",\"color\": \"#D1C0FB\"},{\"serieName\": \"germany\",\"color\": \"#8C62F5\"},{\"serieName\": \"india\",\"color\": \"#56D3A8\"},{\"serieName\": \"indonesia\",\"color\": \"#049160\"},{\"serieName\": \"iran\",\"color\": \"#9BE5CB\"},{\"serieName\": \"iraq\",\"color\": \"#06BF7F\"},{\"serieName\": \"japan\",\"color\": \"#FCD977\"},{\"serieName\": \"jordan\",\"color\": \"#BF982A\"},{\"serieName\": \"kenya\",\"color\": \"#FDE9AF\"},{\"serieName\": \"morocco\",\"color\": \"#FCC838\"},{\"serieName\": \"mozambique\",\"color\": \"#82DFE9\"},{\"serieName\": \"peru\",\"color\": \"#369FAA\"},{\"serieName\": \"romania\",\"color\": \"#B5ECF2\"},{\"serieName\": \"russia\",\"color\": \"#48D1E0\"},{\"serieName\": \"saudi arabia\",\"color\": \"#71A1F4\"},{\"serieName\": \"united kingdom\",\"color\": \"#2359B6\"},{\"serieName\": \"united states\",\"color\": \"#ABC7F9\"},{\"serieName\": \"vietnam\",\"color\": \"#2E75F0\"}]}"
+  display_mode: TABLE_MODE
