@@ -1,0 +1,32 @@
+guid: 739dd9ce-d1a7-4780-bb18-8341ec2fb0e3
+answer:
+  name: Total sales by city12
+  tables:
+  - id: GTM
+    name: GTM
+    fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+  search_query: "[# of Unique Users] [ABM Content Account]"
+  answer_columns:
+  - name: '# of Unique Users'
+  - name: ABM Content Account
+  table:
+    table_columns:
+    - column_id: '# of Unique Users'
+      headline_aggregation: SUM
+    - column_id: ABM Content Account
+      headline_aggregation: COUNT_DISTINCT
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: '# of Unique Users'
+    - column_id: ABM Content Account
+    axis_configs:
+    - x:
+      - ABM Content Account
+      "y":
+      - '# of Unique Users'
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Account\",\"columnProperty\": {}},{\"columnId\": \"# of Unique Users\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"19946f80-2bd0-4b51-afa7-dcade58b879d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# of Unique Users\"],\"isOpposite\": false}},{\"id\": \"6acd7bae-7429-407c-bba1-1488636982fc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Account\"]}}],\"systemSeriesColors\": [{\"serieName\": \"# of Unique Users\",\"color\": \"#FF8142\"}]}"
+  display_mode: CHART_MODE
