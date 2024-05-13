@@ -5,13 +5,16 @@ answer:
   - id: GTM
     name: GTM
     fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
-  search_query: "[Account Count] [Account ABM Tier]"
+  search_query: "[Account Count] [Account ABM Tier] [Account City]"
   answer_columns:
   - name: Account ABM Tier
+  - name: Account City
   - name: Account Count
   table:
     table_columns:
     - column_id: Account ABM Tier
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Account City
       headline_aggregation: COUNT_DISTINCT
     - column_id: Account Count
       headline_aggregation: SUM
@@ -21,12 +24,13 @@ answer:
     type: COLUMN
     chart_columns:
     - column_id: Account ABM Tier
+    - column_id: Account City
     - column_id: Account Count
     axis_configs:
     - x:
-      - Account ABM Tier
+      - Account City
       "y":
       - Account Count
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account ABM Tier\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0fa6cda-42ab-42f9-8efd-548b8ada8729\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"72ac6ed6-5ecd-4ee4-9676-ad4fb57acebc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account ABM Tier\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account City\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e20a1dbf-f7fd-404a-8b18-9bb3a9f58450\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"36020d62-1d63-4374-9882-e946e93d8b42\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account City\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
   display_mode: CHART_MODE
