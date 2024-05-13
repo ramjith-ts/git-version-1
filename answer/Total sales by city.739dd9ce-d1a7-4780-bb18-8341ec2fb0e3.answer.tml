@@ -5,28 +5,38 @@ answer:
   - id: GTM
     name: GTM
     fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
-  search_query: "[ABM Content Link] [% Cases]"
+  search_query: "[% Cases] [# of Unique Users] [ABM Content Link] [ABM Content Name]"
   answer_columns:
+  - name: '# of Unique Users'
   - name: ABM Content Link
+  - name: ABM Content Name
   - name: Total % Cases
   table:
     table_columns:
+    - column_id: '# of Unique Users'
+      headline_aggregation: SUM
     - column_id: ABM Content Link
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: ABM Content Name
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total % Cases
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: COLUMN
+    type: SCATTER
     chart_columns:
+    - column_id: '# of Unique Users'
     - column_id: ABM Content Link
+    - column_id: ABM Content Name
     - column_id: Total % Cases
     axis_configs:
     - x:
-      - ABM Content Link
-      "y":
       - Total % Cases
+      "y":
+      - '# of Unique Users'
+      category:
+      - ABM Content Link
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Link\",\"columnProperty\": {}},{\"columnId\": \"Total % Cases\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"fec8deb9-f6b6-4176-8a3b-7ae175daeaab\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % Cases\"],\"isOpposite\": false}},{\"id\": \"354cc1b3-14d4-448f-89b1-fab18be3601b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Link\"]}}],\"systemSeriesColors\": [{\"serieName\": \"4ccdb3cb-815a-47ad-b311-b347256908ea\",\"color\": \"#FF8142\"},{\"serieName\": \"Total % Cases\",\"color\": \"#06BF7F\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total % Cases\",\"columnProperty\": {}},{\"columnId\": \"# of Unique Users\",\"columnProperty\": {}},{\"columnId\": \"ABM Content Link\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"070dce07-ef4a-4520-bf81-9463a7b7ce00\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"# of Unique Users\"],\"isOpposite\": false}},{\"id\": \"7fa61f47-0f56-45ab-9e70-d8a6190528aa\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total % Cases\"]}}],\"systemSeriesColors\": [{\"serieName\": \"4ccdb3cb-815a-47ad-b311-b347256908ea\",\"color\": \"#FF8142\"},{\"serieName\": \"Total % Cases\",\"color\": \"#06BF7F\"},{\"serieName\": \"# of Unique Users\",\"color\": \"#FCC838\"}]}"
   display_mode: CHART_MODE
