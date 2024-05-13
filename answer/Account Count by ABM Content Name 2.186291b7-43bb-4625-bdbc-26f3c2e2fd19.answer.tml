@@ -31,6 +31,8 @@ answer:
       - Account City
       "y":
       - Account Count
+      color:
+      - Account ABM Tier
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account City\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e20a1dbf-f7fd-404a-8b18-9bb3a9f58450\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"36020d62-1d63-4374-9882-e946e93d8b42\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account City\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account City\",\"columnProperty\": {}},{\"columnId\": \"Account ABM Tier\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e20a1dbf-f7fd-404a-8b18-9bb3a9f58450\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"36020d62-1d63-4374-9882-e946e93d8b42\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account City\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
   display_mode: CHART_MODE
