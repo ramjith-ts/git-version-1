@@ -5,15 +5,18 @@ answer:
   - id: GTM
     name: GTM
     fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
-  search_query: "[ABM Content Opportunity Stage] [% Cases]"
+  search_query: "[ABM Content Opportunity Stage] [% Cases] [Account Days In Adoption]"
   answer_columns:
   - name: ABM Content Opportunity Stage
   - name: Total % Cases
+  - name: Total Account Days In Adoption
   table:
     table_columns:
     - column_id: ABM Content Opportunity Stage
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total % Cases
+      headline_aggregation: SUM
+    - column_id: Total Account Days In Adoption
       headline_aggregation: SUM
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -22,11 +25,13 @@ answer:
     chart_columns:
     - column_id: ABM Content Opportunity Stage
     - column_id: Total % Cases
+    - column_id: Total Account Days In Adoption
     axis_configs:
     - x:
       - ABM Content Opportunity Stage
       "y":
       - Total % Cases
+      - Total Account Days In Adoption
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Opportunity Stage\",\"columnProperty\": {}},{\"columnId\": \"Total % Cases\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e4a53b0b-5533-42f4-b567-204486aedabd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % Cases\"],\"isOpposite\": false}},{\"id\": \"063915b8-359f-4fa4-9496-eab343517424\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Opportunity Stage\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total % Cases\",\"color\": \"#747E8C\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Opportunity Stage\",\"columnProperty\": {}},{\"columnId\": \"Total % Cases\",\"columnProperty\": {}},{\"columnId\": \"Total Account Days In Adoption\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"976da9b7-4645-46f9-9ad3-0b17aac1b2d0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % Cases\"],\"isOpposite\": false}},{\"id\": \"199771d8-b14e-433a-bb18-21a05c2fa6c4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Account Days In Adoption\"],\"isOpposite\": true}},{\"id\": \"271b7c33-a4ff-494c-aa78-7d0e04fc3451\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Opportunity Stage\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total % Cases\",\"color\": \"#747E8C\"},{\"serieName\": \"Total Account Days In Adoption\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
