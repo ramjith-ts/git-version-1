@@ -1,6 +1,6 @@
 guid: 186291b7-43bb-4625-bdbc-26f3c2e2fd19
 answer:
-  name: Account Count by ABM Content Name
+  name: Account Count by ABM Content Name 2
   tables:
   - id: GTM
     name: GTM
