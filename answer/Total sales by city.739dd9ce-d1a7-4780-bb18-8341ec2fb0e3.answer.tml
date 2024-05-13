@@ -1,6 +1,6 @@
 guid: 739dd9ce-d1a7-4780-bb18-8341ec2fb0e3
 answer:
-  name: Total sales by city12
+  name: Total sales by city
   tables:
   - id: GTM
     name: GTM
