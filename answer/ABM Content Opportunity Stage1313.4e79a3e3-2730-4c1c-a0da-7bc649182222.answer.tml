@@ -5,17 +5,14 @@ answer:
   - id: GTM
     name: GTM
     fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
-  search_query: "[ABM Content Opportunity Stage] [% Cases] [Account Days In Adoption] [Account Cohort]"
+  search_query: "[ABM Content Opportunity Stage] [% Cases] [Account Days In Adoption]"
   answer_columns:
   - name: ABM Content Opportunity Stage
-  - name: Account Cohort
   - name: Total % Cases
   - name: Total Account Days In Adoption
   table:
     table_columns:
     - column_id: ABM Content Opportunity Stage
-      headline_aggregation: COUNT_DISTINCT
-    - column_id: Account Cohort
       headline_aggregation: COUNT_DISTINCT
     - column_id: Total % Cases
       headline_aggregation: SUM
@@ -24,20 +21,17 @@ answer:
     client_state: ""
     client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
   chart:
-    type: SCATTER
+    type: COLUMN
     chart_columns:
     - column_id: ABM Content Opportunity Stage
-    - column_id: Account Cohort
     - column_id: Total % Cases
     - column_id: Total Account Days In Adoption
     axis_configs:
     - x:
-      - Total % Cases
-      "y":
-      - Total Account Days In Adoption
-      color:
-      - Account Cohort
       - ABM Content Opportunity Stage
+      "y":
+      - Total % Cases
+      - Total Account Days In Adoption
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Opportunity Stage\",\"columnProperty\": {}},{\"columnId\": \"Total % Cases\",\"columnProperty\": {}},{\"columnId\": \"Total Account Days In Adoption\",\"columnProperty\": {}},{\"columnId\": \"Account Cohort\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"793dd757-8add-4490-9f8b-a3549d6b47b8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Account Days In Adoption\"],\"isOpposite\": false}},{\"id\": \"22cc7584-07ad-4e80-b968-413ab8d84021\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total % Cases\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total % Cases\",\"color\": \"#747E8C\"},{\"serieName\": \"Total Account Days In Adoption\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}, {null}\",\"color\": \"#A2ACBA\"},{\"serieName\": \"{null}, m0\",\"color\": \"#47515F\"},{\"serieName\": \"{null}, m1\",\"color\": \"#BEC6D0\"},{\"serieName\": \"{null}, s1\",\"color\": \"#747E8C\"},{\"serieName\": \"{null}, s2\",\"color\": \"#7A3D1F\"},{\"serieName\": \"{null}, s3\",\"color\": \"#FFA97E\"},{\"serieName\": \"{null}, s4\",\"color\": \"#C26232\"},{\"serieName\": \"{null}, s5\",\"color\": \"#FFCCB3\"},{\"serieName\": \"{null}, s6\",\"color\": \"#FF8142\"},{\"serieName\": \"high revenue, high potential, {null}\",\"color\": \"#422E75\"},{\"serieName\": \"high revenue, high potential, m0\",\"color\": \"#B094F8\"},{\"serieName\": \"high revenue, high potential, m1\",\"color\": \"#6A4ABA\"},{\"serieName\": \"high revenue, high potential, s1\",\"color\": \"#D1C0FB\"},{\"serieName\": \"high revenue, high potential, s2\",\"color\": \"#8C62F5\"},{\"serieName\": \"high revenue, high potential, s3\",\"color\": \"#025B3C\"},{\"serieName\": \"high revenue, high potential, s4\",\"color\": \"#56D3A8\"},{\"serieName\": \"high revenue, high potential, s5\",\"color\": \"#049160\"},{\"serieName\": \"high revenue, high potential, s6\",\"color\": \"#9BE5CB\"},{\"serieName\": \"high revenue, low potential, {null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"high revenue, low potential, s1\",\"color\": \"#785F1A\"},{\"serieName\": \"high revenue, low potential, s2\",\"color\": \"#FCD977\"},{\"serieName\": \"high revenue, low potential, s4\",\"color\": \"#BF982A\"},{\"serieName\": \"high revenue, low potential, s6\",\"color\": \"#FDE9AF\"},{\"serieName\": \"low revenue, high potential, {null}\",\"color\": \"#FCC838\"},{\"serieName\": \"low revenue, high potential, m0\",\"color\": \"#22636B\"},{\"serieName\": \"low revenue, high potential, m1\",\"color\": \"#82DFE9\"},{\"serieName\": \"low revenue, high potential, s1\",\"color\": \"#369FAA\"},{\"serieName\": \"low revenue, high potential, s2\",\"color\": \"#B5ECF2\"},{\"serieName\": \"low revenue, high potential, s3\",\"color\": \"#48D1E0\"},{\"serieName\": \"low revenue, high potential, s4\",\"color\": \"#163772\"},{\"serieName\": \"low revenue, high potential, s5\",\"color\": \"#71A1F4\"},{\"serieName\": \"low revenue, low potential, {null}\",\"color\": \"#2359B6\"},{\"serieName\": \"low revenue, low potential, s1\",\"color\": \"#ABC7F9\"},{\"serieName\": \"low revenue, low potential, s2\",\"color\": \"#2E75F0\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Opportunity Stage\",\"columnProperty\": {}},{\"columnId\": \"Total % Cases\",\"columnProperty\": {}},{\"columnId\": \"Total Account Days In Adoption\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"976da9b7-4645-46f9-9ad3-0b17aac1b2d0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total % Cases\"],\"isOpposite\": false}},{\"id\": \"199771d8-b14e-433a-bb18-21a05c2fa6c4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Account Days In Adoption\"],\"isOpposite\": true}},{\"id\": \"271b7c33-a4ff-494c-aa78-7d0e04fc3451\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Opportunity Stage\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total % Cases\",\"color\": \"#747E8C\"},{\"serieName\": \"Total Account Days In Adoption\",\"color\": \"#2E75F0\"}]}"
   display_mode: CHART_MODE
