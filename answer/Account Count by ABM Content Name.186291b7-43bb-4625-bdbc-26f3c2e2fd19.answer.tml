@@ -1,0 +1,32 @@
+guid: 186291b7-43bb-4625-bdbc-26f3c2e2fd19
+answer:
+  name: Account Count by ABM Content Name
+  tables:
+  - id: GTM
+    name: GTM
+    fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
+  search_query: "[Account Count] [Account ABM Tier]"
+  answer_columns:
+  - name: Account ABM Tier
+  - name: Account Count
+  table:
+    table_columns:
+    - column_id: Account ABM Tier
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Account Count
+      headline_aggregation: SUM
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Account ABM Tier
+    - column_id: Account Count
+    axis_configs:
+    - x:
+      - Account ABM Tier
+      "y":
+      - Account Count
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account ABM Tier\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0fa6cda-42ab-42f9-8efd-548b8ada8729\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"72ac6ed6-5ecd-4ee4-9676-ad4fb57acebc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account ABM Tier\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
+  display_mode: CHART_MODE
