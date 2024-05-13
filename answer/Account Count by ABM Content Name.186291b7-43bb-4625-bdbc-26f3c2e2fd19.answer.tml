@@ -5,16 +5,13 @@ answer:
   - id: GTM
     name: GTM
     fqn: 54beb173-d755-42e0-8f73-4d4ec768114f
-  search_query: "[Account Count] [ABM Content Link] [ABM Content Name]"
+  search_query: "[Account Count] [Account ABM Tier]"
   answer_columns:
-  - name: ABM Content Link
-  - name: ABM Content Name
+  - name: Account ABM Tier
   - name: Account Count
   table:
     table_columns:
-    - column_id: ABM Content Link
-      headline_aggregation: COUNT_DISTINCT
-    - column_id: ABM Content Name
+    - column_id: Account ABM Tier
       headline_aggregation: COUNT_DISTINCT
     - column_id: Account Count
       headline_aggregation: SUM
@@ -23,14 +20,13 @@ answer:
   chart:
     type: COLUMN
     chart_columns:
-    - column_id: ABM Content Link
-    - column_id: ABM Content Name
+    - column_id: Account ABM Tier
     - column_id: Account Count
     axis_configs:
     - x:
-      - ABM Content Name
+      - Account ABM Tier
       "y":
       - Account Count
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"ABM Content Name\",\"columnProperty\": {}},{\"columnId\": \"Account Count\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c2bc73f3-6fe3-4d05-a358-d64328563760\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"bcf64fd3-fa05-4efd-bb5b-8812df2d16b8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"ABM Content Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Account Count\",\"columnProperty\": {}},{\"columnId\": \"Account ABM Tier\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0fa6cda-42ab-42f9-8efd-548b8ada8729\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Account Count\"],\"isOpposite\": false}},{\"id\": \"72ac6ed6-5ecd-4ee4-9676-ad4fb57acebc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Account ABM Tier\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Account Count\",\"color\": \"#FF8142\"}]}"
   display_mode: CHART_MODE
