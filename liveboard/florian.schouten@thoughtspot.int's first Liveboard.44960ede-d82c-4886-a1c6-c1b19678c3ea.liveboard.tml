@@ -45,3 +45,5 @@ liveboard:
         width: 6
     - name: Tab 2
       description: ""
+    - name: Tab 3
+      description: ""
