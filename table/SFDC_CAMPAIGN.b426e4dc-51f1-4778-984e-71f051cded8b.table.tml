@@ -1,0 +1,190 @@
+guid: b426e4dc-51f1-4778-984e-71f051cded8b
+table:
+  name: SFDC_CAMPAIGN
+  db: GTM_DB
+  schema: CAMPAIGNS
+  db_table: SFDC_CAMPAIGN
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Campaign Created Date
+    db_column_name: Campaign Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Campaign Partner Event Organizer
+    db_column_name: Campaign Partner Event Organizer
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Partner Involvement
+    db_column_name: Campaign Partner Involvement
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Partner Event Host
+    db_column_name: Campaign Partner Event Host
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign SFDC URL
+    db_column_name: Campaign SFDC URL
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Partners Involved
+    db_column_name: Campaign Partners Involved
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Mode Campaign
+    db_column_name: Mode Campaign
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Asset Name
+    db_column_name: Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Asset Type
+    db_column_name: Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Category
+    db_column_name: Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Classification
+    db_column_name: Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign ID
+    db_column_name: Campaign ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Name
+    db_column_name: Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Owner ID
+    db_column_name: Campaign Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Status
+    db_column_name: Campaign Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Subcategory
+    db_column_name: Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Type
+    db_column_name: Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Webinar Average Watch Time
+    db_column_name: Campaign Webinar Average Watch Time
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Campaign Type Of Webinar
+    db_column_name: Campaign Type Of Webinar
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Region
+    db_column_name: Campaign Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Field Marketer Name
+    db_column_name: Field Marketer Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Active Status
+    db_column_name: Campaign Active Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Campaign Superregion
+    db_column_name: Campaign Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign Event Date
+    db_column_name: Campaign Event Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE

@@ -1,0 +1,2992 @@
+guid: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+worksheet:
+  name: GTM Campaigns
+  description: "The main worksheet for Campaign-centric go-to-market insights.  Includes Opportunity, Account, Lead, & Engagement data."
+  tables:
+  - name: SFDC_ACCOUNT_EXTENDED
+    fqn: 963ceb65-e584-42e5-b350-feee9562baeb
+  - name: SFDC_CAMPAIGN
+    fqn: b426e4dc-51f1-4778-984e-71f051cded8b
+  - name: SFDC_CAMPAIGN_COST
+    fqn: b95af623-c2a9-4d35-9bb4-8af3da22ef4c
+  - name: SFDC_CAMPAIGN_ENGAGEMENT
+    fqn: 87d6bd5c-6ec2-4adf-9709-d15c7bf42e66
+  - name: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    fqn: 9539a35b-6e9c-49b6-8fb0-b4b03fecb9fe
+  - name: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+    fqn: c2a7c4e4-4c11-4216-be09-0cd609c4f047
+  - name: SFDC_CAMPAIGN_MARKETING_TOUCH
+    fqn: 8cfbf53e-2195-43a4-a81f-48abceff93b9
+  - name: SFDC_CAMPAIGN_OPPORTUNITY
+    fqn: 8812b0a3-c580-46f2-a36c-42e1b711b5b6
+  - name: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT
+    fqn: 93fe5cd6-c8bd-48c7-ace8-6c1997e04653
+  - name: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT
+    fqn: d69dcd30-64c8-428a-8dad-d311f816e1a6
+  - name: SFDC_CAMPAIGN_PERSON
+    fqn: 233b4778-8c84-4ac2-bff5-2413d7aee968
+  - name: SFDC_CAMPAIGN_PERSON_ACCOUNT
+    fqn: f6d4fd72-6a03-4b6d-bd3c-0091babde6e8
+  - name: TS_USER
+    fqn: 962febc2-8be6-479e-80d0-dca3c7dc8e6e
+  joins:
+  - name: SFDC_ACCOUNT_EXTENDED_to_SFDC_CAMPAIGN_PERSON_ACCOUNT
+    source: SFDC_ACCOUNT_EXTENDED
+    destination: SFDC_CAMPAIGN_PERSON_ACCOUNT
+    type: INNER
+    is_one_to_one: true
+  - name: FK_CAMPAIGN_COST_CAMPAIGN
+    source: SFDC_CAMPAIGN_COST
+    destination: SFDC_CAMPAIGN
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_ENGAGEMENT_CAMPAIGN
+    source: SFDC_CAMPAIGN_ENGAGEMENT
+    destination: SFDC_CAMPAIGN
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_ENGAGEMENT_PERSON
+    source: SFDC_CAMPAIGN_ENGAGEMENT
+    destination: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+    source: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    destination: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_MARKETING_TOUCH_CAMPAIGN
+    source: SFDC_CAMPAIGN_MARKETING_TOUCH
+    destination: SFDC_CAMPAIGN
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_OPP_ACCOUNT
+    source: SFDC_CAMPAIGN_OPPORTUNITY
+    destination: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_OPPORTUNITY_CAMPAIGN
+    source: SFDC_CAMPAIGN_OPPORTUNITY
+    destination: SFDC_CAMPAIGN
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_OPPORTUNITY_CONTACT_OPPORTUNITY
+    source: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT
+    destination: SFDC_CAMPAIGN_OPPORTUNITY
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_PERSON_ACCOUNT
+    source: SFDC_CAMPAIGN_PERSON
+    destination: SFDC_CAMPAIGN_PERSON_ACCOUNT
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: FK_CAMPAIGN_PERSON_CAMPAIGN
+    source: SFDC_CAMPAIGN_PERSON
+    destination: SFDC_CAMPAIGN
+    type: RIGHT_OUTER
+    is_one_to_one: false
+  - name: FK_FT_ENGAGEMENT_PERSON
+    source: TS_USER
+    destination: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: SFDC_ACCOUNT_EXTENDED_1
+    table: SFDC_ACCOUNT_EXTENDED
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_1
+    table: SFDC_CAMPAIGN
+    join_path:
+    - join:
+      - FK_CAMPAIGN_PERSON_CAMPAIGN
+    - join:
+      - FK_CAMPAIGN_ENGAGEMENT_CAMPAIGN
+    - join:
+      - FK_OPPORTUNITY_CONTACT_OPPORTUNITY
+      - FK_CAMPAIGN_OPPORTUNITY_CAMPAIGN
+    - join:
+      - FK_CAMPAIGN_COST_CAMPAIGN
+    - join:
+      - FK_CAMPAIGN_MARKETING_TOUCH_CAMPAIGN
+  - id: SFDC_CAMPAIGN_COST_1
+    table: SFDC_CAMPAIGN_COST
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_ENGAGEMENT_1
+    table: SFDC_CAMPAIGN_ENGAGEMENT
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1
+    table: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    join_path:
+    - join:
+      - FK_CAMPAIGN_ENGAGEMENT_PERSON
+    - join:
+      - FK_FT_ENGAGEMENT_PERSON
+  - id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2
+    table: SFDC_CAMPAIGN_ENGAGEMENT_PERSON
+    join_path:
+    - join:
+      - FK_CAMPAIGN_ENGAGEMENT_PERSON
+  - id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1
+    table: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+    join_path:
+    - join:
+      - FK_FT_ENGAGEMENT_PERSON
+      - FK_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+    - join:
+      - FK_CAMPAIGN_ENGAGEMENT_PERSON
+      - FK_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT
+  - id: SFDC_CAMPAIGN_MARKETING_TOUCH_1
+    table: SFDC_CAMPAIGN_MARKETING_TOUCH
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_OPPORTUNITY_1
+    table: SFDC_CAMPAIGN_OPPORTUNITY
+    join_path:
+    - join:
+      - FK_OPPORTUNITY_CONTACT_OPPORTUNITY
+  - id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1
+    table: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT
+    join_path:
+    - join:
+      - FK_OPPORTUNITY_CONTACT_OPPORTUNITY
+      - FK_CAMPAIGN_OPP_ACCOUNT
+  - id: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT_1
+    table: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_PERSON_1
+    table: SFDC_CAMPAIGN_PERSON
+    join_path:
+    - {}
+  - id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1
+    table: SFDC_CAMPAIGN_PERSON_ACCOUNT
+    join_path:
+    - join:
+      - FK_CAMPAIGN_PERSON_ACCOUNT
+    - join:
+      - SFDC_ACCOUNT_EXTENDED_to_SFDC_CAMPAIGN_PERSON_ACCOUNT
+  - id: SFDC_CAMPAIGN_PERSON_ACCOUNT_2
+    table: SFDC_CAMPAIGN_PERSON_ACCOUNT
+    join_path:
+    - join:
+      - FK_CAMPAIGN_PERSON_ACCOUNT
+  - id: TS_USER_1
+    table: TS_USER
+    join_path:
+    - {}
+  formulas:
+  - name: CFY Booked ACV
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Close Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] = 's6 closed won' and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked ACV] > 0 ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked ACV] else 0"
+    was_auto_generated: false
+  - name: CFY M1 Pipe Created (ACV)
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV] ) else 0"
+    was_auto_generated: false
+  - name: CFY Metric
+    expr: "if ( sum ( [CFY MQL] ) > 0 or sum ( [CFY M0] ) > 0 or sum ( [CFY M1] ) > 0 or sum ( [CFY S1] ) > 0 ) then true else false"
+    was_auto_generated: false
+  - name: CFY M0
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then 1 else 0"
+    was_auto_generated: false
+  - name: CFY M1
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then 1 else 0"
+    was_auto_generated: false
+  - name: CFY MQL
+    expr: "if ( year ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Date Last] , fiscal ) = year ( today ( ) , fiscal ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: CFY S1
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] , fiscal ) = year ( today ( ) , fiscal ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: CFY S1 Pipe Created (ACV)
+    expr: "if ( year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV] else 0"
+    was_auto_generated: false
+  - name: CQ Creation of a Metric
+    expr: "if ( [CQ MQL] > 0 or [CQ M0] > 0 or [CQ M1] > 0 or [CQ S1] > 0 ) then true else false"
+    was_auto_generated: false
+  - name: CQ Metric
+    expr: "if ( sum ( [CQ MQL] ) > 0 or sum ( [CQ M0] ) > 0 or sum ( [CQ M1] ) > 0 or sum ( [CQ S1] ) > 0 ) then true else false"
+    was_auto_generated: false
+  - name: CQ M0
+    expr: "group_sum ( if ( quarter_number ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] , fiscal ) = quarter_number ( today ( ) , fiscal ) and year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: CQ M1
+    expr: "if ( quarter_number ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] , fiscal ) = quarter_number ( today ( ) , fiscal ) and year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] , fiscal ) = year ( today ( ) , fiscal ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type] != 'renewal' ) then 1 else 0"
+    was_auto_generated: false
+  - name: CQ MQL
+    expr: "if ( quarter_number ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Date Last] , fiscal ) = quarter_number ( today ( ) , fiscal ) and year ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Date Last] , fiscal ) = year ( today ( ) , fiscal ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: CQ S1
+    expr: "if ( quarter_number ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] , fiscal ) = quarter_number ( today ( ) , fiscal ) and year ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] , fiscal ) = year ( today ( ) , fiscal ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: Engagement Person Domain Name
+    expr: "right ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Email] , ( strlen ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Email] ) - strpos ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Email] , '@' ) ) )"
+    was_auto_generated: false
+  - name: Engagements Count
+    expr: "unique count ( [SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement ID] )"
+    was_auto_generated: false
+  - name: M0 Not S1
+    expr: "if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) ) then 'converted to s1' else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) ) then 'm0 - not converted to s1' else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) ) then 'm1 - not converted to s1' else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'dq' ) ) then 'dq - not converted to s1' else null"
+    was_auto_generated: false
+  - name: M1 Campaign Open Pipeline ACV
+    expr: "sum_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last ID] ) ) and ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'pipeline' or contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV] )"
+    was_auto_generated: false
+  - name: M1 Open Pipeline TCV
+    expr: "sum ( if ( ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'pipeline' ) or substr ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 0 , 2 ) = 'm1' ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV] else 0 )"
+    was_auto_generated: false
+  - name: M1 Pipeline Created ACV
+    expr: "sum_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV] )"
+    was_auto_generated: false
+  - name: M1 Pipeline Date
+    expr: "if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] else if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date] ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date] else null"
+    was_auto_generated: false
+  - name: Marketing Gen?
+    expr: "if ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Classification] ) = true and [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Classification] = 'sales' ) then 'n/a' else 'marketing'"
+    was_auto_generated: false
+  - name: Opportunity  S2 to S6 Conversion (Not in S2-S5)
+    expr: "if ( sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] ) = false ) then 1 else 0 ) * 100 / sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: Opportunity Count
+    expr: "unique count ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity Current Stage Duration
+    expr: "if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) ) then diff_days ( today ( ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) else null"
+    was_auto_generated: false
+  - name: Opportunity M0 Created Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity M0 to M1 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M0 to M1 Conversion (Not in M0)
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: Opportunity M0 to S1 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M0 to S1 Conversion Velocity  (/30 - Months)
+    expr: "average ( diff_days ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) / 30"
+    was_auto_generated: false
+  - name: Opportunity M0 to S2 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M0 to S2 Conversion (Not in M0/M1/S2)
+    expr: "if ( sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) = false ) then 1 else 0 ) * 100 / sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm0' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: Opportunity M0 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S7 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M1 Created Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity M1 to S1 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M1 to S1 Conversion (Not in M1)
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 'm1' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: Opportunity M1 to S2 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity M1 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S7 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity Open Pipeline Deals
+    expr: "unique_count_if ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'pipeline' , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity Pipeline Created ACV
+    expr: "sum_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV] )"
+    was_auto_generated: false
+  - name: Opportunity Region Segment
+    expr: "if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'na ' ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'na' ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'majors' ) ) or [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] = 'na acct mgmt' ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'majors' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'na ' ) and not ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'majors' ) ) and not ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'emea' ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'emea' ) and not ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) and not ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'partner' ) ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'apac' ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'apj ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'apac' ) or contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'japan' ) or [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] in { 'emerging markets' , 'apj' } ) then concat ( sql_string_op ( \" upper ( 'apj ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else sql_string_op ( \" initcap ( 'other' ) \" )"
+    was_auto_generated: false
+  - name: Opportunity S1 Created Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity S1 to S2 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S1 to S3 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S1 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S2 Created Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  - name: Opportunity S2 to S3 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S2 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S7 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S3 to S4 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S3 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S7 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S4 to S5 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity S5 to S6 Conversion (Not in S5)
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: Opportunity S5 to S7 Conversion
+    expr: "safe_divide ( unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) , unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] ) )"
+    was_auto_generated: false
+  - name: Opportunity Segment
+    expr: "if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'majors' ) = true ) then 'majors' else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'commercial' ) = true ) then 'commercial' else 'enterprise'"
+    was_auto_generated: false
+  - name: Opportunity Theater
+    expr: "if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'na ' ) or contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'north american' ) ) then sql_string_op ( \"upper ( 'na' ) \" ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'emea' ) ) then sql_string_op ( \"upper ( 'emea' ) \" ) else if ( contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'apac' ) or contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] , 'japan' ) or [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team] in { 'emerging markets' , 'apj' } ) then sql_string_op ( \"upper ( 'apj' ) \" ) else sql_string_op ( \"initcap ( 'other' ) \" )"
+    was_auto_generated: false
+  - name: People Count
+    expr: "if ( not ( isnull ( [SFDC_CAMPAIGN_ENGAGEMENT_1::Person ID] ) ) ) then 1 else 0"
+    was_auto_generated: false
+  - name: Person Account Region Segment
+    expr: "if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'commercial' ) and contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'na ' ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'na' ) and contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'majors' ) ) or [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] = 'na acct mgmt' ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'majors' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'na ' ) and not ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'majors' ) ) and not ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) ) then concat ( sql_string_op ( \" upper ( 'na ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'emea' ) and contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'emea' ) and not ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) and not ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'partner' ) ) ) then concat ( sql_string_op ( \" upper ( 'emea ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'apac' ) and contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'commercial' ) ) then concat ( sql_string_op ( \" upper ( 'apj ' ) \" ) , sql_string_op ( \" initcap ( 'commercial' ) \" ) ) else if ( contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'apac' ) or contains ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] , 'japan' ) or [SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team] in { 'emerging markets' , 'apj' } ) then concat ( sql_string_op ( \" upper ( 'apj ' ) \" ) , sql_string_op ( \" initcap ( 'enterprise' ) \" ) ) else sql_string_op ( \" initcap ( 'other' ) \" )"
+    was_auto_generated: false
+  - name: Person Domain Name
+    expr: "right ( [SFDC_CAMPAIGN_PERSON_1::Person Email] , ( strlen ( [SFDC_CAMPAIGN_PERSON_1::Person Email] ) - strpos ( [SFDC_CAMPAIGN_PERSON_1::Person Email] , '@' ) ) )"
+    was_auto_generated: false
+  - name: Person Employee Range
+    expr: "if ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_2::Account Employee Range] ) ) ) then [SFDC_CAMPAIGN_PERSON_ACCOUNT_2::Account Employee Range] else if ( [SFDC_CAMPAIGN_PERSON_1::Person Employees] < 101 ) then '1) 1-100' else if ( [SFDC_CAMPAIGN_PERSON_1::Person Employees] > 100 and [SFDC_CAMPAIGN_PERSON_1::Person Employees] < 501 ) then '2) 101-500' else if ( [SFDC_CAMPAIGN_PERSON_1::Person Employees] > 500 and [SFDC_CAMPAIGN_PERSON_1::Person Employees] < 1001 ) then '3) 501-1,000' else if ( [SFDC_CAMPAIGN_PERSON_1::Person Employees] > 1000 and [SFDC_CAMPAIGN_PERSON_1::Person Employees] < 5001 ) then '4) 1,001-5,000' else if ( [SFDC_CAMPAIGN_PERSON_1::Person Employees] > 5000 ) then sql_string_op ( \"initcap ( '5) over 5,000') \" ) else null"
+    was_auto_generated: false
+  - name: Person MQL to M0 Conversion
+    expr: "safe_divide ( unique_count_if ( [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true , [SFDC_CAMPAIGN_PERSON_1::Person Opportunity ID] ) , unique_count_if ( ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'lead' ) or ( ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'contact' and [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true ) ) , [SFDC_CAMPAIGN_PERSON_1::Person ID] ) )"
+    was_auto_generated: false
+  - name: Person MQL to SAL Conversion
+    expr: "safe_divide ( unique_count_if ( ( [SFDC_CAMPAIGN_PERSON_1::Person SAL Flag] = 'true' and not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'lead' ) or ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'contact' and [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true and [SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag] = 'true' ) , [SFDC_CAMPAIGN_PERSON_1::Person ID] ) , unique_count_if ( ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'lead' or ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'contact' and [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true ) ) , [SFDC_CAMPAIGN_PERSON_1::Person ID] ) )"
+    was_auto_generated: false
+  - name: Person MQLs Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) , [SFDC_CAMPAIGN_PERSON_1::Person ID] )"
+    was_auto_generated: false
+  - name: Person Revenue Range
+    expr: "if ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_ACCOUNT_2::Account Revenue Range] ) ) ) then [SFDC_CAMPAIGN_PERSON_ACCOUNT_2::Account Revenue Range] else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] <= 10000000 ) then sql_string_op ( \" upper ( '1) $0-$10m' ) \" ) else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] > 10000000 and [SFDC_CAMPAIGN_PERSON_1::Person Revenue] <= 50000000 ) then sql_string_op ( \" upper ( '2) $10m-$50m' ) \" ) else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] > 50000000 and [SFDC_CAMPAIGN_PERSON_1::Person Revenue] <= 250000000 ) then sql_string_op ( \"upper ( '3) $50m-$250m' ) \" ) else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] > 250000000 and [SFDC_CAMPAIGN_PERSON_1::Person Revenue] <= 500000000 ) then sql_string_op ( \"upper ( '4) $250m-$500m' ) \" ) else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] > 500000000 and [SFDC_CAMPAIGN_PERSON_1::Person Revenue] <= 1000000000 ) then sql_string_op ( \"upper ( '5) $500m-$1b' ) \" ) else if ( [SFDC_CAMPAIGN_PERSON_1::Person Revenue] > 1000000000 ) then concat ( sql_string_op ( \"initcap ( '6) over' ) \" ) , sql_string_op ( \"upper ( ' $1b' ) \" ) ) else null"
+    was_auto_generated: false
+  - name: Person SAL to M0 Conversion
+    expr: "safe_divide ( unique_count_if ( [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true and [SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag] = 'true' , [SFDC_CAMPAIGN_PERSON_1::Person Opportunity ID] ) , unique_count_if ( ( [SFDC_CAMPAIGN_PERSON_1::Person SAL Flag] = 'true' and not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'lead' ) or ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Object Type] = 'contact' and [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true and [SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag] = 'true' ) , [SFDC_CAMPAIGN_PERSON_1::Person ID] ) )"
+    was_auto_generated: false
+  - name: Person SAL to M0 Conversion (SDR Level)
+    expr: "safe_divide ( unique_count_if ( [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true and [SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag] = 'true' and not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person Owner ID At Working] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person Owner ID At Working] = [SFDC_CAMPAIGN_PERSON_1::Person Owner ID At Opp Creation] , [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person Opportunity ID] ) , unique_count_if ( ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person SAL Flag] = 'true' and not ( isnull ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person Object Type] = 'lead' ) or ( not ( isnull ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_2::Person Object Type] = 'contact' and [SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC] = true and [SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag] = 'true' ) and not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person Owner ID At Working] ) ) , [SFDC_CAMPAIGN_ENGAGEMENT_1::Person ID] ) )"
+    was_auto_generated: false
+  - name: Person SALs Count
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID] ) ) and [SFDC_CAMPAIGN_PERSON_1::Person SAL Flag] = 'true' , [SFDC_CAMPAIGN_PERSON_1::Person ID] )"
+    was_auto_generated: false
+  - name: "z[DEL] Booked Amount Acv"
+    expr: "group_sum ( if ( ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last ID] ) ) ) and not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'booked' ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked ACV] else 0 )"
+    was_auto_generated: false
+  - name: "z[DEL] Booked Amount Tcv"
+    expr: "group_sum ( if ( ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last ID] ) ) ) and not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'booked' ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked TCV] else 0 )"
+    was_auto_generated: false
+  - name: "z[DEL] M1 Pipe + Pipe Influence"
+    expr: "sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) or not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date] ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV] else 0 ) + sum ( [SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Attribution Amount] )"
+    was_auto_generated: false
+  - name: "z[DEL] M1 Pipeline Created Tcv"
+    expr: "sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date] ) ) or not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date] ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV] else 0 )"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity Open Pipeline Tcv"
+    expr: "if ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status] = 'pipeline' ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV] else null"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity Pipeline Created Tcv"
+    expr: "sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date] ) ) ) then [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV] else 0 )"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S1 to S2 Conversion (Not in S1)"
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S1 to S3 Conversion Velocity (/30 - Months)"
+    expr: "average ( diff_days ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) / 30"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S1 to S6 Conversion (Not in S1-S5)"
+    expr: "if ( sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] ) = false ) then 1 else 0 ) * 100 / sum ( if ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's1' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's5' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S2 to S3 Conversion (Not in S2)"
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's2' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S3 To S6 Conversion Velocity (/30 - Months)"
+    expr: "average ( diff_days ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date] , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) / 30"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S3 to S4 Conversion (Not in S3)"
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's3' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: "z[DEL] Opportunity S4 To S5 Conversion (not In S4)"
+    expr: "if ( sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false ) then 1 else 0 ) > 0 ) then sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date] ) ) ) then 1 else 0 ) * 100 / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date] ) ) and contains ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage] , 's4' ) = false ) then 1 else 0 ) else 0"
+    was_auto_generated: false
+  - name: "z[DEL] Person Sal To S1 Conversion"
+    expr: "100 * sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) and not ( isnull ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Date Last] ) ) and [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person SAL Flag] = 'true' ) then 1 else 0 ) / sum ( if ( not ( isnull ( [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Date Last] ) ) and [SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person SAL Flag] = 'true' ) then 1 else 0 )"
+    was_auto_generated: false
+  - name: "[DEL] S1 Created"
+    expr: "unique_count_if ( not ( isnull ( [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date] ) ) , [SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ID] )"
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Campaign Asset Name
+    column_id: SFDC_CAMPAIGN_1::Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Campaign Resource Name
+      - Campaign Item Name
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Campaign Asset Type
+    column_id: SFDC_CAMPAIGN_1::Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Category
+    column_id: SFDC_CAMPAIGN_1::Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Classification
+    column_id: SFDC_CAMPAIGN_1::Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign ID
+    column_id: SFDC_CAMPAIGN_1::Campaign ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Name
+    column_id: SFDC_CAMPAIGN_1::Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Status
+    column_id: SFDC_CAMPAIGN_1::Campaign Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Subcategory
+    column_id: SFDC_CAMPAIGN_1::Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Type
+    column_id: SFDC_CAMPAIGN_1::Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Region
+    column_id: SFDC_CAMPAIGN_1::Campaign Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Date
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement ID
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Status
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person ID
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Person ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign ID
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Date
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch ID
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity ID
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Person ID
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Person ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Stage Snapshot
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Stage Snapshot
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Accelerated Amount
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Accelerated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Attribution Amount
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Attribution Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Generated Amount
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Generated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Asset Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Asset Type
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Category
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Classification
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Subcategory
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Type
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Person Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Person Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity TCV
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Close Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Close Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Created Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Region
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Detailed
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Stage
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Stage Maximum
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Stage Maximum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Status
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Forecast Category
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Disqualified Comment
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Disqualified Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Disqualified Reason
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Subregion
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Superregion
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Meeting Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Meeting Status
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Meeting Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M0 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity M1 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity M1 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S1 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S2 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S2 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S3 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S3 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S4 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S4 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S5 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S5 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S6 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S6 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Product Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Cloud Data Warehouse
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity ACV
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity SDR Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity SDR Profile
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity SDR Role
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity SDR Team
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Team
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Deployment
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Deployment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Asset Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Asset Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Category
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Classification
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      is_attribution_dimension: false
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source MQL Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Touch Last Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Title
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Contact Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Profile
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Creator Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Creator Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Owner Manager Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Owner Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Pipeline Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Booked ACV
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Booked TCV
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Booked TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account City
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account City
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Country
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Revenue Tier
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Revenue Tier
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Segment
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Status
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Subregion
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Theatre
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Theatre
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Owner Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account SDR Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account CS Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account CS Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account SDR Team
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Owner Team
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Closed Date
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Closed Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Closed Reason
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Closed Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Cloud Data Warehouse
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Country
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Country
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Email
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Function
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person ID
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Lifecycle
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Lifecycle
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person MQL Date First
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Date First
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity MQL Touch First Date
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Date
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity MQL Touch Last Date
+      value_casing: UNKNOWN
+  - name: Person Recent MQL ID
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity MQL Touch Last ID
+      value_casing: UNKNOWN
+  - name: Person Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Opportunity ID
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Phone
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Profile Fit
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Profile Fit
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Region
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Revenue
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Revenue
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Revenue Tier
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Revenue Tier
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person SAL Flag
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person SAL Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Seniority
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Status
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Subregion
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Superregion
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Title
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Object Type
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Object Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person AE Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person AE Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person AE Team
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person AE Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person SDR Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person SDR Profile
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person SDR Role
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person SDR Team
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Asset Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Asset Type
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Category
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Classification
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Subcategory
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Recent MQL Type
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Segment Persona
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Segment Persona
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Closed Reason
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Closed Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Cloud Data Warehouse
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Company
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Company
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Country
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Country
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Email
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Function
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL Date
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person MQL Touch First ID
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch First ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL ID
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Opportunity ID
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Phone
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Phone
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Region
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Seniority
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Status
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Subregion
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Superregion
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Title
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Object Type
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Object Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person AE Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person AE Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person SDR Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL Asset Type
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL Category
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL Classification
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Recent MQL Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Segment Persona
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Segment Persona
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Buying Stage
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Buying Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Name
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Profile Fit
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Profile Fit
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account Region
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Status
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Cloud Data Warehouse
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account SDR Name
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account SDR Team
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Owner Role
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Owner Team
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Fortune 1000 Rank
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Fortune 1000 Rank
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account Employees
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Employees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account Global 2000 Rank
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Global 2000 Rank
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Cost Amount
+    column_id: SFDC_CAMPAIGN_COST_1::Campaign Cost Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Cost Date
+    column_id: SFDC_CAMPAIGN_COST_1::Campaign Cost Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy Booked Acv"
+    description: Field marked to be deleted
+    formula_id: CFY Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S5 To S6 Conversion (not In S5)"
+    description: Field marked to be deleted
+    formula_id: Opportunity S5 to S6 Conversion (Not in S5)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy M1 Pipe Created (acv)"
+    description: Field marked to be deleted
+    formula_id: CFY M1 Pipe Created (ACV)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy S1"
+    description: Field marked to be deleted
+    formula_id: CFY S1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy M1"
+    description: Field marked to be deleted
+    formula_id: CFY M1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy M0"
+    description: Field marked to be deleted
+    formula_id: CFY M0
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy Mql"
+    description: Field marked to be deleted
+    formula_id: CFY MQL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy Metric"
+    description: Field marked to be deleted
+    formula_id: CFY Metric
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cfy S1 Pipe Created (acv)"
+    description: Field marked to be deleted
+    formula_id: CFY S1 Pipe Created (ACV)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq M0"
+    description: Field marked to be deleted
+    formula_id: CQ M0
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq S1"
+    description: Field marked to be deleted
+    formula_id: CQ S1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq M1"
+    description: Field marked to be deleted
+    formula_id: CQ M1
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq Mql"
+    description: Field marked to be deleted
+    formula_id: CQ MQL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq Creation Of A Metric"
+    description: Field marked to be deleted
+    formula_id: CQ Creation of a Metric
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Cq Metric"
+    description: Field marked to be deleted
+    formula_id: CQ Metric
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagements Count
+    formula_id: Engagements Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 Created Count
+    formula_id: Opportunity M0 Created Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M1 Created Count
+    formula_id: Opportunity M1 Created Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: M1 Campaign Open Pipeline Acv
+    formula_id: M1 Campaign Open Pipeline ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] M1 Open Pipeline Tcv"
+    description: Field marked to be deleted
+    formula_id: M1 Open Pipeline TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Gen?
+    formula_id: Marketing Gen?
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S2 To S6 Conversion (not In S2-s5)"
+    description: Field marked to be deleted
+    formula_id: Opportunity  S2 to S6 Conversion (Not in S2-S5)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 To M1 Conversion
+    formula_id: Opportunity M0 to M1 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity M0 To M1 Conversion (not In M0)"
+    description: Field marked to be deleted
+    formula_id: Opportunity M0 to M1 Conversion (Not in M0)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 To S1 Conversion
+    formula_id: Opportunity M0 to S1 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity M0 To S1 Conversion Velocity (/30 - Months)"
+    description: Field marked to be deleted
+    formula_id: Opportunity M0 to S1 Conversion Velocity  (/30 - Months)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 To S2 Conversion
+    formula_id: Opportunity M0 to S2 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity M0 To S2 Conversion (not In M0/m1/s2)"
+    description: Field marked to be deleted
+    formula_id: Opportunity M0 to S2 Conversion (Not in M0/M1/S2)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M0 To S7 Conversion
+    formula_id: Opportunity M0 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M1 To S1 Conversion
+    formula_id: Opportunity M1 to S1 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity M1 To S1 Conversion (not In M1)"
+    description: Field marked to be deleted
+    formula_id: Opportunity M1 to S1 Conversion (Not in M1)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M1 To S6 Conversion
+    formula_id: Opportunity M1 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S1 To S2 Conversion
+    formula_id: Opportunity S1 to S2 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S1 To S2 Conversion (not In S1)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S1 to S2 Conversion (Not in S1)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S1 To S3 Conversion
+    formula_id: Opportunity S1 to S3 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S1 To S3 Conversion Velocity (/30 - Months)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S1 to S3 Conversion Velocity (/30 - Months)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S2 To S3 Conversion
+    formula_id: Opportunity S2 to S3 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S2 To S3 Conversion (not In S2)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S2 to S3 Conversion (Not in S2)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S3 To S4 Conversion
+    formula_id: Opportunity S3 to S4 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S3 To S4 Conversion (not In S3)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S3 to S4 Conversion (Not in S3)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S3 To S6 Conversion
+    formula_id: Opportunity S3 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S3 To S6 Conversion Velocity (/30 - Months)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S3 To S6 Conversion Velocity (/30 - Months)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S4 To S5 Conversion
+    formula_id: Opportunity S4 to S5 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S4 To S5 Conversion (not In S4)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S4 To S5 Conversion (not In S4)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S5 To S6 Conversion
+    formula_id: Opportunity S5 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Mql To Sal Conversion
+    formula_id: Person MQL to SAL Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Sal To M0 Conversion
+    formula_id: Person SAL to M0 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S2 Created Count
+    formula_id: Opportunity S2 Created Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: M1 Pipeline Created Acv
+    formula_id: M1 Pipeline Created ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Booked Amount Acv"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Booked Amount Acv"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Open Pipeline Deals
+    formula_id: Opportunity Open Pipeline Deals
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: M0 Not S1
+    formula_id: M0 Not S1
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S1 Created Count
+    formula_id: Opportunity S1 Created Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Field Marketer Name
+    column_id: SFDC_CAMPAIGN_1::Field Marketer Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Channel
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Channel
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: "z[DEL] M1 Pipeline Created Tcv"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] M1 Pipeline Created Tcv"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] M1 Pipeline Date"
+    description: Field marked to be deleted
+    formula_id: M1 Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S1 To S6 Conversion
+    formula_id: Opportunity S1 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Pipeline Created Acv
+    formula_id: Opportunity Pipeline Created ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity Pipeline Created Tcv"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity Pipeline Created Tcv"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Booked Amount Tcv"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Booked Amount Tcv"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Person Sal To S1 Conversion"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Person Sal To S1 Conversion"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Contact Role
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT_1::Opportunity Contact Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Contact Primary Flag
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT_1::Opportunity Contact Primary Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Contact Title
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT_1::Opportunity Contact Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Contact Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_CONTACT_1::Opportunity Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: "z[DEL] M1 Pipe + Pipe Influence"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] M1 Pipe + Pipe Influence"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: zDEL Engagement Type
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity Open Pipeline Tcv"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity Open Pipeline Tcv"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Count
+    formula_id: People Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Count
+    formula_id: Opportunity Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Account Subsegment 2021"
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Subsegment
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Subdivision 2021
+      - Account Subclassification 2021
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: "Person [DEL] Account Subsegment 2021"
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Subsegment
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Current Stage Duration
+    formula_id: Opportunity Current Stage Duration
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Id
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Region
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Segment
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Segment
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Status
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Subregion
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Subregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Cloud Data Warehouse
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Website
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Website
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Owner Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Cs Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account CS Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Owner Role
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Record Type Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Record Type Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Employees
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Employees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Stage
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Mql Touch Last Campaign Category
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Source
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Owner Manager Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Owner Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Mql Touch Last Campaign Asset Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Superregion
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Close Date
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Close Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Booked Acv
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity S1 Date
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Type
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Mql Touch Last Campaign Name
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Tcv
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Status
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Source Contact Function
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Source Contact Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Pipeline Date
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Mqls Count
+    formula_id: Person MQLs Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Sals Count
+    formula_id: Person SALs Count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity S2 to S7 Conversion
+    formula_id: Opportunity S2 to S7 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity M1 to S2 Conversion
+    formula_id: Opportunity M1 to S2 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Seniority
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Contact Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: "z[DEL] Opportunity S1 to S6 Conversion (Not in S1-S5)"
+    description: Field marked to be deleted
+    formula_id: "z[DEL] Opportunity S1 to S6 Conversion (Not in S1-S5)"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account Segment
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Account Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Account Clearbit Industry
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_ACCOUNT_1::Account Clearbit Industry
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Employee Range
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Employee Range
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Employees
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Employees
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Employee Range
+    formula_id: Person Employee Range
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account Revenue Range
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Revenue Range
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Revenue Range
+    formula_id: Person Revenue Range
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Pardot Grade
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Pardot Grade
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Prospect Priority
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Prospect Priority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Pardot Score
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Pardot Score
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Pardot Grade at Conversion
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Pardot Grade at Conversion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Pardot Score at MQL
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Pardot Score at MQL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source Contact Pardot Grade
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Contact Pardot Grade
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Superregion
+    column_id: SFDC_CAMPAIGN_1::Campaign Superregion
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person MQL to M0 Conversion
+    formula_id: Person MQL to M0 Conversion
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Free Personal Email
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Free Personal Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity RD Gate Meeting Held
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity RD Gate Meeting Held
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Tier
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Tier
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Subsegment Final
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Subsegment Final
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Sales Cycle Proxy
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Sales Cycle Proxy
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Type
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement Type 2
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Event Date
+    column_id: SFDC_CAMPAIGN_1::Campaign Event Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Source
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Influence
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Opportunity Stage at Touch
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Opportunity Stage at Touch
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Ready For CS Approval
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Ready For CS Approval
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Send To Commissions Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Send To Commissions Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportuniy Send To Commissions
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportuniy Send To Commissions
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Notes On Commissions
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Notes On Commissions
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Pain
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Pain
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Consequence
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Consequence
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Target Profile
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Target Profile
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Authority
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Authority
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Timing
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Timing
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Segment
+    formula_id: Opportunity Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement TS GA UTM Source
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement TS GA UTM Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement TS GA UTM Campaign
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement TS GA UTM Campaign
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement TS GA UTM Medium
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_1::Engagement TS GA UTM Medium
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity SDR Manager Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity SDR Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Registration Date
+    column_id: TS_USER_1::User Registration Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: FT User Activation Date
+    column_id: TS_USER_1::User Activation Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: FT User Status
+    column_id: TS_USER_1::User Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Team ID
+    column_id: TS_USER_1::User Team ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: FT User Team Owner Flag
+    column_id: TS_USER_1::User Team Owner Flag
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Subscription Type
+    column_id: TS_USER_1::User Subscription Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Subscription Tier
+    column_id: TS_USER_1::User Subscription Tier
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Source
+    column_id: TS_USER_1::User Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: FT User Source Cluster
+    column_id: TS_USER_1::User Source Cluster
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Account SDR Manager
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account SDR Manager
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Owner Manager
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Manager
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Matillion Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Matillion Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Alation Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Alation Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev BigQuery Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev BigQuery Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Compliance Focused
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Compliance Focused
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev SaaS Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev SaaS Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Growth Rate
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Growth Rate
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Tech Centricity
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Tech Centricity
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Early Adopter
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Early Adopter
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Fivetran Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Fivetran Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev DBT Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev DBT Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Collibra Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Collibra Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Synapse Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Synapse Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Starburst Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Starburst Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Snowflake Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Snowflake Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Redshift Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Redshift Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Databricks Signal
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Databricks Signal
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev AICP Name
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev AICP Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Data Ramp
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Data Ramp
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Converted SAL Flag
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Converted SAL Flag
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Converted Flag SPC
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Converted Flag SPC
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Account Tier Snapshot
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Account Tier Snapshot
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Quote Hide Logo Language
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Quote Hide Logo Language
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Asset Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Classification
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Classification
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Subcategory
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Category
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Category
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement ID
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement ID
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Source Engagement Asset Type
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Source Engagement Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity Finance Comments
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Finance Comments
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Opportunity S7 Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity S7 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Partner Account Name
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Partner Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person Partner Name
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Partner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Company
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Company
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account Rev Score - TSA
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Score - TSA
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Rev Score - TSE
+    column_id: SFDC_ACCOUNT_EXTENDED_1::Account Rev Score - TSE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Next Quarter S2 Target
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity Next Quarter S2 Target
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Cost per Touch
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Cost per Touch
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Order
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Order
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Marketing Touch Campaign Total Touches
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Campaign Total Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Accelerated Percentage
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Accelerated Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Percentage
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch WMT Generated Percentage
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch WMT Generated Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Total Accelerated Opportunity Touches
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Total Accelerated Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Total Opportunity Touches
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Total Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Marketing Touch Total Generated Opportunity Touches
+    column_id: SFDC_CAMPAIGN_MARKETING_TOUCH_1::Marketing Touch Total Generated Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Last Activity Date
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Last Activity Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Free Personal Email
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Free Personal Email
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Source
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Source
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Code Uber
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Code Uber
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Code New
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Page
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Page
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Location
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Location
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Code
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person UTM Referral Code
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Domain Name
+    formula_id: Engagement Person Domain Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Engagement Person Referral Internal Code
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person Referral Internal Code
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Account List
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account List
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Domain Name
+    formula_id: Person Domain Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Campaign Partner Involvement
+    column_id: SFDC_CAMPAIGN_1::Campaign Partner Involvement
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Campaign Partner Event Host
+    column_id: SFDC_CAMPAIGN_1::Campaign Partner Event Host
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Campaign Collaborator Event Host
+      - Campaign Associate Event Host
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Opportunity Region Segment
+    formula_id: Opportunity Region Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity Theater
+    formula_id: Opportunity Theater
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Person MQL Touch Last Reason
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person MQL Touch Last Reason
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Country
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Country
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Owner Name
+    column_id: SFDC_CAMPAIGN_PERSON_ACCOUNT_1::Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+  - name: Person Account Region Segment
+    formula_id: Person Account Region Segment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Open Pipeline
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Open Pipeline
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account Open Pipeline Deals
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account Open Pipeline Deals
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Opportunity MQL Date Last
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_1::Opportunity MQL Date Last
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Opportunity MQL Date Recent
+      - Opportunity MQL Date Final
+      synonym_type: AUTO_GENERATED
+  - name: Person SAL to M0 Conversion (SDR Level)
+    formula_id: Person SAL to M0 Conversion (SDR Level)
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Person SAL to M0 Ratio
+      - Person SAL to M0 Proportion
+      synonym_type: AUTO_GENERATED
+  - name: Campaign SFDC URL
+    column_id: SFDC_CAMPAIGN_1::Campaign SFDC URL
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - SFDC URL
+      - URL
+      synonym_type: AUTO_GENERATED
+  - name: Campaign Created Date
+    column_id: SFDC_CAMPAIGN_1::Campaign Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Campaign Formation Date
+      - Campaign Generation Date
+      synonym_type: AUTO_GENERATED
+  - name: Person Import Notes 2
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Import Notes 2
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Person Import Remarks 2
+      - Person Import Comments 2
+      synonym_type: AUTO_GENERATED
+  - name: Engagement Person Recent MQL Asset Name
+    column_id: SFDC_CAMPAIGN_ENGAGEMENT_PERSON_1::Person MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Interaction Individual Recent MQL Resource Name
+      - Engagement Person Recent MQL Property Name
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Account SDR Disqualified Reason
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Sales Development Representative Disqualified Reason
+      - Account Sales Development Rep Disqualified Reason
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Stage Last Change Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Stage Last Change Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - SDR Stage Last Change Date of Account
+      - Account SDR Stage Last Modified Date
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Stage Disqualified Last
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Stage Disqualified Last
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - SDR Stage Disqualified Last of Account
+      - SDR Stage Disqualified Last of Firm
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Days Assigned
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Days Assigned
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Sales Development Representative Days Assigned
+      - Account Sales Development Representative Days Allotted
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Last Transfer Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Last Transfer Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Organization SDR Last Exchange Date
+      - Firm SDR Last Exchange Date
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Last Touch Date
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Last Touch Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Sales Development Representative Last Contact Date
+      - Account Sales Development Representative Last Touch Date
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Nurture Follow-up
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Nurture Follow-up
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Sales Development Representative Nurture Follow-up
+      - Account Sales Development Representative Nurture Pursuit
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Notes
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Notes
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Sales Development Representative Notes
+      - Account Sales Development Representative Remarks
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR Stage
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Stage
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Account Sales Development Representative Phase
+      - Account Sales Development Representative Stage
+      synonym_type: AUTO_GENERATED
+  - name: Account SDR ID
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+  - name: Account SDR Profile
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Sales Development Representative Profile
+      - Account Sales Development Representative Character
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Account SDR Role
+    column_id: SFDC_CAMPAIGN_OPPORTUNITY_ACCOUNT_1::Account SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Account Sales Development Representative Role
+      - Account Sales Development Representative Function
+      synonym_type: AUTO_GENERATED
+      value_casing: UNKNOWN
+  - name: Mode Campaign
+    column_id: SFDC_CAMPAIGN_1::Mode Campaign
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Style Campaign
+      - Form Campaign
+      synonym_type: AUTO_GENERATED
+  - name: Campaign Partners Involved
+    column_id: SFDC_CAMPAIGN_1::Campaign Partners Involved
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Campaign Partners Participating
+      - Campaign Partners Engaged
+      synonym_type: AUTO_GENERATED
+  - name: Person Created Date
+    column_id: SFDC_CAMPAIGN_PERSON_1::Person Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Person Generated Date
+      - Person Established Date
+      synonym_type: AUTO_GENERATED
+  properties:
+    is_bypass_rls: false
+    join_progressive: true

@@ -1,0 +1,1153 @@
+guid: 8cfbf53e-2195-43a4-a81f-48abceff93b9
+table:
+  name: SFDC_CAMPAIGN_MARKETING_TOUCH
+  db: GTM_DB
+  schema: CAMPAIGNS
+  db_table: SFDC_CAMPAIGN_MARKETING_TOUCH
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Marketing Touch Campaign ID
+    db_column_name: Marketing Touch Campaign ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch WMT Generated Percentage
+    db_column_name: Marketing Touch WMT Generated Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Total Accelerated Opportunity Touches
+    db_column_name: Marketing Touch Total Accelerated Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Cost per Touch
+    db_column_name: Marketing Touch Cost per Touch
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch WMT Accelerated Percentage
+    db_column_name: Marketing Touch WMT Accelerated Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Campaign Total Touches
+    db_column_name: Marketing Touch Campaign Total Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Total Generated Opportunity Touches
+    db_column_name: Marketing Touch Total Generated Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Total Opportunity Touches
+    db_column_name: Marketing Touch Total Opportunity Touches
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Order
+    db_column_name: Marketing Touch Order
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch WMT Percentage
+    db_column_name: Marketing Touch WMT Percentage
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Date
+    db_column_name: Marketing Touch Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch ID
+    db_column_name: Marketing Touch ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity ID
+    db_column_name: Marketing Touch Opportunity ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Person ID
+    db_column_name: Marketing Touch Person ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Stage Snapshot
+    db_column_name: Marketing Touch Opportunity Stage Snapshot
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch WLT Generated Amount
+    db_column_name: Marketing Touch WLT Generated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch WMT Accelerated Amount
+    db_column_name: Marketing Touch WMT Accelerated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch WMT Attribution Amount
+    db_column_name: Marketing Touch WMT Attribution Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch WMT Generated Amount
+    db_column_name: Marketing Touch WMT Generated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Campaign Asset Name
+    db_column_name: Marketing Touch Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Asset Type
+    db_column_name: Marketing Touch Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Category
+    db_column_name: Marketing Touch Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Classification
+    db_column_name: Marketing Touch Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Name
+    db_column_name: Marketing Touch Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Subcategory
+    db_column_name: Marketing Touch Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Campaign Type
+    db_column_name: Marketing Touch Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Person Email
+    db_column_name: Marketing Touch Person Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Person Name
+    db_column_name: Marketing Touch Person Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Person Title
+    db_column_name: Marketing Touch Person Title
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Tenure
+    db_column_name: Marketing Touch Opportunity Owner Tenure
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity Creator Role
+    db_column_name: Marketing Touch Opportunity Creator Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity ACV
+    db_column_name: Marketing Touch Opportunity ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Opportunity Presales Notes
+    db_column_name: Marketing Touch Opportunity Presales Notes
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch PeopleAi Engagement Level
+    db_column_name: Marketing Touch PeopleAi Engagement Level
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity SDR Profile
+    db_column_name: Marketing Touch Opportunity SDR Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Next Step History
+    db_column_name: Marketing Touch Opportunity Owner Next Step History
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity CS Role
+    db_column_name: Marketing Touch Opportunity CS Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity CS ID
+    db_column_name: Marketing Touch Opportunity CS ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Partner Account ID
+    db_column_name: Marketing Touch Opportunity Partner Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Type
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source Contact FT Date
+    db_column_name: Marketing Touch Opportunity Source Contact FT Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Subregion
+    db_column_name: Marketing Touch Opportunity Subregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Product Type
+    db_column_name: Marketing Touch Opportunity Product Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SE Profile
+    db_column_name: Marketing Touch Opportunity SE Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SE ID
+    db_column_name: Marketing Touch Opportunity SE ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SDR Name
+    db_column_name: Marketing Touch Opportunity SDR Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Disqualified Date
+    db_column_name: Marketing Touch Opportunity Disqualified Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Initial Meeting Date
+    db_column_name: Marketing Touch Opportunity Initial Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Name
+    db_column_name: Marketing Touch Opportunity Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Free Trial Impact
+    db_column_name: Marketing Touch Opportunity Free Trial Impact
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Active Flag
+    db_column_name: Marketing Touch Opportunity Owner Active Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: BOOL
+  - name: Marketing Touch Opportunity Partner Account Name
+    db_column_name: Marketing Touch Opportunity Partner Account Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Disqualified Comment
+    db_column_name: Marketing Touch Opportunity Disqualified Comment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Pipeline Date
+    db_column_name: Marketing Touch Opportunity Pipeline Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity SDR Role
+    db_column_name: Marketing Touch Opportunity SDR Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Booked TCV
+    db_column_name: Marketing Touch Opportunity Booked TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity CS Team
+    db_column_name: Marketing Touch Opportunity CS Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Asset Type
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Asset Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Presales Stage
+    db_column_name: Marketing Touch Opportunity Presales Stage
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source Contact Function
+    db_column_name: Marketing Touch Opportunity Source Contact Function
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Forecast Category
+    db_column_name: Marketing Touch Opportunity Forecast Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Close Date
+    db_column_name: Marketing Touch Opportunity Close Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity S4 Date
+    db_column_name: Marketing Touch Opportunity S4 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Original Currency
+    db_column_name: Marketing Touch Opportunity Original Currency
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity S5 Date
+    db_column_name: Marketing Touch Opportunity S5 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Channel
+    db_column_name: Marketing Touch Opportunity Channel
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Name
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Asset Name
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Asset Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Start Date
+    db_column_name: Marketing Touch Opportunity Owner Start Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity S1 Date
+    db_column_name: Marketing Touch Opportunity S1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity S6 Date
+    db_column_name: Marketing Touch Opportunity S6 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity S3 Date
+    db_column_name: Marketing Touch Opportunity S3 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity MQL Touch Last ID
+    db_column_name: Marketing Touch Opportunity MQL Touch Last ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Creator Team
+    db_column_name: Marketing Touch Opportunity Creator Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SDR Team
+    db_column_name: Marketing Touch Opportunity SDR Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Classification
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Classification
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Category
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Profile
+    db_column_name: Marketing Touch Opportunity Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Partner Account Owner Name
+    db_column_name: Marketing Touch Opportunity Partner Account Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Creator Name
+    db_column_name: Marketing Touch Opportunity Creator Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Original Renewal ACV
+    db_column_name: Marketing Touch Opportunity Original Renewal ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity Source Contact Seniority
+    db_column_name: Marketing Touch Opportunity Source Contact Seniority
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Region
+    db_column_name: Marketing Touch Opportunity Region
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity M1 Date
+    db_column_name: Marketing Touch Opportunity M1 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity S2 Date
+    db_column_name: Marketing Touch Opportunity S2 Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Partner Account Owner Role
+    db_column_name: Marketing Touch Opportunity Partner Account Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Name
+    db_column_name: Marketing Touch Opportunity Owner Name
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SE Role
+    db_column_name: Marketing Touch Opportunity SE Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner ID
+    db_column_name: Marketing Touch Opportunity Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source
+    db_column_name: Marketing Touch Opportunity Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Last Login Date
+    db_column_name: Marketing Touch Opportunity Owner Last Login Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity M0 Date
+    db_column_name: Marketing Touch Opportunity M0 Date
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Meeting Status
+    db_column_name: Marketing Touch Opportunity Meeting Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Stage
+    db_column_name: Marketing Touch Opportunity Stage
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SDR ID
+    db_column_name: Marketing Touch Opportunity SDR ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source Contact ID
+    db_column_name: Marketing Touch Opportunity Source Contact ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Disqualified Reason
+    db_column_name: Marketing Touch Opportunity Disqualified Reason
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source Contact Email
+    db_column_name: Marketing Touch Opportunity Source Contact Email
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Source Contact Name
+    db_column_name: Marketing Touch Opportunity Source Contact Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity TCV
+    db_column_name: Marketing Touch Opportunity TCV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Opportunity Conversion
+    db_column_name: Marketing Touch Opportunity Conversion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Original Renewal Date
+    db_column_name: Marketing Touch Opportunity Original Renewal Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity CS Name
+    db_column_name: Marketing Touch Opportunity CS Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Booked ACV
+    db_column_name: Marketing Touch Opportunity Booked ACV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity Partner Account Owner ID
+    db_column_name: Marketing Touch Opportunity Partner Account Owner ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Status
+    db_column_name: Marketing Touch Opportunity Status
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Deployment
+    db_column_name: Marketing Touch Opportunity Deployment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Stage Maximum
+    db_column_name: Marketing Touch Opportunity Stage Maximum
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Opportunity Probability
+    db_column_name: Marketing Touch Opportunity Probability
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Opportunity Source Contact Title
+    db_column_name: Marketing Touch Opportunity Source Contact Title
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Customer Environment Type
+    db_column_name: Marketing Touch Opportunity Customer Environment Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Team
+    db_column_name: Marketing Touch Opportunity Owner Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Partner Account Type
+    db_column_name: Marketing Touch Opportunity Partner Account Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch Last Campaign Subcategory
+    db_column_name: Marketing Touch Opportunity MQL Touch Last Campaign Subcategory
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Creator ID
+    db_column_name: Marketing Touch Opportunity Creator ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Next Step
+    db_column_name: Marketing Touch Opportunity Owner Next Step
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Partner Account Status
+    db_column_name: Marketing Touch Opportunity Partner Account Status
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Superregion
+    db_column_name: Marketing Touch Opportunity Superregion
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Created Date
+    db_column_name: Marketing Touch Opportunity Created Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Marketing Touch Opportunity SE Team
+    db_column_name: Marketing Touch Opportunity SE Team
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity CS Profile
+    db_column_name: Marketing Touch Opportunity CS Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Customer Environment
+    db_column_name: Marketing Touch Opportunity Customer Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Role
+    db_column_name: Marketing Touch Opportunity Owner Role
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Type
+    db_column_name: Marketing Touch Opportunity Type
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Free Trial Type
+    db_column_name: Marketing Touch Opportunity Free Trial Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Account ID
+    db_column_name: Marketing Touch Account ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity SE Hours
+    db_column_name: Marketing Touch Opportunity SE Hours
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity Meeting Date
+    db_column_name: Marketing Touch Opportunity Meeting Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Marketing Touch Opportunity Cloud Data Warehouse
+    db_column_name: Marketing Touch Opportunity Cloud Data Warehouse
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Partner Account Owner Profile
+    db_column_name: Marketing Touch Opportunity Partner Account Owner Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Cloud Environment
+    db_column_name: Marketing Touch Opportunity Cloud Environment
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity MQL Touch First ID
+    db_column_name: Marketing Touch Opportunity MQL Touch First ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Creator Profile
+    db_column_name: Marketing Touch Opportunity Creator Profile
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Owner Manager Name
+    db_column_name: Marketing Touch Opportunity Owner Manager Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Free Trial Source
+    db_column_name: Marketing Touch Opportunity Free Trial Source
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Pull Forward Flag
+    db_column_name: Marketing Touch Opportunity Pull Forward Flag
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Booked Deal
+    db_column_name: Marketing Touch Opportunity Booked Deal
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: INT64
+  - name: Marketing Touch Opportunity SE Name
+    db_column_name: Marketing Touch Opportunity SE Name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch Opportunity Pricing Type
+    db_column_name: Marketing Touch Opportunity Pricing Type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Marketing Touch WFT Accelerated Amount
+    db_column_name: Marketing Touch WFT Accelerated Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Marketing Touch Opportunity Stage at Touch
+    db_column_name: Marketing Touch Opportunity Stage at Touch
+    properties:
+      column_type: ATTRIBUTE
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CAMPAIGN_MARKETING_TOUCH_CAMPAIGN
+    destination:
+      name: SFDC_CAMPAIGN
+      fqn: b426e4dc-51f1-4778-984e-71f051cded8b
+    "on": "[SFDC_CAMPAIGN_MARKETING_TOUCH::Marketing Touch Campaign ID] = [SFDC_CAMPAIGN::Campaign ID]"
+    type: INNER

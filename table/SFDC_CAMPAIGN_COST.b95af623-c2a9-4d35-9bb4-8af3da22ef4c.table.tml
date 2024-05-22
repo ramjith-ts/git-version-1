@@ -1,0 +1,50 @@
+guid: b95af623-c2a9-4d35-9bb4-8af3da22ef4c
+table:
+  name: SFDC_CAMPAIGN_COST
+  db: GTM_DB
+  schema: CAMPAIGNS
+  db_table: SFDC_CAMPAIGN_COST
+  connection:
+    name: Analytics
+    fqn: 57cc6155-5118-4888-9ba4-c1c0c65ba088
+  columns:
+  - name: Campaign Cost Amount
+    db_column_name: Campaign Cost Amount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Campaign Cost Date
+    db_column_name: Campaign Cost Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: DATE
+  - name: Campaign Cost User ID
+    db_column_name: Campaign Cost User ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Campaign ID
+    db_column_name: Campaign ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      value_casing: UNKNOWN
+    db_column_properties:
+      data_type: VARCHAR
+  joins_with:
+  - name: FK_CAMPAIGN_COST_CAMPAIGN
+    destination:
+      name: SFDC_CAMPAIGN
+      fqn: b426e4dc-51f1-4778-984e-71f051cded8b
+    "on": "[SFDC_CAMPAIGN_COST::Campaign ID] = [SFDC_CAMPAIGN::Campaign ID]"
+    type: INNER

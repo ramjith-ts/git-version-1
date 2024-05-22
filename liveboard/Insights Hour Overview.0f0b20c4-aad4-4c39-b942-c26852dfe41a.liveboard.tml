@@ -1,0 +1,404 @@
+guid: 0f0b20c4-aad4-4c39-b942-c26852dfe41a
+liveboard:
+  name: Insights Hour Overview
+  description: Liveboard to monitor the registration of Insights Hour Sessions
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Insights Hour 2024 - List of Registrations
+      description: Number of people registered for 'Customer Insights Hours' campaign this month
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "[Campaign Event Date] = 'this month' by [Engagement Person Email] [Engagement Person Account Name] [Engagement Person Account Region] [Engagement Date] [Engagement Date].detailed [Engagement Person Account Owner Name] [Engagement Person Account Cs Name] sort by [Engagement Date] [Engagement Date].detailed descending"
+      answer_columns:
+      - name: Engagement Date
+        custom_name: Registration Date
+      - name: Engagement Person Account Cs Name
+        custom_name: CSM
+      - name: Engagement Person Account Name
+        custom_name: Account Name
+      - name: Engagement Person Account Owner Name
+        custom_name: AE
+      - name: Engagement Person Account Region
+        custom_name: Account Region
+      - name: Engagement Person Email
+        custom_name: Registered Participant
+      table:
+        table_columns:
+        - column_id: Engagement Date
+          show_headline: false
+        - column_id: Engagement Person Account Cs Name
+          show_headline: false
+        - column_id: Engagement Person Account Name
+          show_headline: false
+        - column_id: Engagement Person Account Owner Name
+          show_headline: false
+        - column_id: Engagement Person Account Region
+          show_headline: false
+        - column_id: Engagement Person Email
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Engagement Person Email\",\"width\": 277.0},{\"columnId\": \"Engagement Person Account Name\",\"width\": 348.0},{\"columnId\": \"Engagement Person Account Region\",\"width\": 278.0}]}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Engagement Date
+        - column_id: Engagement Person Account Cs Name
+        - column_id: Engagement Person Account Name
+        - column_id: Engagement Person Account Owner Name
+        - column_id: Engagement Person Account Region
+        - column_id: Engagement Person Email
+        axis_configs:
+        - x:
+          - Engagement Date
+          "y":
+          - Engagement Person Account Cs Name
+          category:
+          - Engagement Person Account Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Engagement Person Email\",\"columnProperty\": {}},{\"columnId\": \"Engagement Person Account Name\",\"columnProperty\": {}},{\"columnId\": \"Engagement Person Account Region\",\"columnProperty\": {}},{\"columnId\": \"Engagement Date\",\"columnProperty\": {}},{\"columnId\": \"Engagement Person Account Owner Name\",\"columnProperty\": {}},{\"columnId\": \"Engagement Person Account Cs Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ef8ab1d4-3a8b-44f5-88e0-9634a756f013\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Engagement Person Account Cs Name\"],\"isOpposite\": false}},{\"id\": \"78618c95-cb3a-4cce-a974-293515d1988e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Date\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1782588a-42c8-4639-b945-506c6d9f26a7\",\"color\": \"#747E8C\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: d4b1dc3c-16ef-4697-b39a-f57cc8ffc686
+  - id: Viz_2
+    answer:
+      name: '... by Companies Represented'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Campaign Name].'WB 2024.01.25 Customer Insights Hours' [Engagement Person Account Name] sort by count [Engagement Person ID] descending [Engagement Person Account Region]"
+      answer_columns:
+      - name: Engagement Person Account Name
+      - name: Engagement Person Account Region
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Account Name
+          show_headline: false
+        - column_id: Engagement Person Account Region
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_BAR
+        chart_columns:
+        - column_id: Engagement Person Account Name
+        - column_id: Engagement Person Account Region
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Account Name
+          "y":
+          - Number of Engagement Person ID
+          color:
+          - Engagement Person Account Region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Engagement Person Account Name\",\"columnProperty\": {}},{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Account Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2a60994e-c20e-4f05-8547-922dce0e6dc5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"6fe452e7-4833-422e-941a-ba13fc4444f6\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Account Name\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#7A7DF3\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#7A7DF3\"},{\"serieName\": \"{null}\",\"color\": \"#56D3A8\"},{\"serieName\": \"apac\",\"color\": \"#06BF7F\"},{\"serieName\": \"emea benelux\",\"color\": \"#FCD977\"},{\"serieName\": \"emea commercial\",\"color\": \"#FCC838\"},{\"serieName\": \"emea dach\",\"color\": \"#82DFE9\"},{\"serieName\": \"emea western europe\",\"color\": \"#48D1E0\"},{\"serieName\": \"na commercial\",\"color\": \"#9597f5\"},{\"serieName\": \"na east\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7619a9a1-268f-4e1b-8a01-40e5e512a340
+  - id: Viz_3
+    answer:
+      name: '... by Market Region'
+      description: Region of participants who have registered for Insights Hour Campaign
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Campaign Name].'WB 2024.01.25 Customer Insights Hours' [Engagement Person Account Region] sort by count [Engagement Person ID] descending"
+      answer_columns:
+      - name: Engagement Person Account Region
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Account Region
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Engagement Person Account Region
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Account Region
+          "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Account Region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1fd951e1-24ab-4d57-b03b-c49f22f54591\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"1bc6e0e8-10d0-446b-955d-b4cf05cd2964\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Account Region\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#7A7DF3\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: ebf4bb92-f57d-4fc0-beb4-bcc969bfe033
+  - id: Viz_4
+    answer:
+      name: '... by CSM/CCOE'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Campaign Name].'WB 2024.01.25 Customer Insights Hours' sort by count [Engagement Person ID] descending [Engagement Person Account Cs Name]"
+      answer_columns:
+      - name: Engagement Person Account Cs Name
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Account Cs Name
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Engagement Person Account Cs Name
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Account Cs Name
+          "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Account Cs Name\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ab4d8d3c-eed5-490b-ada9-f3bf5cc8ccbe\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"11a8bbec-2a66-4a36-9830-d977ad4e2ca3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Account Cs Name\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#7A7DF3\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#747E8C\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e9d3aecc-d9c1-4c49-97a9-e54ec0e15e3b
+  - id: Viz_5
+    answer:
+      name: Number of Registrations
+      description: excluding TS participants
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID]"
+      answer_columns:
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"customProps\": \"{\\\"showLabel\\\":true,\\\"showComparison\\\":true,\\\"showSparkline\\\":true,\\\"showAnomalies\\\":true,\\\"showBounds\\\":true,\\\"customCompare\\\":\\\"PREV_MONTH\\\"}\",\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e7ed5fd5-7d4d-482e-ad40-9d03f675be14\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"7f39672e-5db8-46b1-b928-3f321b784923\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: dabb9403-b03c-4a07-b245-d17aa4456e7e
+  - id: Viz_6
+    answer:
+      name: '... by Date of Registration'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Engagement Date] [Engagement Date].daily [Engagement Person Superregion]"
+      answer_columns:
+      - name: Day(Engagement Date)
+      - name: Engagement Person Superregion
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Day(Engagement Date)
+          show_headline: false
+        - column_id: Engagement Person Superregion
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Day(Engagement Date)
+        - column_id: Engagement Person Superregion
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Day(Engagement Date)
+          "y":
+          - Number of Engagement Person ID
+          color:
+          - Engagement Person Superregion
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Day(Engagement Date)\",\"columnProperty\": {}},{\"columnId\": \"Engagement Person Superregion\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"44263d0a-bf39-47dd-b3c2-e7e5509d2a61\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"68519e58-5457-4119-a652-cb49f0742975\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Engagement Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#F04152\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#F04152\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"emea\",\"color\": \"#FCC838\"},{\"serieName\": \"emerging markets\",\"color\": \"#48D1E0\"},{\"serieName\": \"exception\",\"color\": \"#9597f5\"},{\"serieName\": \"na\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 572f64b9-d476-4349-9008-4a43c03012ef
+  - id: Viz_7
+    answer:
+      name: '... by Super Region'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Engagement Person Superregion]"
+      answer_columns:
+      - name: Engagement Person Superregion
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Superregion
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Engagement Person Superregion
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Superregion
+          "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Superregion\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b50f4fd8-5da1-4d4e-baef-c48c3d795b1a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"17fe1e62-a2a0-4259-9e62-3367bd7262e1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Superregion\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#F04152\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"emea\",\"color\": \"#FCC838\"},{\"serieName\": \"emerging markets\",\"color\": \"#48D1E0\"},{\"serieName\": \"exception\",\"color\": \"#9597f5\"},{\"serieName\": \"na\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4e8f30ea-d731-4db0-a592-8a940c037137
+  - id: Viz_8
+    answer:
+      name: '... by Account Segment'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Campaign Name].'wb 2024.01.25 customer insights hours' [Campaign Name].'wb 2024.02.29 customer insights hours' [Campaign Name].'wb 2024.03.28 customer insights hours' [Engagement Person Account Segment]"
+      answer_columns:
+      - name: Engagement Person Account Segment
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Account Segment
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Engagement Person Account Segment
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Account Segment
+          "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Account Segment\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"6adff322-8338-4288-bab1-c1f6e05ec624\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"a33eb4a6-438d-45a1-9d55-f49b1272cf2e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Account Segment\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#F04152\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"emea\",\"color\": \"#FCC838\"},{\"serieName\": \"emerging markets\",\"color\": \"#48D1E0\"},{\"serieName\": \"exception\",\"color\": \"#9597f5\"},{\"serieName\": \"na\",\"color\": \"#7A7DF3\"},{\"serieName\": \"commercial\",\"color\": \"#48D1E0\"},{\"serieName\": \"enterprise\",\"color\": \"#7A7DF3\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7a24bd89-9c5f-4d32-b243-7576c6d79e48
+  - id: Viz_9
+    answer:
+      name: '... by Account Status'
+      tables:
+      - id: GTM Campaigns
+        name: GTM Campaigns
+        fqn: b2d24878-0150-4c1e-a74c-bfc46cc4a682
+      search_query: "count [Engagement Person ID] [Campaign Event Date] = 'this month' [Campaign Name].'wb 2024.01.25 customer insights hours' [Campaign Name].'wb 2024.02.29 customer insights hours' [Campaign Name].'wb 2024.03.28 customer insights hours' [Engagement Person Account Status]"
+      answer_columns:
+      - name: Engagement Person Account Status
+      - name: Number of Engagement Person ID
+      table:
+        table_columns:
+        - column_id: Engagement Person Account Status
+          show_headline: false
+        - column_id: Number of Engagement Person ID
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Engagement Person Account Status
+        - column_id: Number of Engagement Person ID
+        axis_configs:
+        - x:
+          - Engagement Person Account Status
+          "y":
+          - Number of Engagement Person ID
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Number of Engagement Person ID\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Engagement Person Account Status\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1f0eee98-d50c-4871-a10e-1ed0c5b57ec9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Engagement Person ID\"],\"isOpposite\": false}},{\"id\": \"454caf60-17d7-4d35-9ea6-a91f224e4cb2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Engagement Person Account Status\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Engagement Person ID\",\"color\": \"#F04152\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"emea\",\"color\": \"#FCC838\"},{\"serieName\": \"emerging markets\",\"color\": \"#48D1E0\"},{\"serieName\": \"exception\",\"color\": \"#9597f5\"},{\"serieName\": \"na\",\"color\": \"#7A7DF3\"},{\"serieName\": \"commercial\",\"color\": \"#48D1E0\"},{\"serieName\": \"enterprise\",\"color\": \"#7A7DF3\"},{\"serieName\": \"customer\",\"color\": \"#48D1E0\"},{\"serieName\": \"partner\",\"color\": \"#7A7DF3\"},{\"serieName\": \"prospect\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 0283ea05-b27a-4d1b-89c5-3e72effef326
+  filters:
+  - column:
+    - Campaign Name
+    oper: in
+    values:
+    - WB 2024.01.25 Customer Insights Hours
+    - WB 2024.02.29 Customer Insights Hours
+    - WB 2024.03.28 Customer Insights Hours
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Campaign Event Date
+    is_mandatory: false
+    date_filter:
+      type: THIS_PERIOD
+      oper: =
+      date_period: MONTH
+    display_name: ""
+  layout:
+    tabs:
+    - name: Summary
+      description: ""
+      tiles:
+      - visualization_id: Viz_2
+        x: 0
+        "y": 8
+        height: 8
+        width: 12
+      - visualization_id: Viz_3
+        x: 6
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_5
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_6
+        x: 0
+        "y": 4
+        height: 4
+        width: 12
+      - visualization_id: Viz_1
+        x: 0
+        "y": 24
+        height: 8
+        width: 12
+      - visualization_id: Viz_7
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_8
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_9
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
