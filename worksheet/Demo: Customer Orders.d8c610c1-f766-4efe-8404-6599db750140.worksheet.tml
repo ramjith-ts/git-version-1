@@ -1,0 +1,270 @@
+guid: d8c610c1-f766-4efe-8404-6599db750140
+model:
+  name: "Demo: Customer Orders"
+  description: Mode datasets integration demo
+  model_tables:
+  - name: customer_orders
+    fqn: 9850ce2b-2da1-4d5e-8552-7c8b263ae136
+    joins:
+    - with: sales_clerk_targets
+      "on": "[customer_orders::Order Clerk] = [sales_clerk_targets::Order Clerk]"
+      type: INNER
+      cardinality: MANY_TO_ONE
+  - name: ordered_parts
+    fqn: 92591b15-d197-49cd-ae41-fbb3896202ea
+    joins:
+    - with: customer_orders
+      "on": "[ordered_parts::Order Key] = [customer_orders::Order Key]"
+      type: INNER
+      cardinality: MANY_TO_ONE
+  - name: sales_clerk_targets
+    fqn: 589017c6-d3cb-4d97-a727-ed3296531118
+  columns:
+  - name: Customer Nation
+    column_id: customer_orders::Customer Nation
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Country
+      - Nation
+      synonym_type: AUTO_GENERATED
+  - name: Order Status
+    column_id: customer_orders::Order Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Order Condition
+      - Order State
+      synonym_type: AUTO_GENERATED
+  - name: Order Clerk
+    column_id: customer_orders::Order Clerk
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Order Attendant
+      - Order Officer
+      synonym_type: AUTO_GENERATED
+  - name: Order Total Price
+    column_id: customer_orders::Order Total Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Total Cost
+      - Overall Price
+      synonym_type: AUTO_GENERATED
+  - name: Order Date
+    column_id: customer_orders::Order Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Order Placement Date
+      - Order Creation Date
+      synonym_type: AUTO_GENERATED
+  - name: Customer Region
+    column_id: customer_orders::Customer Region
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Geographical Area
+      - Territory
+      synonym_type: AUTO_GENERATED
+  - name: Customer Name
+    column_id: customer_orders::Customer Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Client Name
+      - Customer Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Customer Market Segment
+    column_id: customer_orders::Customer Market Segment
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Market Division
+      - Market Segmentation
+      synonym_type: AUTO_GENERATED
+  - name: Order Key
+    column_id: customer_orders::Order Key
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Order Identifier
+      - Order Number
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Receipt Date
+    column_id: ordered_parts::Order Item Receipt Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Receipt Date
+      - Receiving Date
+      synonym_type: AUTO_GENERATED
+  - name: Item Order Line Number
+    column_id: ordered_parts::Item Order Line Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Order Line Number
+      - Order Line Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Ship Date
+    column_id: ordered_parts::Order Item Ship Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Delivery Date
+      - Shipment Date
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Tax
+    column_id: ordered_parts::Order Item Tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Taxation
+      - Levy
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Return Flag
+    column_id: ordered_parts::Order Item Return Flag
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Return Flag
+      - Return Marker
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Quantity
+    column_id: ordered_parts::Order Item Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Amount
+      - Quantity
+      synonym_type: AUTO_GENERATED
+  - name: Part Manufacturer
+    column_id: ordered_parts::Part Manufacturer
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Producer
+      - Maker
+      synonym_type: AUTO_GENERATED
+  - name: ' Order Item Discount'
+    column_id: "ordered_parts:: Order Item Discount"
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Part Name
+    column_id: ordered_parts::Part Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Component Name
+      - Part Designation
+      synonym_type: AUTO_GENERATED
+  - name: Part Retail Price
+    column_id: ordered_parts::Part Retail Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Retail Cost
+      - Retail Price
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Extended Price
+    column_id: ordered_parts::Order Item Extended Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Total Price
+      - Final Price
+      synonym_type: AUTO_GENERATED
+  - name: Part Brand
+    column_id: ordered_parts::Part Brand
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Brand Name
+      - Brand Identifier
+      synonym_type: AUTO_GENERATED
+  - name: Part Key
+    column_id: ordered_parts::Part Key
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Component Identifier
+      - Part Number
+      synonym_type: AUTO_GENERATED
+  - name: Part Size
+    column_id: ordered_parts::Part Size
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Dimension
+      - Size
+      synonym_type: AUTO_GENERATED
+  - name: Order Item Status
+    column_id: ordered_parts::Order Item Status
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Item Status
+      - Order Line Status
+      synonym_type: AUTO_GENERATED
+  - name: Part Type
+    column_id: ordered_parts::Part Type
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Component Type
+      - Part Classification
+      synonym_type: AUTO_GENERATED
+  - name: Clerk Name
+    column_id: sales_clerk_targets::Clerk Name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Attendant Name
+      - Officer Name
+      synonym_type: AUTO_GENERATED
+  - name: Target
+    column_id: sales_clerk_targets::Target
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Aim
+      - Objective
+      synonym_type: AUTO_GENERATED
+  - name: Sales Territory
+    column_id: sales_clerk_targets::Sales Territory
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Region
+      - Area
+      synonym_type: AUTO_GENERATED
+  properties:
+    is_bypass_rls: false
+    join_progressive: true

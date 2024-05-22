@@ -1,0 +1,36 @@
+guid: 589017c6-d3cb-4d97-a727-ed3296531118
+table:
+  name: sales_clerk_targets
+  db: modeqa
+  schema: demo_orders
+  db_table: sales_clerk_targets
+  connection:
+    name: Customer Orders
+    fqn: cd71b015-c7b5-4000-bd07-1c1b79d06322
+  columns:
+  - name: Order Clerk
+    db_column_name: Order Clerk
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Clerk Name
+    db_column_name: Clerk Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Sales Territory
+    db_column_name: Sales Territory
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Target
+    db_column_name: Target
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE

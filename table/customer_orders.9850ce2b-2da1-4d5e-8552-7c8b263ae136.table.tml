@@ -1,0 +1,69 @@
+guid: 9850ce2b-2da1-4d5e-8552-7c8b263ae136
+table:
+  name: customer_orders
+  db: modeqa
+  schema: demo_orders
+  db_table: customer_orders
+  connection:
+    name: Customer Orders
+    fqn: cd71b015-c7b5-4000-bd07-1c1b79d06322
+  columns:
+  - name: Customer Market Segment
+    db_column_name: Customer Market Segment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer Name
+    db_column_name: Customer Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer Nation
+    db_column_name: Customer Nation
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Customer Region
+    db_column_name: Customer Region
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Order Date
+    db_column_name: Order Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Order Key
+    db_column_name: Order Key
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Order Status
+    db_column_name: Order Status
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Order Total Price
+    db_column_name: Order Total Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Order Clerk
+    db_column_name: Order Clerk
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR

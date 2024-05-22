@@ -1,0 +1,132 @@
+guid: 92591b15-d197-49cd-ae41-fbb3896202ea
+table:
+  name: ordered_parts
+  db: modeqa
+  schema: demo_orders
+  db_table: ordered_parts
+  connection:
+    name: Customer Orders
+    fqn: cd71b015-c7b5-4000-bd07-1c1b79d06322
+  columns:
+  - name: ' Order Item Discount'
+    db_column_name: ' Order Item Discount'
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Order Item Extended Price
+    db_column_name: Order Item Extended Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Item Order Line Number
+    db_column_name: Item Order Line Number
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Order Item Status
+    db_column_name: Order Item Status
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Order Key
+    db_column_name: Order Key
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Order Item Quantity
+    db_column_name: Order Item Quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Order Item Receipt Date
+    db_column_name: Order Item Receipt Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Order Item Return Flag
+    db_column_name: Order Item Return Flag
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Order Item Ship Date
+    db_column_name: Order Item Ship Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: Order Item Tax
+    db_column_name: Order Item Tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Part Brand
+    db_column_name: Part Brand
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Part Manufacturer
+    db_column_name: Part Manufacturer
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Part Name
+    db_column_name: Part Name
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Part Key
+    db_column_name: Part Key
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Part Retail Price
+    db_column_name: Part Retail Price
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Part Size
+    db_column_name: Part Size
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Part Type
+    db_column_name: Part Type
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
