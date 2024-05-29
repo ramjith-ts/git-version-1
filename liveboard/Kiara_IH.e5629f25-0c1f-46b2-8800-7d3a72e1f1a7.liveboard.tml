@@ -1,14 +1,23 @@
 guid: e5629f25-0c1f-46b2-8800-7d3a72e1f1a7
 liveboard:
   name: Kiara_IH
+  description: Welcome To My Colorful Liveboard
   visualizations:
   - id: Viz_1
     viz_guid: a8fafb3b-8c11-4319-a31e-acbc95e9c0cc
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"color: rgb(182, 49, 62); white-space: pre-wrap;\">Hello</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><i><em class=\"theme-module__editor-text-italic\" style=\"color: rgb(122, 61, 31); white-space: pre-wrap;\">The tiles are now enhanced</em></i></p><hr><h2 class=\"theme-module__editor-h2\" dir=\"ltr\" style=\"text-align: center;\"><b><strong class=\"theme-module__editor-text-bold\" style=\"color: rgb(255, 255, 255); white-space: pre-wrap;\">With loads of personalisable feautures</strong></b></h2><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 129, 66);\"></div>"
+  - id: Viz_2
+    viz_guid: 14fa21d1-ba6b-4770-8a6c-7643ed60df3f
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Videos</span></h1><p class=\"theme-module__editor-paragraph\"><br></p><hr><p class=\"theme-module__editor-paragraph\"><br></p><span data-notetile-version=\"V2\" style=\"position: relative;\n    width: 100%;\n    padding-bottom: 56%; \n    height: 0;\n    overflow: hidden;\"><iframe data-src-link=\"https://www.youtube.com/embed/D-y_EjFsDuk?si=7dB3LxybsDYOdTSX\" src=\"https://www.youtube.com/embed/D-y_EjFsDuk?si=7dB3LxybsDYOdTSX\" frameborder=\"0\" title=\"Embedded Page\" allow=\"fullscreen\" allowfullscreen=\"allowfullscreen\" style=\"position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\"></iframe></span><p class=\"theme-module__editor-paragraph\"><br></p><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 169, 126);\"></div>"
+  - id: Viz_3
+    viz_guid: baa4a11d-991c-4806-a747-20c22a2738c1
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Docs</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><hr><h1><img id=\"a4bb4182-6f23-43b4-a1ed-bf54067e4e10\" alt=\"UPLOAD\" style=\"height: inherit; width: 74.6067415730337%; max-width: 100%;\"></h1><h1><br></h1><h1><br></h1><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 221, 204);\"></div>"
   layout:
     tabs:
-    - name: Tab 1
+    - name: New Tiles
       description: ""
       tiles:
       - visualization_id: Viz_1
@@ -16,3 +25,14 @@ liveboard:
         "y": 0
         height: 4
         width: 3
+      - visualization_id: Viz_2
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_3
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      id: 6d605372-3ce9-49f7-91ff-6bc66920a564
