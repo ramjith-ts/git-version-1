@@ -1,0 +1,752 @@
+guid: 725602aa-d320-49a8-bc67-184ead37d7ea
+liveboard:
+  name: Test-RS
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total LO_REVENUE by Daily LO_COMMITDATE
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_COMMITDATE] [LO_COMMITDATE].daily [LO_REVENUE]"
+      answer_columns:
+      - name: Day(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Day(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Day(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"c1beb265-7604-4c85-9f37-2d4f4fd21360\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"17e2bab5-5187-44e9-867f-967cd2d91e42\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 51183d72-cf84-42c6-b6c5-b5316912a6fc
+  - id: Viz_2
+    answer:
+      name: Total LO_REVENUE by Daily LO_COMMITDATE
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_COMMITDATE] [LO_COMMITDATE].daily [LO_REVENUE]"
+      answer_columns:
+      - name: Day(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Day(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Day(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"75a39d45-c3e1-42b7-be8c-d799e0aa4de6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"f10eab0d-2f5e-483d-a5ca-fa4addc0923e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: af0540cf-6a7a-4da6-a7ed-fc22ffdc5709
+  - id: Viz_3
+    answer:
+      name: Total LO_REVENUE by C_NATION
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_REVENUE] [C_NATION]"
+      answer_columns:
+      - name: C_NATION
+      - name: Total LO_REVENUE
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 0.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: C_NATION
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: C_NATION
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - C_NATION
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": false},\"mapviewport\": {\"center\": [-346609.581852084,3628761.2798739895],\"zoomLevel\": 2.1485149036139237,\"extent\": [-2.0037508342789244E7,-6812887.350021556,2.0037508342789244E7,1.4070409909769535E7]},\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"C_NATION\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"b8f26de7-0061-48c7-9630-c958b7f5e87f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"cda574c4-387e-4b62-a17c-fda65e5358a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"seriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+    viz_guid: 1c3fcefb-61b0-4eb7-abc3-122f7717edde
+  - id: Viz_4
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4aa8aca1-4c77-4e39-8821-c26ca3d335df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40142b9f-5cad-4794-8b34-455fb51a1abf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: eb33a85b-f53c-45d9-97f7-b0deb945aea1
+  - id: Viz_5
+    answer:
+      name: Total quantity purchased by Monthly date - Fiscal and city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [quantity purchased] [date].monthly [city] sort by [date] ascending sort by [city] ascending"
+      answer_columns:
+      - name: Month(date)
+      - name: Total quantity purchased
+      - name: city
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total quantity purchased
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total quantity purchased
+        - column_id: city
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total quantity purchased
+          color:
+          - city
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"432bece3-27fa-47a6-b9a7-a4eb5ce2a2fc\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"bbec96d4-4028-454b-89d1-d365e2e292b1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"alpharetta\",\"color\": \"#2E75F0\"},{\"serieName\": \"ann arbor\",\"color\": \"#48D1E0\"},{\"serieName\": \"arcadia\",\"color\": \"#FCC838\"},{\"serieName\": \"atlanta\",\"color\": \"#06BF7F\"},{\"serieName\": \"berkeley\",\"color\": \"#8C62F5\"},{\"serieName\": \"billings\",\"color\": \"#FF8142\"},{\"serieName\": \"bloomington\",\"color\": \"#ABC7F9\"},{\"serieName\": \"boise\",\"color\": \"#B5ECF2\"},{\"serieName\": \"boston\",\"color\": \"#FDE9AF\"},{\"serieName\": \"boulder\",\"color\": \"#9BE5CB\"},{\"serieName\": \"bozeman\",\"color\": \"#D1C0FB\"},{\"serieName\": \"chandler\",\"color\": \"#FFCCB3\"},{\"serieName\": \"chicago\",\"color\": \"#2359B6\"},{\"serieName\": \"colorado springs\",\"color\": \"#369FAA\"},{\"serieName\": \"columbia\",\"color\": \"#BF982A\"},{\"serieName\": \"east hanover\",\"color\": \"#049160\"},{\"serieName\": \"flagstaff\",\"color\": \"#6A4ABA\"},{\"serieName\": \"framingham\",\"color\": \"#C26232\"},{\"serieName\": \"henderson\",\"color\": \"#71A1F4\"},{\"serieName\": \"indianapolis\",\"color\": \"#82DFE9\"},{\"serieName\": \"kentwood\",\"color\": \"#FCD977\"},{\"serieName\": \"las vegas\",\"color\": \"#56D3A8\"},{\"serieName\": \"maple grove\",\"color\": \"#B094F8\"},{\"serieName\": \"newark\",\"color\": \"#FFA97E\"},{\"serieName\": \"north conway\",\"color\": \"#163772\"},{\"serieName\": \"northbrook\",\"color\": \"#22636B\"},{\"serieName\": \"norwalk\",\"color\": \"#785F1A\"},{\"serieName\": \"st. louis\",\"color\": \"#025B3C\"},{\"serieName\": \"west des moines\",\"color\": \"#422E75\"},{\"serieName\": \"west hartford\",\"color\": \"#7A3D1F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 5bbe821c-2f29-489b-bf9f-366e4843d4c0
+  - id: Viz_6
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"86e4f8f9-cfa1-4e18-9f01-1c7538e7977c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"36f347a3-0015-4950-a61f-33ce33d4c5d2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d31bbbf3-d406-4bbb-b2d7-81831d7ee149
+  - id: Viz_7
+    answer:
+      name: Total LO_REVENUE by Quarterly LO_COMMITDATE - Fiscal
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "sum [LO_REVENUE] [LO_COMMITDATE].quarterly"
+      answer_columns:
+      - name: Quarter(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Quarter(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Quarter(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Quarter(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Quarter(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b5fadaad-567b-4b32-9fc2-6339b4c46647\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"993c36ad-9490-477e-89bb-f0c0f6dfa8a7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Quarter(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4fed947f-a0a9-41a9-8974-612bb05b7f39
+  - id: Viz_8
+    answer:
+      name: Total LO_REVENUE by Daily LO_COMMITDATE
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "sum [LO_REVENUE] [LO_COMMITDATE] [LO_COMMITDATE].daily"
+      answer_columns:
+      - name: Day(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Day(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Day(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"7acee0c2-d0f9-4c56-b7ba-037b25b0790e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"92088053-582a-48a6-979c-1b0ddf063f85\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e0c69b74-7ed6-470a-9408-29779386689f
+  - id: Viz_9
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"196b5d60-0edd-4a24-bcfe-647f3c190502\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"93fc01dc-3e30-4bb2-9b89-cb52545e60fe\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 84cdd89e-a67b-44cd-8186-58cb5cc807fa
+  - id: Viz_10
+    answer:
+      name: Total LO_REVENUE by C_NATION
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_REVENUE] [C_NATION]"
+      answer_columns:
+      - name: C_NATION
+      - name: Total LO_REVENUE
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 0.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: C_NATION
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: C_NATION
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - C_NATION
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": false},\"mapviewport\": {\"center\": [-346609.581852084,3628761.2798739895],\"zoomLevel\": 2.1485149036139237,\"extent\": [-1.4852020343922887E7,-2750367.352693679,1.4852020343922887E7,1.000788991244166E7]},\"responsiveLayoutPreference\": \"AUTO_ON\",\"showLinearRegressionLine\": true,\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"light-v9\\\"}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"C_NATION\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"b8f26de7-0061-48c7-9630-c958b7f5e87f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"cda574c4-387e-4b62-a17c-fda65e5358a4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"C_NATION\"]}}],\"seriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#F04152\"}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"colorMap\": [{\"serieName\": \"C_NATION\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4b59d45e-4c18-4d5f-9f11-3ba9bed98150
+  - id: Viz_11
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4aa8aca1-4c77-4e39-8821-c26ca3d335df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40142b9f-5cad-4794-8b34-455fb51a1abf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 9534b5a2-c87a-48b6-b437-39fbd698253c
+  - id: Viz_12
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4aa8aca1-4c77-4e39-8821-c26ca3d335df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40142b9f-5cad-4794-8b34-455fb51a1abf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2540bc2a-1d31-4383-aa94-ec7800f122bf
+  - id: Viz_13
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4aa8aca1-4c77-4e39-8821-c26ca3d335df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40142b9f-5cad-4794-8b34-455fb51a1abf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 2ee83584-55da-45fb-9192-10315f9b1ec6
+  - id: Viz_14
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4aa8aca1-4c77-4e39-8821-c26ca3d335df\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"40142b9f-5cad-4794-8b34-455fb51a1abf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3c26df04-0a9b-4409-b4b5-c5d494181f0c
+  - id: Viz_15
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"86e4f8f9-cfa1-4e18-9f01-1c7538e7977c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"36f347a3-0015-4950-a61f-33ce33d4c5d2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: e7fad99a-b148-4d50-b9ee-c6bc3518aa01
+  - id: Viz_16
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"86e4f8f9-cfa1-4e18-9f01-1c7538e7977c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"36f347a3-0015-4950-a61f-33ce33d4c5d2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 3c97de3a-26b0-418a-b4f0-b2f6c75b3ade
+  - id: Viz_17
+    answer:
+      name: Total sales by city
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "sum [sales] [city]"
+      answer_columns:
+      - name: Total sales
+      - name: city
+      table:
+        table_columns:
+        - column_id: Total sales
+          headline_aggregation: SUM
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: city
+        axis_configs:
+        - x:
+          - city
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"86e4f8f9-cfa1-4e18-9f01-1c7538e7977c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"36f347a3-0015-4950-a61f-33ce33d4c5d2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"city\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 24794dbd-7997-4d17-9c38-7794da7b31da
+  - id: Viz_18
+    answer:
+      name: Total LO_REVENUE by Daily LO_COMMITDATE
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_COMMITDATE] [LO_COMMITDATE].daily [LO_REVENUE]"
+      answer_columns:
+      - name: Day(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Day(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Day(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"75a39d45-c3e1-42b7-be8c-d799e0aa4de6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"f10eab0d-2f5e-483d-a5ca-fa4addc0923e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 58e97f27-332d-4095-a1ba-c18ddbd7b24b
+  - id: Viz_19
+    answer:
+      name: Total LO_REVENUE by Daily LO_COMMITDATE
+      tables:
+      - id: WS-RS
+        name: WS-RS
+        fqn: 577505d3-e60d-4528-9dd1-e55c46997266
+      search_query: "[LO_COMMITDATE] [LO_COMMITDATE].daily [LO_REVENUE]"
+      answer_columns:
+      - name: Day(LO_COMMITDATE)
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: Day(LO_COMMITDATE)
+          headline_aggregation: MIN-MAX
+        - column_id: Total LO_REVENUE
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(LO_COMMITDATE)
+        - column_id: Total LO_REVENUE
+        axis_configs:
+        - x:
+          - Day(LO_COMMITDATE)
+          "y":
+          - Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(LO_COMMITDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"75a39d45-c3e1-42b7-be8c-d799e0aa4de6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_REVENUE\"],\"isOpposite\": false}},{\"id\": \"f10eab0d-2f5e-483d-a5ca-fa4addc0923e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(LO_COMMITDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_REVENUE\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 93e03bd6-3e6e-4e97-993d-f69aa69bf41a
+  layout:
+    tabs:
+    - name: Tab 1
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_19
+        x: 6
+        "y": 8
+        height: 4
+        width: 3
+      id: 696ea18a-7f9f-4009-ae6d-f1e8343a5e8c
+    - name: Tab 2
+      description: ""
+      tiles:
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_5
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_6
+        x: 0
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_7
+        x: 0
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_8
+        x: 6
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_9
+        x: 0
+        "y": 24
+        height: 8
+        width: 6
+      - visualization_id: Viz_10
+        x: 6
+        "y": 24
+        height: 8
+        width: 6
+      - visualization_id: Viz_11
+        x: 0
+        "y": 32
+        height: 8
+        width: 6
+      - visualization_id: Viz_12
+        x: 6
+        "y": 32
+        height: 8
+        width: 6
+      - visualization_id: Viz_13
+        x: 0
+        "y": 40
+        height: 8
+        width: 6
+      - visualization_id: Viz_14
+        x: 6
+        "y": 40
+        height: 8
+        width: 6
+      - visualization_id: Viz_15
+        x: 0
+        "y": 48
+        height: 8
+        width: 6
+      - visualization_id: Viz_16
+        x: 6
+        "y": 48
+        height: 8
+        width: 6
+      - visualization_id: Viz_17
+        x: 0
+        "y": 56
+        height: 8
+        width: 6
+      - visualization_id: Viz_18
+        x: 6
+        "y": 56
+        height: 4
+        width: 3
+      id: 229febaf-f414-45ea-8a6f-31701bedcff9

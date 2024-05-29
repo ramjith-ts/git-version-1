@@ -1,0 +1,60 @@
+guid: 97c3255f-e190-49bd-87ab-63d0454769a5
+table:
+  name: CUSTOMER-RS
+  db: NEBULADEV
+  schema: TPCH5K_falcon_default_schema
+  db_table: CUSTOMER
+  connection:
+    name: Connection-RS
+    fqn: 5c03799b-5c6c-4365-a646-c40460283a37
+  columns:
+  - name: C_CUSTKEY
+    db_column_name: C_CUSTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: C_NAME
+    db_column_name: C_NAME
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_ADDRESS
+    db_column_name: C_ADDRESS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_CITY
+    db_column_name: C_CITY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_NATION
+    db_column_name: C_NATION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_REGION
+    db_column_name: C_REGION
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_PHONE
+    db_column_name: C_PHONE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: C_MKTSEGMENT
+    db_column_name: C_MKTSEGMENT
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
