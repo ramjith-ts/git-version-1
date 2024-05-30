@@ -23,6 +23,10 @@ liveboard:
     viz_guid: 66b4e033-f325-4492-a927-f57d93ba2134
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Embed &amp; Personalise</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(244, 126, 137);\"></div>"
+  - id: Viz_6
+    viz_guid: 3b34c851-aa08-4aee-8cc9-b867c3fc89c6
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"color: rgb(194, 98, 50); white-space: pre-wrap;\">Hello</span><span style=\"white-space: pre-wrap;\"> </span></h1><hr><p class=\"theme-module__editor-paragraph\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(252, 217, 119);\"></div>"
   layout:
     tabs:
     - name: New Tiles
@@ -53,4 +57,9 @@ liveboard:
         "y": 4
         height: 4
         width: 9
+      - visualization_id: Viz_6
+        x: 1
+        "y": 8
+        height: 4
+        width: 6
       id: 6d605372-3ce9-49f7-91ff-6bc66920a564
