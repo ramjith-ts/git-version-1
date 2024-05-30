@@ -1,0 +1,1671 @@
+guid: 9a963d91-429d-42cf-8f51-047530dd8443
+liveboard:
+  name: Demo Liveboard
+  description: This is a demo liveboard created for users to explore and see the state of art possibilities within ThoughtSpot.
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total sales
+      description: We not only can see trend of our KPI but also anomalies highlighted in RED alongside WoW changes on the trend line.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [date].monthly [date] <= 'last month'"
+      answer_columns:
+      - name: Month(date)
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Month(date)
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"234163c2-dbbc-49f6-96df-0b9ec8c925a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"142b7093-c443-46e3-9f64-f6770d77daa3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 862d5911-d149-4ce5-8332-556445310048
+  - id: Viz_2
+    answer:
+      name: Total Qty Purchased
+      description: We not only can see trend of our KPI but also anomalies highlighted in RED alongside WoW changes on the trend line.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] [date].monthly [date] <= 'last month'"
+      answer_columns:
+      - name: Month(date)
+      - name: Total quantity purchased
+      table:
+        table_columns:
+        - column_id: Month(date)
+          show_headline: false
+        - column_id: Total quantity purchased
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total quantity purchased
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total quantity purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"45429583-5bc2-4506-baf7-49ce9dbccd01\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"5d5aa2f7-97d4-462b-aa46-5ae6a9b17641\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: db569c15-0900-42de-a2e5-86c6d0b5d60e
+  - id: Viz_3
+    viz_guid: 761880b9-9e59-46ad-9dc1-1e0010639339
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Read me:</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Hi, welcome to this Liveboard! We have built this Demo liveboard with some demo analyses on a generic retail apparel data set. The idea behind this Liveboard is to allow users to review the capabilities of the platform and give you a feeling of what it can help them achieve.</span></p><ol><li value=\"1\"><span style=\"white-space: pre-wrap;\">If you need a more personalized introduction to ThoughtSpot, feel free to reach out to your data tem. We'll be happy to run you through the product &amp; our offerings within your company.</span><br></li><li value=\"2\"><span style=\"white-space: pre-wrap;\">Want to learn more about ThoughtSpot, check </span><a href=\"https://training.thoughtspot.com/page/learning-paths#business_user\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot University</span></a><span style=\"white-space: pre-wrap;\"> for beginners / advanced lessons.</span><br></li><li value=\"3\"><span style=\"white-space: pre-wrap;\">You can find more tips &amp; tricks on </span><a href=\"https://docs.thoughtspot.com\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot Documentation</span></a><span style=\"white-space: pre-wrap;\">.</span></li></ol>"
+  - id: Viz_4
+    answer:
+      name: Sales by State
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [state]"
+      answer_columns:
+      - name: Total sales
+      - name: state
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Total sales
+        - column_id: state
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859373],\"zoomLevel\": 2.831323619858035,\"extent\": [-1.909555474000784E7,-741537.1693608621,-2535190.1840265747,1.0629913159079608E7]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"outdoors-v9\\\"}\"},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"state\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"427db53d-2831-4118-966e-f7b9cccf275c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"1ff3cb29-94bd-433f-a2a4-b78334bc28c3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"state\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: ff08aa28-c515-4223-ae07-cae0791449e9
+  - id: Viz_5
+    answer:
+      name: Average Sales
+      description: We not only can see trend of our KPI but also anomalies highlighted in RED alongside WoW changes on the trend line.
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "average [sales] [date].monthly [date] <= 'last month'"
+      answer_columns:
+      - name: Average sales
+      - name: Month(date)
+      table:
+        table_columns:
+        - column_id: Average sales
+          show_headline: false
+        - column_id: Month(date)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Average sales
+        - column_id: Month(date)
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Average sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Average sales\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"847a5eda-16b2-46d8-a92a-40f2d799d198\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average sales\"],\"isOpposite\": false}},{\"id\": \"0b828078-1554-4360-99b2-38df411432db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average sales\",\"color\": \"#2770ef\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: cc0a4237-9a75-4aa2-8797-3597782b460d
+  - id: Viz_6
+    answer:
+      name: Growth of sales by Month
+      description: Just try "Growth Of <Measure> by <Date>" on Search and you'll automatically get a calculation
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "growth of [sales] by [date] [date].monthly"
+      answer_columns:
+      - name: Growth of Total sales
+      - name: Month(date)
+      table:
+        table_columns:
+        - column_id: Growth of Total sales
+          show_headline: false
+        - column_id: Month(date)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Growth of Total sales
+        - column_id: Month(date)
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Growth of Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"b770651a-9437-411b-b355-909cb7df672b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Total sales\"],\"isOpposite\": false}},{\"id\": \"a53dc01e-be83-4138-a2b0-4a764e8d3812\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Total sales\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 8eae1d6d-ff68-4ac0-af36-7ac1af250ddc
+  - id: Viz_7
+    answer:
+      name: Quantity Purchased by region
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[region] [quantity purchased] [date].monthly"
+      answer_columns:
+      - name: Month(date)
+      - name: Total quantity purchased
+      - name: region
+      table:
+        table_columns:
+        - column_id: Month(date)
+          show_headline: false
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total quantity purchased
+        - column_id: region
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total quantity purchased
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"backgroundColor\\\":\\\"#323946\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"2\\\",\\\"dashStyle\\\":\\\"Solid\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Dot\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"}},\\\"answerLevelSettings\\\":{\\\"backgroundColor\\\":\\\"#FFFFFF\\\",\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\"},\"showStackedLabels\": false,\"allLabels\": false},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {\"dataLabels\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"backgroundColor\\\":\\\"#DBDFE7\\\",\\\"borderColor\\\":\\\"#DBDFE7\\\",\\\"borderWidth\\\":\\\"\\\",\\\"filter\\\":{\\\"operator\\\":\\\"\\\",\\\"value\\\":\\\"\\\"},\\\"align\\\":\\\"center\\\",\\\"style\\\":{\\\"color\\\":\\\"#F04152\\\",\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":true,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"maxCharacters\\\":\\\"\\\"}}}\"}}],\"axisProperties\": [{\"id\": \"e266597f-9c7a-4a05-bc72-fcf1f644db76\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"7c2a2f84-3336-4f5d-8011-c941f99e9296\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"308bbb3f-ebe4-463e-9888-83c0224ac6d4\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total quantity purchased\",\"color\": \"#06BF7F\"},{\"serieName\": \"east\",\"color\": \"#2E75F0\"},{\"serieName\": \"midwest\",\"color\": \"#48D1E0\"},{\"serieName\": \"south\",\"color\": \"#FCC838\"},{\"serieName\": \"southwest\",\"color\": \"#06BF7F\"},{\"serieName\": \"west\",\"color\": \"#8C62F5\"}],\"tooltipConfig\": {\"columnIds\": [\"region\",\"Month(date)\",\"Total quantity purchased\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: 2f44a970-5878-4df9-9f39-278766235a4c
+  - id: Viz_8
+    answer:
+      name: Top 10 states by Quantity Purchased
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] [state] top 10 by [quantity purchased]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: state
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: state
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - Total quantity purchased
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"state\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f5403799-df0a-4663-a5c3-50b1bb67622b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"fdcd5eab-f197-4454-bfb4-595349c9cee4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#48D1E0\"},{\"serieName\": \"michigan\",\"color\": \"#B094F8\"},{\"serieName\": \"colorado\",\"color\": \"#8C62F5\"},{\"serieName\": \"massachusetts\",\"color\": \"#56D3A8\"},{\"serieName\": \"arizona\",\"color\": \"#06BF7F\"},{\"serieName\": \"california\",\"color\": \"#FCD977\"},{\"serieName\": \"nevada\",\"color\": \"#FCC838\"},{\"serieName\": \"minnesota\",\"color\": \"#82DFE9\"},{\"serieName\": \"montana\",\"color\": \"#48D1E0\"},{\"serieName\": \"illinois\",\"color\": \"#71A1F4\"},{\"serieName\": \"connecticut\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 4bea8717-3f6a-4aa3-870b-d7a798ae364e
+  - id: Viz_9
+    answer:
+      name: Top 3 Stores by Weekly sales
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "top 3 [store] [sales] for each [date] [date].weekly"
+      answer_columns:
+      - name: Total sales
+      - name: Week(date)
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: Week(date)
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: Week(date)
+        - column_id: store
+        axis_configs:
+        - x:
+          - Week(date)
+          "y":
+          - Total sales
+          color:
+          - store
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {}},{\"columnId\": \"Week(date)\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"b59cb1f1-5ebe-4f7a-b62e-019640c770ed\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"a650f5bd-5c5a-44ec-96a5-dac3611eb5bc\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"fee5dbf8-6d5e-497b-af3e-d131aad24704\",\"color\": \"#48D1E0\"},{\"serieName\": \"michigan\",\"color\": \"#B094F8\"},{\"serieName\": \"colorado\",\"color\": \"#8C62F5\"},{\"serieName\": \"massachusetts\",\"color\": \"#56D3A8\"},{\"serieName\": \"arizona\",\"color\": \"#06BF7F\"},{\"serieName\": \"california\",\"color\": \"#FCD977\"},{\"serieName\": \"nevada\",\"color\": \"#FCC838\"},{\"serieName\": \"minnesota\",\"color\": \"#82DFE9\"},{\"serieName\": \"montana\",\"color\": \"#48D1E0\"},{\"serieName\": \"illinois\",\"color\": \"#71A1F4\"},{\"serieName\": \"connecticut\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"arizona (86001)\",\"color\": \"#06BF7F\"},{\"serieName\": \"colorado (80301)\",\"color\": \"#FCD977\"},{\"serieName\": \"maryland (21045)\",\"color\": \"#FCC838\"},{\"serieName\": \"massachusetts (02215)\",\"color\": \"#82DFE9\"},{\"serieName\": \"michigan (48103)\",\"color\": \"#48D1E0\"},{\"serieName\": \"michigan (49512)\",\"color\": \"#71A1F4\"},{\"serieName\": \"nevada (89145)\",\"color\": \"#2E75F0\"},{\"serieName\": \"california (91006)\",\"color\": \"#8C62F5\"},{\"serieName\": \"california (94702)\",\"color\": \"#56D3A8\"},{\"serieName\": \"illinois (60642)\",\"color\": \"#B094F8\"},{\"serieName\": \"minnesota (55369)\",\"color\": \"#8C62F5\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 3ffe1bb7-4e4d-4ec1-8c91-3edf19dc31fb
+  - id: Viz_10
+    answer:
+      name: "Sankey Chart : Flow of Sales for Item Type per Region through Stores"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [store] [item type] [region] [product]"
+      answer_columns:
+      - name: Total sales
+      - name: item type
+      - name: product
+      - name: region
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: product
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SANKEY
+        chart_columns:
+        - column_id: Total sales
+        - column_id: item type
+        - column_id: product
+        - column_id: region
+        - column_id: store
+        axis_configs:
+        - x:
+          - region
+          - item type
+          "y":
+          - Total sales
+        - x:
+          - item type
+          - store
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"store\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"item type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"region\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"product\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"d9856acb-048e-4c96-85a4-7a1d59c7f149\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"2bf88d5b-631b-4a82-8216-62bcad9ec68f\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\",\"item type\",\"store\"]}}],\"systemSeriesColors\": [{\"serieName\": \"fee5dbf8-6d5e-497b-af3e-d131aad24704\",\"color\": \"#48D1E0\"},{\"serieName\": \"michigan\",\"color\": \"#B094F8\"},{\"serieName\": \"colorado\",\"color\": \"#8C62F5\"},{\"serieName\": \"massachusetts\",\"color\": \"#56D3A8\"},{\"serieName\": \"arizona\",\"color\": \"#06BF7F\"},{\"serieName\": \"california\",\"color\": \"#FCD977\"},{\"serieName\": \"nevada\",\"color\": \"#FCC838\"},{\"serieName\": \"minnesota\",\"color\": \"#82DFE9\"},{\"serieName\": \"montana\",\"color\": \"#48D1E0\"},{\"serieName\": \"illinois\",\"color\": \"#71A1F4\"},{\"serieName\": \"connecticut\",\"color\": \"#2E75F0\"},{\"serieName\": \"9bdb71e7-550b-4611-a61a-e81a36a13ad8\",\"color\": \"#48D1E0\"},{\"serieName\": \"arizona (86001)\",\"color\": \"#06BF7F\"},{\"serieName\": \"colorado (80301)\",\"color\": \"#FCD977\"},{\"serieName\": \"maryland (21045)\",\"color\": \"#FCC838\"},{\"serieName\": \"massachusetts (02215)\",\"color\": \"#82DFE9\"},{\"serieName\": \"michigan (48103)\",\"color\": \"#48D1E0\"},{\"serieName\": \"michigan (49512)\",\"color\": \"#71A1F4\"},{\"serieName\": \"nevada (89145)\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {\"columnIds\": [\"region\",\"item type\"]}}"
+      display_mode: CHART_MODE
+    viz_guid: d88cca04-89cd-4f0f-b389-7fd7383a5c7d
+  - id: Viz_11
+    answer:
+      name: Sales and Quantity by region and Day of the Year
+      description: You can have Pivot Tables in the way you've always preffered with color codes and custom calculations
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[date].'day of year' [region] [sales] [quantity purchased]"
+      answer_columns:
+      - name: DAY_OF_YEAR(date)
+      - name: Total quantity purchased
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: DAY_OF_YEAR(date)
+          show_headline: false
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: PIVOT_TABLE
+        chart_columns:
+        - column_id: DAY_OF_YEAR(date)
+        - column_id: Total quantity purchased
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - x:
+          - DAY_OF_YEAR(date)
+          "y":
+          - Total quantity purchased
+          - Total sales
+          color:
+          - region
+        - "y":
+          - Total quantity purchased
+          - Total sales
+        - x:
+          - DAY_OF_YEAR(date)
+          "y":
+          - Total quantity purchased
+          - Total sales
+        - "y":
+          - Total quantity purchased
+          - Total sales
+          color:
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_OFF\",\"chartSpecific\": {\"summaryMode\": \"None\",\"isHeatmapOverlayed\": true,\"dataFieldArea\": \"row\",\"showPivotSummaryPrior\": \"BOTH\"}},\"columnProperties\": [{\"columnId\": \"DAY_OF_YEAR(date)\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4fcc4149-25be-4fcf-9b91-575d59bb195a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"12aec03c-4e83-46b8-b4a8-9cd5ca73a13e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": true}},{\"id\": \"00473588-e368-451b-a487-87d221c8f80b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"DAY_OF_YEAR(date)\"]}}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: c2bd8507-63b5-42e3-bb22-36e7245e5f1a
+  - id: Viz_12
+    answer:
+      name: Item Type Sales with Changes
+      description: An example of how you can use SVGs and graphics to display the change of metrics on your table
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Progress Bar
+        name: Progress Bar
+        expr: "concat ( ' ' , if ( [Change %] > 0.99 ) then ( '🟩🟩🟩🟩 ' ) else if ( [Change %] > 0.75 ) then ( '🟩🟩🟩⬜ ' ) else if ( [Change %] > 0.5 ) then ( '🟩🟩⬜⬜ ' ) else if ( [Change %] > 0.25 ) then ( '🟩⬜⬜⬜ ' ) else if ( [Change %] > 0 ) then ( '⬜⬜⬜⬜ ' ) else if ( [Change %] > - 0.25 ) then ( '🟥⬜⬜⬜ ' ) else if ( [Change %] > - 0.5 ) then ( '🟥🟥⬜⬜ ' ) else if ( [Change %] > - 0.75 ) then ( '🟥🟥🟥⬜ ' ) else if ( [Change %] > - 0.99 ) then ( '🟥🟥🟥🟥 ' ) else ( '🟥🟥🟥🟥 ' ) )"
+        was_auto_generated: false
+      - id: Trend
+        name: Trend
+        expr: "if ( [Change %] < 0 ) then '🔻' else if ( [Change %] > 0 ) then '⬆' else ' '"
+        was_auto_generated: false
+      - id: Change %
+        name: Change %
+        expr: "( [sales(this year)] - [sales(last year)] ) / [sales(last year)]"
+        was_auto_generated: false
+      - id: sales(2019)
+        name: sales(2019)
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) + { year_name ( [date] ) = '2019' } )"
+        was_auto_generated: true
+      - id: sales(2020)
+        name: sales(2020)
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) + { year_name ( [date] ) = '2020' } )"
+        was_auto_generated: true
+      - id: sales(last year)
+        name: sales(last year)
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) + { diff_years ( [date] , today ( ) ) = - 1 } )"
+        was_auto_generated: true
+      - id: sales(this year)
+        name: sales(this year)
+        expr: "group_aggregate ( sum ( [sales] ) , query_groups ( ) , query_filters ( ) + { diff_years ( [date] , today ( ) ) = 0 } )"
+        was_auto_generated: true
+      search_query: "[sales] [Change %] [Trend] [item type] [Progress Bar]"
+      answer_columns:
+      - name: Change %
+        custom_name: YoY Change %
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      - name: Progress Bar
+      - name: Total sales
+      - name: Trend
+      - name: item type
+      table:
+        table_columns:
+        - column_id: Change %
+          show_headline: false
+        - column_id: Progress Bar
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: Trend
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"item type\",\"Total sales\",\"Change %\",\"Trend\",\"Progress Bar\"]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Change %
+        - column_id: Progress Bar
+        - column_id: Total sales
+        - column_id: Trend
+        - column_id: item type
+        axis_configs:
+        - x:
+          - Progress Bar
+          "y":
+          - Total sales
+          - Change %
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Change %\",\"columnProperty\": {}},{\"columnId\": \"Trend\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Progress Bar\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4982b278-aef2-4846-9391-9c004b772fd0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"b9ae0655-9616-467a-86fa-dd98bb7a80e1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Change %\"],\"isOpposite\": true}},{\"id\": \"fa586e4d-5d2c-440c-9f8d-8a333cb5e99a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Progress Bar\"]}}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: 907ba5c0-bce7-47fc-9973-70f5ab482b34
+  - id: Viz_13
+    answer:
+      name: Best Selling Product
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [product] top 1"
+      answer_columns:
+      - name: Total sales
+      - name: product
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: product
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total sales
+        - column_id: product
+        axis_configs:
+        - "y":
+          - product
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"587c0a90-192b-43f1-9f65-052bdddbeeb0\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"product\"],\"isOpposite\": false}},{\"id\": \"d3316f30-e51b-486f-b643-9de7896c4715\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: cb427d0e-65a5-44e1-b7ca-be73f5b8b87e
+  - id: Viz_14
+    answer:
+      name: Store with Best sales
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [store] top 1"
+      answer_columns:
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - "y":
+          - store
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"store\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"173616e6-cc8c-4b1d-b227-fdeffe994852\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"store\"],\"isOpposite\": false}},{\"id\": \"094c58c5-be00-44fd-a6fe-22c113568034\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: b96790bd-c9b0-4b48-8273-81e3b2b98936
+  - id: Viz_15
+    answer:
+      name: Best Selling item type
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] top 1 [item type]"
+      answer_columns:
+      - name: Total sales
+      - name: item type
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total sales
+        - column_id: item type
+        axis_configs:
+        - "y":
+          - item type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d0cb4b26-cd61-455a-bf4b-f7f4fdb318ef\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"item type\"],\"isOpposite\": false}},{\"id\": \"e2d09026-261d-4e90-b653-666a6c358860\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 39d850c6-80d5-4c0b-ac65-42f8d24e4f58
+  - id: Viz_16
+    answer:
+      name: Best Performing region
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] top 1 [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        axis_configs:
+        - "y":
+          - region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"region\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"a7f3f245-985c-45cb-851f-8603dfea1493\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"region\"],\"isOpposite\": false}},{\"id\": \"29917292-f0a1-4430-8c4e-69784b02aeb5\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 665b2bf9-fd50-4b8e-9c21-a7940994dda7
+  - id: Viz_17
+    viz_guid: e2278409-cf99-4e9a-9e9e-f30091b419f1
+    note_tile:
+      html_parsed_string: <h2><span>New to ThoughtSpot - see this!</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>What is ThoughtSpot?</span><br></p><iframe data-src-link="https://www.youtube.com/embed/AQi74XVorjU?si=2kXLw6bLM5RQWpuB" width="560" height="315" src="https://www.youtube.com/embed/AQi74XVorjU?si=2kXLw6bLM5RQWpuB" frameborder="0" title="Embedded Page"></iframe>
+  - id: Viz_18
+    answer:
+      name: Product Sales with Quantity Purchased
+      description: "Be it visual or tabular, you can present data in its form and perform drill-down any direction"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[product] [item type] [quantity purchased] [sales] sort by [item type] descending"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: Total sales
+      - name: item type
+        custom_name: Item Type
+      - name: product
+        custom_name: Product
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: product
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: Total sales
+        - column_id: item type
+        - column_id: product
+        axis_configs:
+        - x:
+          - Total quantity purchased
+          "y":
+          - Total sales
+          color:
+          - item type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5773e5c8-2505-4167-be65-fa4358413589\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"02d9849e-a761-4ed2-9607-4ca031d65105\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total quantity purchased\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bags\",\"color\": \"#6A4ABA\"},{\"serieName\": \"dresses\",\"color\": \"#B094F8\"},{\"serieName\": \"headwear\",\"color\": \"#8C62F5\"},{\"serieName\": \"jackets\",\"color\": \"#049160\"},{\"serieName\": \"jeans\",\"color\": \"#56D3A8\"},{\"serieName\": \"pants\",\"color\": \"#06BF7F\"},{\"serieName\": \"shirts\",\"color\": \"#BF982A\"},{\"serieName\": \"shorts\",\"color\": \"#FCD977\"},{\"serieName\": \"skirts\",\"color\": \"#FCC838\"},{\"serieName\": \"socks\",\"color\": \"#369FAA\"},{\"serieName\": \"sweaters\",\"color\": \"#82DFE9\"},{\"serieName\": \"sweatshirts\",\"color\": \"#48D1E0\"},{\"serieName\": \"swimwear\",\"color\": \"#2359B6\"},{\"serieName\": \"underwear\",\"color\": \"#71A1F4\"},{\"serieName\": \"vests\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: 5613ab45-7bfa-43fd-9670-e87b46f7344f
+  - id: Viz_19
+    answer:
+      name: Sales by ZIP Code
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[zip code] [sales]"
+      answer_columns:
+      - name: Total sales
+      - name: zip code
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: zip code
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_BUBBLE
+        chart_columns:
+        - column_id: Total sales
+        - column_id: zip code
+        axis_configs:
+        - x:
+          - zip code
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0761255174985757E7,4839776.915609218],\"zoomLevel\": 4.363964533890174,\"extent\": [-1.3617965481465198E7,2969583.9016340105,-7904544.868506316,6709969.929584426]},\"chartSpecific\": {\"customProps\": \"{\\\"tileType\\\":\\\"dark-v9\\\"}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"zip code\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"938b9cc5-aea7-4eb4-8a1a-5d1875d669d9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"b53a44f9-841e-405e-9e66-73ffadf9a6d1\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"zip code\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#F04152\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 0537c421-f1ef-4b1e-bc35-bc4c019c2ed5
+  - id: Viz_20
+    answer:
+      name: Total quantity purchased by monthly date and item type
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] by [item type] [date].monthly [date].2021"
+      answer_columns:
+      - name: Month(date)
+      - name: Total quantity purchased
+      - name: item type
+      table:
+        table_columns:
+        - column_id: Month(date)
+          headline_aggregation: MIN-MAX
+        - column_id: Total quantity purchased
+          headline_aggregation: SUM
+        - column_id: item type
+          headline_aggregation: COUNT_DISTINCT
+        client_state: "{\"dataOffset\":0.0,\"widthState\":{},\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total quantity purchased
+        - column_id: item type
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total quantity purchased
+          color:
+          - item type
+        client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"1f882531-5c8e-4c9b-90f6-caff946a5771\":{\"linkedColumns\":[\"Total quantity purchased\"],\"axisType\":\"Y\",\"isOpposite\":false},\"859a2212-1767-463d-82bd-daacc09c3831\":{\"linkedColumns\":[\"Month(date)\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"bags\":\"#2E75F0\",\"dresses\":\"#48D1E0\",\"headwear\":\"#FCC838\",\"jackets\":\"#06BF7F\",\"jeans\":\"#8C62F5\",\"pants\":\"#FF8142\",\"shirts\":\"#ABC7F9\",\"shorts\":\"#B5ECF2\",\"skirts\":\"#FDE9AF\",\"socks\":\"#9BE5CB\",\"sweaters\":\"#D1C0FB\",\"sweatshirts\":\"#FFCCB3\",\"swimwear\":\"#2359B6\",\"underwear\":\"#369FAA\",\"vests\":\"#BF982A\"},\"version\":\"V2.1\",\"columnProperties\":{\"Month(date)\":{},\"item type\":{},\"Total quantity purchased\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1f882531-5c8e-4c9b-90f6-caff946a5771\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"859a2212-1767-463d-82bd-daacc09c3831\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"bags\",\"color\": \"#2E75F0\"},{\"serieName\": \"dresses\",\"color\": \"#48D1E0\"},{\"serieName\": \"headwear\",\"color\": \"#FCC838\"},{\"serieName\": \"jackets\",\"color\": \"#06BF7F\"},{\"serieName\": \"jeans\",\"color\": \"#8C62F5\"},{\"serieName\": \"pants\",\"color\": \"#FF8142\"},{\"serieName\": \"shirts\",\"color\": \"#ABC7F9\"},{\"serieName\": \"shorts\",\"color\": \"#B5ECF2\"},{\"serieName\": \"skirts\",\"color\": \"#FDE9AF\"},{\"serieName\": \"socks\",\"color\": \"#9BE5CB\"},{\"serieName\": \"sweaters\",\"color\": \"#D1C0FB\"},{\"serieName\": \"sweatshirts\",\"color\": \"#FFCCB3\"},{\"serieName\": \"swimwear\",\"color\": \"#2359B6\"},{\"serieName\": \"underwear\",\"color\": \"#369FAA\"},{\"serieName\": \"vests\",\"color\": \"#BF982A\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: a5243ec7-0705-47d8-b658-aaf6f653b936
+  - id: Viz_21
+    answer:
+      name: Group_Sum vs. Group_Aggregate
+      description: California filter applied
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: regional sales (gAggr)
+        name: regional sales (gAggr)
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] } , query_filters ( ) - { [state] , [store] } )"
+        was_auto_generated: false
+      - id: regional sales (group)
+        name: regional sales (group)
+        expr: "group_sum ( [sales] , [region] )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [state] [regional sales (group)] sort by [region] [regional sales (gAggr)] [state].california [store]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: regional sales (gAggr)
+      - name: regional sales (group)
+      - name: state
+      - name: store
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: regional sales (gAggr)
+          show_headline: false
+        - column_id: regional sales (group)
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: regional sales (gAggr)
+        - column_id: regional sales (group)
+        - column_id: state
+        - column_id: store
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.7101639872924155},\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"509cf1fb-9c27-4a3c-9b49-d61fdc1b0c93\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"89a88842-097b-4482-9cd1-16aef0a50c03\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"state\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: a47dc837-4538-4d24-a1ee-0d4bae2f382c
+  - id: Viz_22
+    answer:
+      name: Flexible Column Aggregation
+      description: region level summary
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Summary sales (gAggr)
+        name: Summary sales (gAggr)
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] , [state] } , query_filters ( ) - { [state] , [store] } )"
+        was_auto_generated: false
+      - id: Summary sales (group)
+        name: Summary sales (group)
+        expr: "group_sum ( [sales] , [region] , [state] )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [Summary sales (group)] sort by [region] [Summary sales (gAggr)] [store] [region].east"
+      answer_columns:
+      - name: Summary sales (gAggr)
+      - name: Summary sales (group)
+      - name: Total sales
+      - name: region
+      - name: store
+      table:
+        table_columns:
+        - column_id: Summary sales (gAggr)
+          show_headline: false
+        - column_id: Summary sales (group)
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"region\",\"74010310-1b2d-4597-bb35-bbb201f5c9e6\",\"store\",\"Total sales\",\"Summary sales (group)\",\"Summary sales (gAggr)\"]}"
+      chart:
+        type: BUBBLE
+        chart_columns:
+        - column_id: Summary sales (gAggr)
+        - column_id: Summary sales (group)
+        - column_id: Total sales
+        - column_id: region
+        - column_id: store
+        axis_configs:
+        - x:
+          - Total sales
+          "y":
+          - Summary sales (group)
+          color:
+          - region
+          size: Summary sales (gAggr)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"2d980e03-3050-4b5f-8a24-07c48ceda7bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Summary sales (group)\"],\"isOpposite\": false}},{\"id\": \"9be30fe5-495e-48eb-96fd-890494235870\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total sales\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"43dafe5a-f1ef-4774-b500-9972cfc67dec\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: 05280be1-1219-4b08-93f2-b956e4ae5cb4
+  - id: Viz_23
+    answer:
+      name: Flexible Column Aggregation
+      description: state level summary
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Summary sales (gAggr)
+        name: Summary sales (gAggr)
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] , [state] } , query_filters ( ) - { [state] , [store] } )"
+        was_auto_generated: false
+      - id: Summary sales (group)
+        name: Summary sales (group)
+        expr: "group_sum ( [sales] , [region] , [state] )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [Summary sales (group)] sort by [region] [Summary sales (gAggr)] [store] [region].east [state] sort by [state]"
+      answer_columns:
+      - name: Summary sales (gAggr)
+      - name: Summary sales (group)
+      - name: Total sales
+      - name: region
+      - name: state
+      - name: store
+      table:
+        table_columns:
+        - column_id: Summary sales (gAggr)
+          show_headline: false
+        - column_id: Summary sales (group)
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"region\",\"state\",\"store\",\"Total sales\",\"Summary sales (group)\",\"Summary sales (gAggr)\"]}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Summary sales (gAggr)
+        - column_id: Summary sales (group)
+        - column_id: Total sales
+        - column_id: region
+        - column_id: state
+        - column_id: store
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"7d25c0fa-6883-4b80-bbe2-3fa5d98f7fc6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"df1f3bbe-d567-4b77-8922-16e4d3b05656\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"43dafe5a-f1ef-4774-b500-9972cfc67dec\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: c95142a4-6350-44cf-879d-f54ab36542a1
+  - id: Viz_24
+    answer:
+      name: Implicit aggregation - numerical values
+      description: region level summary as region column is included in the search
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Summary sales (gAggr)
+        name: Summary sales (gAggr)
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] , [state] } , query_filters ( ) - { [state] , [store] } )"
+        was_auto_generated: false
+      - id: Summary sales (group)
+        name: Summary sales (group)
+        expr: "group_sum ( [sales] , [region] , [state] )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [Summary sales (group)] sort by [region] [Summary sales (gAggr)] [store]"
+      answer_columns:
+      - name: Summary sales (gAggr)
+      - name: Summary sales (group)
+      - name: Total sales
+      - name: region
+      - name: store
+      table:
+        table_columns:
+        - column_id: Summary sales (gAggr)
+          show_headline: false
+        - column_id: Summary sales (group)
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"region\",\"74010310-1b2d-4597-bb35-bbb201f5c9e6\",\"store\",\"Total sales\",\"Summary sales (group)\",\"Summary sales (gAggr)\"]}"
+      chart:
+        type: BUBBLE
+        chart_columns:
+        - column_id: Summary sales (gAggr)
+        - column_id: Summary sales (group)
+        - column_id: Total sales
+        - column_id: region
+        - column_id: store
+        axis_configs:
+        - x:
+          - Total sales
+          "y":
+          - Summary sales (group)
+          color:
+          - region
+          size: Summary sales (gAggr)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"2d980e03-3050-4b5f-8a24-07c48ceda7bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Summary sales (group)\"],\"isOpposite\": false}},{\"id\": \"9be30fe5-495e-48eb-96fd-890494235870\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total sales\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"43dafe5a-f1ef-4774-b500-9972cfc67dec\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: c8c0095d-872c-49fa-b6a7-17e9de638847
+  - id: Viz_25
+    answer:
+      name: Implicit aggregation - numerical values
+      description: Total level summary as region column is not included in the search
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Summary sales (gAggr)
+        name: Summary sales (gAggr)
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] , [state] } , query_filters ( ) - { [state] , [store] } )"
+        was_auto_generated: false
+      - id: Summary sales (group)
+        name: Summary sales (group)
+        expr: "group_sum ( [sales] , [region] , [state] )"
+        was_auto_generated: false
+      search_query: "[sales] [Summary sales (group)] [Summary sales (gAggr)] [store]"
+      answer_columns:
+      - name: Summary sales (gAggr)
+      - name: Summary sales (group)
+      - name: Total sales
+      - name: store
+      table:
+        table_columns:
+        - column_id: Summary sales (gAggr)
+          show_headline: false
+        - column_id: Summary sales (group)
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: store
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"10e99e29-6796-4cab-ba95-ba13bcdb19cf\",\"74010310-1b2d-4597-bb35-bbb201f5c9e6\",\"store\",\"Total sales\",\"Summary sales (group)\",\"Summary sales (gAggr)\"]}"
+      chart:
+        type: BUBBLE
+        chart_columns:
+        - column_id: Summary sales (gAggr)
+        - column_id: Summary sales (group)
+        - column_id: Total sales
+        - column_id: store
+        axis_configs:
+        - x:
+          - Total sales
+          "y":
+          - Summary sales (group)
+          color:
+          - store
+          size: Summary sales (gAggr)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"2d980e03-3050-4b5f-8a24-07c48ceda7bd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Summary sales (group)\"],\"isOpposite\": false}},{\"id\": \"9be30fe5-495e-48eb-96fd-890494235870\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total sales\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"43dafe5a-f1ef-4774-b500-9972cfc67dec\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: 9ec2e8db-f797-45ae-98b9-43b330b09e3f
+  - id: Viz_26
+    answer:
+      name: Implicit aggregation - categorical values
+      description: Recent Date returns 'min' date as Date column is not specified in the search
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: Recent Date
+        name: Recent Date
+        expr: "group_max ( [date] , [date] )"
+        was_auto_generated: false
+      search_query: "[date].'this year' [sales] [region].east [Recent Date] [Recent Date].detailed"
+      answer_columns:
+      - name: Recent Date
+      - name: Total sales
+      table:
+        table_columns:
+        - column_id: Recent Date
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Recent Date
+        - column_id: Total sales
+        axis_configs:
+        - x:
+          - Recent Date
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"14a0ee41-4b85-4b9e-8790-7fedccef3799\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"d15f63f5-3ea4-468c-b96c-e5da7222c2f2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Recent Date\"]}}],\"systemSeriesColors\": [{\"serieName\": \"east\",\"color\": \"#2e75f0\"},{\"serieName\": \"midwest\",\"color\": \"#48D1E0\"},{\"serieName\": \"south\",\"color\": \"#FCC838\"},{\"serieName\": \"southwest\",\"color\": \"#06BF7F\"},{\"serieName\": \"west\",\"color\": \"#8C62F5\"},{\"serieName\": \"06937103-0b8a-4c20-97bd-ef0d7bf582e9\",\"color\": \"#2e75f0\"},{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: c6578b77-faa2-42ea-8859-a076a30c6138
+  - id: Viz_27
+    answer:
+      name: Implicit Aggregation table result
+      description: state Contribution is correct for the tabular result
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: state Contribution
+        name: state Contribution
+        expr: "safe_divide ( sum ( [sales] ) , [regional sales] )"
+        was_auto_generated: false
+      - id: regional sales
+        name: regional sales
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] } , query_filters ( ) - { [state] } )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [state] [regional sales] [state Contribution] [region].east [state].'new hampshire'"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: regional sales
+      - name: state
+      - name: state Contribution
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: regional sales
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        - column_id: state Contribution
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: regional sales
+        - column_id: state
+        - column_id: state Contribution
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"mapviewport\": {\"center\": [-1.0815372462017208E7,4944187.994859374],\"zoomLevel\": 4.7101639872924155},\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"9e7a31f6-a386-4ddc-9c30-8f2ca3c192a8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"bb6a5220-67e9-4bb7-9362-3ed012a54450\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemMultiColorSeriesColors\": [{\"serieName\": \"Total sales\",\"colorMap\": [{\"serieName\": \"state\",\"color\": [\"#ffffb2\",\"#fddd87\",\"#fba35d\",\"#f75534\",\"#f9140a\",\"#d70315\",\"#b10026\"]}]}],\"tooltipConfig\": {}}"
+      display_mode: TABLE_MODE
+    viz_guid: d6dd1440-eec5-4230-8cdd-2554babc4117
+  - id: Viz_28
+    answer:
+      name: Implicit Aggregation chart result
+      description: contribution % result is incorrect as region is not included in x-axis
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: state Contribution
+        name: state Contribution
+        expr: "safe_divide ( sum ( [sales] ) , [regional sales] )"
+        was_auto_generated: false
+      - id: regional sales
+        name: regional sales
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] } , query_filters ( ) - { [state] } )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [state] [regional sales] [state Contribution]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: regional sales
+      - name: state
+      - name: state Contribution
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: regional sales
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        - column_id: state Contribution
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: regional sales
+        - column_id: state
+        - column_id: state Contribution
+        axis_configs:
+        - x:
+          - state
+          "y":
+          - state Contribution
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"state Contribution\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"region\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"state\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"regional sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"9a229992-3103-44f6-97f0-52cacf8ddd54\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"state Contribution\"],\"isOpposite\": false}},{\"id\": \"fa52cf25-c798-433e-a945-118cf729a94d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#FCC838\"},{\"serieName\": \"regional sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"state Contribution\",\"color\": \"#2e75f0\"},{\"serieName\": \"state\",\"color\": \"#48d1e0\"},{\"serieName\": \"0a98030a-91c8-4af1-9702-4756fb65742b\",\"color\": \"#48D1E0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 6698f758-88ba-4190-9ee1-c83b16afb258
+  - id: Viz_29
+    answer:
+      name: Implicit Aggregation chart result
+      description: contribution % is correct as region is include in x-axis
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: state Contribution
+        name: state Contribution
+        expr: "safe_divide ( sum ( [sales] ) , [regional sales] )"
+        was_auto_generated: false
+      - id: regional sales
+        name: regional sales
+        expr: "group_aggregate ( sum ( [sales] ) , { [region] } , query_filters ( ) - { [state] } )"
+        was_auto_generated: false
+      search_query: "[sales] [region] [state] [regional sales] [state Contribution]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      - name: regional sales
+      - name: state
+      - name: state Contribution
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 2.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        - column_id: regional sales
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        - column_id: state Contribution
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        - column_id: regional sales
+        - column_id: state
+        - column_id: state Contribution
+        axis_configs:
+        - x:
+          - state
+          - region
+          "y":
+          - state Contribution
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"state Contribution\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"region\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"state\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"regional sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"131a7696-bb12-4046-b8ee-3ff0761584ad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"state Contribution\"],\"isOpposite\": false}},{\"id\": \"6359e2c4-ea66-40b1-ba72-91186a0464c7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"region\",\"state\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#FCC838\"},{\"serieName\": \"regional sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"state Contribution\",\"color\": \"#2e75f0\"},{\"serieName\": \"state\",\"color\": \"#48d1e0\"},{\"serieName\": \"0a98030a-91c8-4af1-9702-4756fb65742b\",\"color\": \"#48D1E0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 60572e19-815a-462d-adb2-850b79345c2a
+  - id: Viz_30
+    viz_guid: db2e6432-f29f-45e6-a442-c721f9bb4f6c
+    note_tile:
+      html_parsed_string: "<h2><span>Group Aggregates</span></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br><span>What if you want to aggregate a value by a specific attribute (for example, show revenue by product)? This is known as a grouped aggregation, but some people call it a pinned measure or level-based measure. You can do this for any aggregation using the grouping functions.</span></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Further details can be found on </span><a href=\"https://docs.thoughtspot.com/cloud/latest/formulas-aggregation-group\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span>ThoughtSpot documentation</span></a><span>. We also advise you to check this YouTube video on ThoughtSpot </span><a href=\"https://www.youtube.com/watch?v=TtGowhU-i_o\" target=\"_blank\" rel=\"noopener\" class=\"theme-module__editor-link\"><span>Level of Devel Analysis</span></a></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span>Below are some examples of group aggregation/level of details formulas that you can use on ThoughtSpot.</span></p>"
+  - id: Viz_31
+    answer:
+      name: Top 5 Best Selling Products
+      description: By Sales for all time
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "top 5 [product] by [sales]"
+      answer_columns:
+      - name: Total sales
+      - name: product
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: product
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Total sales
+        - column_id: product
+        axis_configs:
+        - x:
+          - product
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"product\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"e69f396f-2933-4c0a-8bdb-0e56aae63b84\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"97b5efb3-ce02-4076-bd36-70b0a3e1619a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 6bb68634-6bc3-4025-b5e1-5ed2820d12d7
+  - id: Viz_32
+    answer:
+      name: Top 5 Best Selling Items
+      description: By Sales for all time
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "top 5 [item type] by [sales]"
+      answer_columns:
+      - name: Total sales
+      - name: item type
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: Total sales
+        - column_id: item type
+        axis_configs:
+        - x:
+          - item type
+          "y":
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"4fafec5e-3def-486e-9fde-e83d5ec322ad\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": false}},{\"id\": \"e2f09b6b-99f6-42f6-a508-9b3bc4a007e8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"item type\"]}}],\"seriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#8C62F5\"}],\"systemSeriesColors\": [{\"serieName\": \"Total sales\",\"color\": \"#FCC838\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 4f557d3f-9d5d-476f-9d28-32069251ef2a
+  - id: Viz_33
+    answer:
+      name: "Scatter Plot: Sales & Quantity by Region & Product"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [quantity purchased] [region] [product]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: Total sales
+      - name: product
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: product
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: SCATTER
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: Total sales
+        - column_id: product
+        - column_id: region
+        axis_configs:
+        - x:
+          - Total sales
+          "y":
+          - Total quantity purchased
+          color:
+          - region
+          category:
+          - product
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"region\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"product\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total sales\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"66f17d2b-fe29-4b68-8556-a27340ede36c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"bad322da-b1db-4f03-aec4-e15b692faf3e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Total sales\"]}}],\"seriesColors\": [{\"serieName\": \"56f38473-afe3-469a-8b47-ef57666d0f28\",\"color\": \"#8C62F5\"}],\"systemSeriesColors\": [{\"serieName\": \"56f38473-afe3-469a-8b47-ef57666d0f28\",\"color\": \"#8C62F5\"},{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"},{\"serieName\": \"Total quantity purchased\",\"color\": \"#2E75F0\"},{\"serieName\": \"east\",\"color\": \"#06BF7F\"},{\"serieName\": \"midwest\",\"color\": \"#FCC838\"},{\"serieName\": \"south\",\"color\": \"#48D1E0\"},{\"serieName\": \"southwest\",\"color\": \"#71A1F4\"},{\"serieName\": \"west\",\"color\": \"#2E75F0\"}],\"tooltipConfig\": {}}"
+      display_mode: CHART_MODE
+    viz_guid: 2975d63b-8b6d-4669-bac9-7cff7ffc1bac
+  - id: Viz_34
+    viz_guid: 985bba2c-aa6c-4607-b183-5aaefa909b7d
+    note_tile:
+      html_parsed_string: <h2><span>Tutorial Videos</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>Searching in ThoughtSpot</span></p><iframe data-src-link="https://www.youtube.com/embed/videoseries?si=yuiY-JTQdIZ1J75s&amp;list=PLUocSHxJDKPslAO2R0tgQjYXTTDMFUHx6" width="561" height="315" src="https://www.youtube.com/embed/videoseries?si=yuiY-JTQdIZ1J75s&amp;list=PLUocSHxJDKPslAO2R0tgQjYXTTDMFUHx6" frameborder="0" title="Embedded Page"></iframe><h1></h1>
+  - id: Viz_35
+    viz_guid: 30aff0e3-1154-4558-8b15-0049ef9b4e5b
+    note_tile:
+      html_parsed_string: <h2><span>Tutorial Videos</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>Creating Liveboards</span></p><iframe data-src-link="https://www.youtube.com/embed/PiWfV_QwxIc?si=ZKSJD3mhi79l_5AK" width="560" height="315" src="https://www.youtube.com/embed/PiWfV_QwxIc?si=ZKSJD3mhi79l_5AK" frameborder="0" title="Embedded Page"></iframe><h1></h1>
+  - id: Viz_36
+    viz_guid: 429ac7a2-741a-4118-89a7-62f8b53a3309
+    note_tile:
+      html_parsed_string: <h2><span>Tutorial Videos</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>Creating Charts &amp; Visualizations</span></p><iframe data-src-link="https://www.youtube.com/embed/QK7_favTOlI?si=JedFdEMhsy_4pewg" width="560" height="315" src="https://www.youtube.com/embed/QK7_favTOlI?si=JedFdEMhsy_4pewg" frameborder="0" title="Embedded Page"></iframe><h2></h2>
+  - id: Viz_37
+    viz_guid: 70ed4fee-c6f8-4e09-8496-acd1681d0a1e
+    note_tile:
+      html_parsed_string: <h2><span>Tutorial Videos</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>Applying Filters on Liveboards</span></p><iframe data-src-link="https://www.youtube.com/embed/E7MrgPFfazM?si=boxX5OCyolik98xV" width="560" height="315" src="https://www.youtube.com/embed/E7MrgPFfazM?si=boxX5OCyolik98xV" frameborder="0" title="Embedded Page"></iframe><p class="theme-module__editor-paragraph"><br></p>
+  - id: Viz_38
+    viz_guid: 4dc0d101-fe35-4996-8203-04ba6683dc3c
+    note_tile:
+      html_parsed_string: <h2><span>Tutorial Videos</span></h2><p class="theme-module__editor-paragraph" dir="ltr"><span>Sharing Answers &amp; Liveboards</span></p><iframe data-src-link="https://www.youtube.com/embed/SD8TG6TdBP4?si=mQ0OT9SrPOvuSzps" width="560" height="315" src="https://www.youtube.com/embed/SD8TG6TdBP4?si=mQ0OT9SrPOvuSzps" frameborder="0" title="Embedded Page"></iframe><p class="theme-module__editor-paragraph" dir="ltr"><br></p>
+  - id: Viz_39
+    answer:
+      name: Copy of Quantity Purchased by region
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      formulas:
+      - id: String Value
+        name: String Value
+        expr: '''this is test'''
+        was_auto_generated: false
+      search_query: "top 10 by [sales] [date].'last year' [region].west vs [region].east [product]"
+      answer_columns:
+      - name: product
+      - name: sales(east)
+      - name: sales(west)
+      table:
+        table_columns:
+        - column_id: product
+          show_headline: false
+        - column_id: sales(east)
+          show_headline: false
+        - column_id: sales(west)
+          show_headline: false
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: BAR
+        chart_columns:
+        - column_id: product
+        - column_id: sales(east)
+        - column_id: sales(west)
+        axis_configs:
+        - x:
+          - product
+          "y":
+          - sales(west)
+          - sales(east)
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"sales(west)\",\"columnProperty\": {}},{\"columnId\": \"sales(east)\",\"columnProperty\": {}},{\"columnId\": \"product\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8e1ff16f-e8aa-4395-ba36-931564ea5bda\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"sales(west)\"],\"isOpposite\": false}},{\"id\": \"3cc1a41d-37ef-4b61-b6f2-39cb2fc6882f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"sales(east)\"],\"isOpposite\": true}},{\"id\": \"019a75a8-ab00-44d0-ae41-ed7575b5068e\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"product\"]}}],\"systemSeriesColors\": [{\"serieName\": \"699d3c47-bb33-4399-9191-cb8f246a3f16\",\"color\": \"#8C62F5\"},{\"serieName\": \"sales(west)\",\"color\": \"#48D1E0\"},{\"serieName\": \"sales(east)\",\"color\": \"#369faa\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: f755ce13-6f87-41a1-ab70-2414410c2374
+  - id: Viz_40
+    viz_guid: be54f988-a9fd-4131-88b6-bb6c673e96f6
+    note_tile:
+      html_parsed_string: <h1><br></h1><iframe data-src-link="https://www.youtube.com/embed/K7MwXaz7hMw?si=xIlRpoFkw75yJP2Z" width="560" height="315" src="https://www.youtube.com/embed/K7MwXaz7hMw?si=xIlRpoFkw75yJP2Z" frameborder="0" title="Embedded Page"></iframe><h1><br></h1>
+  filters:
+  - column:
+    - item type
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - product
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - region
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tabs:
+    - name: 😊 Key Metrics
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_3
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_5
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_11
+        x: 6
+        "y": 10
+        height: 8
+        width: 6
+      - visualization_id: Viz_13
+        x: 0
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_14
+        x: 3
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_15
+        x: 6
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_16
+        x: 9
+        "y": 4
+        height: 2
+        width: 3
+      - visualization_id: Viz_18
+        x: 0
+        "y": 10
+        height: 8
+        width: 6
+      - visualization_id: Viz_31
+        x: 0
+        "y": 6
+        height: 4
+        width: 6
+      - visualization_id: Viz_32
+        x: 6
+        "y": 6
+        height: 4
+        width: 6
+      id: 4f4605d8-d88c-4f1f-8917-463f1b37f77f
+    - name: 📊 Graphs and Charts
+      description: ""
+      tiles:
+      - visualization_id: Viz_6
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_7
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_8
+        x: 0
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_9
+        x: 6
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_10
+        x: 0
+        "y": 24
+        height: 8
+        width: 12
+      - visualization_id: Viz_20
+        x: 0
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_33
+        x: 6
+        "y": 16
+        height: 8
+        width: 6
+      - visualization_id: Viz_39
+        x: 0
+        "y": 32
+        height: 8
+        width: 6
+      id: cc32b21d-8869-4096-a2e9-c87d9d18806a
+    - name: 🗺️ Geo Maps
+      description: ""
+      tiles:
+      - visualization_id: Viz_4
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_19
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+      id: ea1699f8-6426-464d-8339-7b5f8948bf2b
+    - name: 🔢 Advanced Calculations
+      description: ""
+      tiles:
+      - visualization_id: Viz_12
+        x: 0
+        "y": 0
+        height: 9
+        width: 5
+      - visualization_id: Viz_21
+        x: 5
+        "y": 2
+        height: 3
+        width: 7
+      - visualization_id: Viz_22
+        x: 5
+        "y": 5
+        height: 4
+        width: 7
+      - visualization_id: Viz_23
+        x: 0
+        "y": 9
+        height: 4
+        width: 6
+      - visualization_id: Viz_24
+        x: 6
+        "y": 9
+        height: 4
+        width: 6
+      - visualization_id: Viz_25
+        x: 0
+        "y": 13
+        height: 4
+        width: 6
+      - visualization_id: Viz_26
+        x: 6
+        "y": 13
+        height: 4
+        width: 6
+      - visualization_id: Viz_27
+        x: 0
+        "y": 17
+        height: 4
+        width: 6
+      - visualization_id: Viz_28
+        x: 0
+        "y": 21
+        height: 4
+        width: 6
+      - visualization_id: Viz_29
+        x: 6
+        "y": 17
+        height: 8
+        width: 6
+      - visualization_id: Viz_30
+        x: 5
+        "y": 0
+        height: 2
+        width: 7
+      id: 0c4d892a-8593-4558-a0eb-9583c006d132
+    - name: ❓How to ThoughtSpot?
+      description: ""
+      tiles:
+      - visualization_id: Viz_17
+        x: 0
+        "y": 5
+        height: 5
+        width: 4
+      - visualization_id: Viz_34
+        x: 4
+        "y": 0
+        height: 5
+        width: 4
+      - visualization_id: Viz_35
+        x: 8
+        "y": 0
+        height: 5
+        width: 4
+      - visualization_id: Viz_36
+        x: 0
+        "y": 10
+        height: 5
+        width: 4
+      - visualization_id: Viz_37
+        x: 4
+        "y": 5
+        height: 5
+        width: 4
+      - visualization_id: Viz_38
+        x: 8
+        "y": 5
+        height: 5
+        width: 4
+      - visualization_id: Viz_40
+        x: 0
+        "y": 0
+        height: 5
+        width: 4
+      id: a09f1664-85c0-4706-9751-e8b0be03d6f0
+  views:
+  - view_guid: 2a8223b4-6d81-443d-91c6-e225fc8d448a
+    name: West Boxers Sales
+    view_filters:
+    - column:
+      - product
+      oper: in
+      values:
+      - Active classic boxers
+    - column:
+      - region
+      oper: in
+      values:
+      - West
+    is_public: false
