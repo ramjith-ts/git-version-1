@@ -15,6 +15,14 @@ liveboard:
     viz_guid: baa4a11d-991c-4806-a747-20c22a2738c1
     note_tile:
       html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">More...</span></h1><hr><h1><img id=\"248f22fb-7ce4-4ef0-9d2f-5be436f4c0eb\" alt=\"UPLOAD\" style=\"height: inherit; width: 34.974747474747474%; max-width: 100%;\"></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 221, 204);\"></div>"
+  - id: Viz_4
+    viz_guid: b03341dc-427b-4a5c-a54f-337438e5741b
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"color: rgb(255, 129, 66); white-space: pre-wrap;\">Hellooo</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(240, 65, 82);\"></div>"
+  - id: Viz_5
+    viz_guid: 66b4e033-f325-4492-a927-f57d93ba2134
+    note_tile:
+      html_parsed_string: "<h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Embed &amp; Personalise</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(244, 126, 137);\"></div>"
   layout:
     tabs:
     - name: New Tiles
@@ -35,4 +43,14 @@ liveboard:
         "y": 0
         height: 4
         width: 6
+      - visualization_id: Viz_4
+        x: 0
+        "y": 4
+        height: 4
+        width: 3
+      - visualization_id: Viz_5
+        x: 3
+        "y": 4
+        height: 4
+        width: 9
       id: 6d605372-3ce9-49f7-91ff-6bc66920a564
