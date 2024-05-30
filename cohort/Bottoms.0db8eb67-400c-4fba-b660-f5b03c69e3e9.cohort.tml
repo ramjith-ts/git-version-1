@@ -1,0 +1,31 @@
+guid: 0db8eb67-400c-4fba-b660-f5b03c69e3e9
+cohort:
+  name: Bottoms
+  answer:
+    tables:
+    - id: (Sample) Retail - Apparel
+      name: (Sample) Retail - Apparel
+      fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+    search_query: "[item type] [item type].Pants [item type].Shorts"
+    answer_columns:
+    - name: item type
+    table:
+      table_columns:
+      - column_id: item type
+        show_headline: false
+      client_state: ""
+    chart:
+      type: KPI
+      chart_columns:
+      - column_id: item type
+      axis_configs:
+      - "y":
+        - item type
+      client_state: ""
+    display_mode: TABLE_MODE
+  cohort_config:
+    anchor_column:
+    - name: item type
+    return_column:
+      name: item type
+    null_output_value: ""
