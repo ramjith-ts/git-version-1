@@ -1,0 +1,191 @@
+guid: e104ad21-fb25-47c5-944b-9b3f4d1e8fb7
+liveboard:
+  name: LB2
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Total Net Sales by Product Type
+      tables:
+      - id: WS_golden
+        name: WS_golden
+        fqn: c8684f7f-d8a4-4bc9-b87d-115433c5e458
+      search_query: "[Net Sales] [Product Type]"
+      answer_columns:
+      - name: Product Type
+      - name: Total Net Sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: INR
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Net Sales
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Type
+        - column_id: Total Net Sales
+        axis_configs:
+        - x:
+          - Product Type
+          "y":
+          - Total Net Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Type\",\"columnProperty\": {}},{\"columnId\": \"Total Net Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"27652cc5-8e8a-444e-b554-31cd3f1cf5a9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Net Sales\"],\"isOpposite\": false}},{\"id\": \"98ceebc1-d813-4cd8-a6cd-ca15e18aa37a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Net Sales\",\"color\": \"#FF8142\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 4f9e6b7b-5d9e-43bc-ba1b-29b94c1106a2
+  - id: Viz_2
+    answer:
+      name: Total Net Sales by Product Type
+      tables:
+      - id: WS_golden
+        name: WS_golden
+        fqn: c8684f7f-d8a4-4bc9-b87d-115433c5e458
+      search_query: "[Net Sales] [Product Type]"
+      answer_columns:
+      - name: Product Type
+      - name: Total Net Sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: INR
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Net Sales
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Product Type
+        - column_id: Total Net Sales
+        axis_configs:
+        - x:
+          - Product Type
+          "y":
+          - Total Net Sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Type\",\"columnProperty\": {}},{\"columnId\": \"Total Net Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"27652cc5-8e8a-444e-b554-31cd3f1cf5a9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Net Sales\"],\"isOpposite\": false}},{\"id\": \"98ceebc1-d813-4cd8-a6cd-ca15e18aa37a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total Net Sales\",\"color\": \"#FF8142\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: 89da49de-2b1b-410c-964f-9cd12e05b8e2
+  - id: Viz_3
+    answer:
+      name: Total Net Sales by Product Type and Region
+      tables:
+      - id: WS_golden
+        name: WS_golden
+        fqn: c8684f7f-d8a4-4bc9-b87d-115433c5e458
+      search_query: "[Net Sales] [Product Type] [Region]"
+      answer_columns:
+      - name: Product Type
+      - name: Region
+      - name: Total Net Sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: INR
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Net Sales
+          headline_aggregation: SUM
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Product Type
+        - column_id: Region
+        - column_id: Total Net Sales
+        axis_configs:
+        - x:
+          - Product Type
+          "y":
+          - Total Net Sales
+          color:
+          - Region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Type\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Net Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"8166c775-673e-468a-8281-27cf3ae211cd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Net Sales\"],\"isOpposite\": false}},{\"id\": \"0e07bbb2-a3ba-41ac-8202-79c07cdfc2c4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"midwest\",\"color\": \"#06BF7F\"},{\"serieName\": \"northeast\",\"color\": \"#FCC838\"},{\"serieName\": \"northwest\",\"color\": \"#48D1E0\"},{\"serieName\": \"south\",\"color\": \"#71A1F4\"},{\"serieName\": \"southwest\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 26c523da-33ab-4b20-b1fc-4497771a07d5
+  - id: Viz_4
+    answer:
+      name: "Total Net Sales by Product Type, Region"
+      tables:
+      - id: WS_golden
+        name: WS_golden
+        fqn: c8684f7f-d8a4-4bc9-b87d-115433c5e458
+      search_query: "[Net Sales] [Product Type] [Region]"
+      answer_columns:
+      - name: Product Type
+      - name: Region
+      - name: Total Net Sales
+        format:
+          category: CURRENCY
+          currencyFormatConfig:
+            locale: INR
+            unit: AUTO
+            decimals: 2.0
+            toSeparateThousands: true
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: Product Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Region
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total Net Sales
+          headline_aggregation: SUM
+          headline_client_state: "{\"headlineVizPropVersion\": \"V1\",\"columnProperty\": {\"summariesNumberFormatConfig\": {\"category\": \"CURRENCY\",\"currencyFormatConfig\": {\"locale\": \"INR\",\"unit\": \"AUTO\",\"decimals\": 2.0,\"toSeparateThousands\": true},\"isCategoryEditable\": true}}}"
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Product Type
+        - column_id: Region
+        - column_id: Total Net Sales
+        axis_configs:
+        - x:
+          - Product Type
+          "y":
+          - Total Net Sales
+          color:
+          - Region
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Product Type\",\"columnProperty\": {}},{\"columnId\": \"Region\",\"columnProperty\": {}},{\"columnId\": \"Total Net Sales\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"8166c775-673e-468a-8281-27cf3ae211cd\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Net Sales\"],\"isOpposite\": false}},{\"id\": \"0e07bbb2-a3ba-41ac-8202-79c07cdfc2c4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Product Type\"]}}],\"systemSeriesColors\": [{\"serieName\": \"midwest\",\"color\": \"#06BF7F\"},{\"serieName\": \"northeast\",\"color\": \"#FCC838\"},{\"serieName\": \"northwest\",\"color\": \"#48D1E0\"},{\"serieName\": \"south\",\"color\": \"#71A1F4\"},{\"serieName\": \"southwest\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: bb3c13ca-e292-4002-a36d-770926fcc090
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: MEDIUM
+    - visualization_id: Viz_3
+      size: MEDIUM
+    - visualization_id: Viz_2
+      size: MEDIUM
+    - visualization_id: Viz_4
+      size: MEDIUM

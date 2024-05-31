@@ -1,0 +1,19 @@
+guid: a7af3278-7493-4562-b2b5-2c913ea87e10
+connection:
+  name: ts_complex_schema
+  type: RDBMS_SNOWFLAKE
+  authentication_type: SERVICE_ACCOUNT
+  properties:
+  - key: accountName
+    value: thoughtspot_partner
+  - key: user
+    value: TEST_USER
+  - key: password
+    value: ""
+  - key: role
+    value: TEST
+  - key: warehouse
+    value: CX_AUTO_WH
+  - key: database
+    value: NEBULADEV
+  description: ""
